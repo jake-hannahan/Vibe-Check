@@ -20,7 +20,7 @@ Here are the actions users can take in the MVP:
     a. deletes from all vibes
 
 5. Update a vibe (PUT, accessed from My Vibes):
-    a. allows user to edit all fields? does it redirect to a detail page?
+    a. A form that allows the user to update the fields found in the Create a Vibe form
 
 
 5. See vibe details (GET by vibe id, links from My Vibes, Main, List Vibes?)
@@ -33,6 +33,7 @@ Here are the actions users can take in the MVP:
 
 8. Sign up (POST):
     a. Form with email, username, password, password confirmation fields, plus a join button and link to sign in.
+
 
 
 Day 2:
