@@ -41,3 +41,11 @@ Started wireframing.
 
 Day 3:
 Finished wireframing and started API documentation. Completed initial deloyment set up on Render.
+
+Day 4:
+Talked about ubiquitous language and made some adjustments to our wireframes.
+
+Day 5:
+Decided to use MongoDB as our database and completed our code of conduct. Agreed to read up on authentication and integrating mongo with fastapi.
+
+
