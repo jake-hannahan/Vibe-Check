@@ -1,20 +1,20 @@
-
+<!-- ACCOUNT ENDPOINTS -->
 
 ### Login
 
-* Endpoint path: /token
-* Endpoint method: POST
+-   Endpoint path: /token
+-   Endpoint method: POST
 
-* Request shape (form):
+-   Request shape (form):
     *username: string
     *password: string
 
-* Response: Account information and a token
-* Response shape (JSON):
+-   Response: Account information and a token
+-   Response shape (JSON):
     ```json
     {
         "account": {
-            <<key>>: type>>,
+            <<key>>: <<type>>,
         },
         "token": string
     }
@@ -22,50 +22,54 @@
 
 ### Logout
 
-* Endpoint path: /token
-* Endpoint method: DELETE
+-   Endpoint path: /token
+-   Endpoint method: DELETE
 
-* Headers:
-  * Authorization: Bearer token
+-   Headers:
 
-* Response: Always true
-* Response shape (JSON):
+    -   Authorization: Bearer + token
+
+-   Response: Always true
+-   Response shape (JSON):
     ```json
     true
     ```
 
 ### Signup
 
-* Endpoint path: /token
-* Endpoint method: POST
+-   Endpoint path: /token
+-   Endpoint method: POST
 
-* Request shape (form):
+-   Request shape (form):
     *email: string
     *username: string
     *password: string
     *confirm password: string
 
-* Response: Account information and a token
-* Response shape (JSON):
+-   Response: Account information and a token
+-   Response shape (JSON):
     ```json
     {
         "account": {
-            <<key>>: type>>,
+            <<key>>: <<type>>,
         },
         "token": string
     }
     ```
 
+<!-- VIBE ENDPOINTS -->
 
 ### Post a new Vibe
 
-* Endpoint path: /vibes
-* Endpoint method: POST
+-   Endpoint path: /vibes
+-   Endpoint method: POST
 
-* Headers:
-  * Authorization: Bearer token
+-   Headers:
 
-* Request shape (JSON):
+    -   Authorization: Bearer + token
+
+-   Request shape (JSON):
+
     ```json
     {
         "vibes": [
@@ -90,8 +94,8 @@
     }
     ```
 
-* Response: An indication of success or failure
-* Response shape (JSON):
+-   Response: An indication of success or failure
+-   Response shape (JSON):
     ```json
     {
         "success": boolean,
@@ -101,23 +105,25 @@
 
 ### Get vibes created by user (My Vibes)
 
-* Endpoint path: /vibes/<str:username>/
-* Endpoint method: GET
+-   Endpoint path: /vibes/<str:username>/
+-   Endpoint method: GET
 
-* Headers:
-  * Authorization: Bearer token
+-   Headers:
 
-* Request shape (JSON):
-    * None
+    -   Authorization: Bearer + token
 
-* Response: A list of vibes created by user
-* Response shape (JSON):
+-   Request shape (JSON):
+
+    -   None
+
+-   Response: A list of vibes created by user
+-   Response shape (JSON):
     ```json
     {
         "vibes": [
           {
             "mood": string,
-            "created_by: string,
+            "created_by": string,
             "name": string,
             "playlist_id": string,
             "picture_url": string,
@@ -132,24 +138,27 @@
     }
     ```
 
- ### All Vibes
+### All Vibes
 
-* Endpoint path: /vibes
-* Endpoint method: GET
-* Query parameters:
-    * mood
+-   Endpoint path: /vibes
+-   Endpoint method: GET
+-   Query parameters:
 
-* Headers:
-  * Authorization: Bearer token
+    -   mood
 
-* Request shape (JSON):
-  * None
+-   Headers:
 
-* Response: A list of vibes
-* Response shape (JSON):
+    -   Authorization: Bearer + token
+
+-   Request shape (JSON):
+
+    -   None
+
+-   Response: A list of vibes
+-   Response shape (JSON):
     ```json
     {
-        vibes": [
+        "vibes": [
           {
             "created_by": string,
             "mood": string,
@@ -160,42 +169,45 @@
     }
     ```
 
-
 ### Vibe Detail
 
-* Endpoint path: /vibes/<int:id>/
-* Endpoint method: GET
+-   Endpoint path: /vibes/<int:id>/
+-   Endpoint method: GET
 
-* Headers:
-  * Authorization: Bearer token
+-   Headers:
 
-* Request shape (JSON):
-  * None
+    -   Authorization: Bearer + token
 
-* Response: One vibe
-* Response shape (JSON):
-  ``` json
+-   Request shape (JSON):
+
+    -   None
+
+-   Response: One vibe
+-   Response shape (JSON):
+
+    ```json
 
 
-    {
-        "vibes": [
-          {
-            "id": number,
-            "created_by": string,
-            "mood": string,
-            "name": string,
-            "playlist_id": string,
-            "picture_url": string,
-            "activity":
-                {
-                    "category": string,
-                    "name": string
-                }
-           }
-        ]
-    }
- ```
+      {
+          "vibes": [
+            {
+              "id": number,
+              "created_by": string,
+              "mood": string,
+              "name": string,
+              "playlist_id": string,
+              "picture_url": string,
+              "activity":
+                  {
+                      "category": string,
+                      "name": string
+                  }
+             }
+          ]
+      }
+    ```
 
+````
 
 ### Update a Vibe
 
@@ -203,36 +215,35 @@
 * Endpoint method: PUT
 
 * Headers:
-  * Authorization: Bearer token
+ * Authorization: Bearer + token
 
 * Request shape (JSON):
-    ```json (don't need all)
-    {
-        "vibes": [
-          {
-            "mood": string,
-            "name": string,
-            "playlist_id": string,
-            "picture_url": string,
-            "activity":
-                {
-                    "category": string,
-                    "name": string
-                }
-           }
-        ]
-    }
-    ```
+   ```json (don't need all)
+   {
+       "vibes": [
+         {
+           "mood": string,
+           "name": string,
+           "playlist_id": string,
+           "picture_url": string,
+           "activity":
+               {
+                   "category": string,
+                   "name": string
+               }
+          }
+       ]
+   }
+   ```
 
 * Response: An indication of success or failure
 * Response shape (JSON):
-    ```json
-    {
-        "success": boolean,
-        "message": string
-    }
-    ```
-
+   ```json
+   {
+       "success": boolean,
+       "message": string
+   }
+   ```
 
 ### Delete a vibe
 
@@ -240,21 +251,22 @@
 * Endpoint method: DELETE
 
 * Headers:
-  * Authorization: Bearer token
+ * Authorization: Bearer + token
 
 * Request shape (JSON):
-  * None
+ * None
 
 * Response: An indication of success or failure
 * Response shape (JSON):
-    ```json
-    {
-        "success": boolean,
-        "message": string
-    }
-    ```
+   ```json
+   {
+       "success": boolean,
+       "message": string
+   }
+   ```
 
 
+<!-- SPOTIFY ENDPOINTS -->
 
 ### GET playlist using Spotify api
 
@@ -262,8 +274,7 @@
 * Endpoint method: GET
 * URL: https://api.spotify.com/v1/playlists/{playlist_id}/tracks
 * Headers:
-* Authorization: Bearer token
-
+* Authorization: Bearer + token
 
 ### GET playlist using Spotify api
 
@@ -271,26 +282,27 @@
 * Endpoint method: GET
 
 * Headers:
-  * Authorization: Bearer token
+ * Authorization: Bearer + token
 
 * Request shape (JSON):
-    None
+   None
 
 * Response: A Playlist's song names and artist names
 * Response shape (JSON):
-    ```json
-    {
-     "items": [
-        {
-            "tracks": {
-                "artists": [
-                    {
-                        "name": str
-                    }
-                ],
-                "name": str
-            }
-        }
-    ]
-    }
-    ```
+   ```json
+   {
+    "items": [
+       {
+           "tracks": {
+               "artists": [
+                   {
+                       "name": str
+                   }
+               ],
+               "name": str
+           }
+       }
+   ]
+   }
+   ```
+````
