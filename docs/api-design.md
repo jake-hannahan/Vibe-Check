@@ -265,22 +265,13 @@
    }
    ```
 
-
 <!-- SPOTIFY ENDPOINTS -->
-
-### GET playlist using Spotify api
-
-* Endpoint path: /vibes/<int:id>/<playlist_id>/
-* Endpoint method: GET
-* URL: https://api.spotify.com/v1/playlists/{playlist_id}/tracks
-* Headers:
-* Authorization: Bearer + token
 
 ### GET playlist using Spotify api
 
 * Endpoint path: /api/<playlist_id>/
 * Endpoint method: GET
-
+* URL: https://api.spotify.com/v1/playlists/{playlist_id}/tracks
 * Headers:
  * Authorization: Bearer + token
 
