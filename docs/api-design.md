@@ -207,63 +207,62 @@
       }
     ```
 
-````
-
 ### Update a Vibe
 
-* Endpoint path: /vibes/<int:id>/
-* Endpoint method: PUT
+-   Endpoint path: /vibes/<int:id>/
+-   Endpoint method: PUT
 
-* Headers:
- * Authorization: Bearer + token
+-   Headers:
+-   Authorization: Bearer + token
 
-* Request shape (JSON):
-   ```json (don't need all)
-   {
-       "vibes": [
-         {
-           "mood": string,
-           "name": string,
-           "playlist_id": string,
-           "picture_url": string,
-           "activity":
-               {
-                   "category": string,
-                   "name": string
-               }
-          }
-       ]
-   }
-   ```
+-   Request shape (JSON):
 
-* Response: An indication of success or failure
-* Response shape (JSON):
-   ```json
-   {
-       "success": boolean,
-       "message": string
-   }
-   ```
+    ```json (don't need all)
+    {
+        "vibes": [
+          {
+            "mood": string,
+            "name": string,
+            "playlist_id": string,
+            "picture_url": string,
+            "activity":
+                {
+                    "category": string,
+                    "name": string
+                }
+           }
+        ]
+    }
+    ```
+
+-   Response: An indication of success or failure
+-   Response shape (JSON):
+    ```json
+    {
+        "success": boolean,
+        "message": string
+    }
+    ```
 
 ### Delete a vibe
 
-* Endpoint path: /vibes/<int:id>/
-* Endpoint method: DELETE
+-   Endpoint path: /vibes/<int:id>/
+-   Endpoint method: DELETE
 
-* Headers:
- * Authorization: Bearer + token
+-   Headers:
+-   Authorization: Bearer + token
 
-* Request shape (JSON):
- * None
+-   Request shape (JSON):
+-   None
 
-* Response: An indication of success or failure
-* Response shape (JSON):
-   ```json
-   {
-       "success": boolean,
-       "message": string
-   }
-   ```
+-   Response: An indication of success or failure
+-   Response shape (JSON):
+    ```json
+    {
+        "success": boolean,
+        "message": string
+    }
+    ```
 
 <!-- SPOTIFY ENDPOINTS -->
 
@@ -274,26 +273,44 @@
 * URL: https://api.spotify.com/v1/playlists/{playlist_id}/tracks
 * Headers:
  * Authorization: Bearer + token
+<!-- Grabbing playlist data using the selected playlist ID that is linked to the vibe -->
 
-* Request shape (JSON):
-   None
+-   Endpoint path: /vibes/<int:id>/playlist/
+-   Endpoint method: GET
+-   URL: https://api.spotify.com/v1/playlists/{playlist_id}/tracks
+-   Headers:
+    -   Authorization: Bearer + token
 
-* Response: A Playlist's song names and artist names
-* Response shape (JSON):
-   ```json
-   {
-    "items": [
-       {
-           "tracks": {
-               "artists": [
-                   {
-                       "name": str
-                   }
-               ],
-               "name": str
-           }
-       }
-   ]
-   }
-   ```
-````
+### GET playlist using Spotify api
+
+<!-- Searching up playlist using Spotify API to add to vibe instance -->
+
+-   Endpoint path: /api/<playlist_id>/
+-   Endpoint method: GET
+-   URL: https://api.spotify.com/v1/playlists/{playlist_id}/tracks
+-
+-   Headers:
+
+    -   Authorization: Bearer + token
+
+-   Request shape (JSON):
+    None
+
+-   Response: A Playlist's song names and artist names
+-   Response shape (JSON):
+    ```json
+    {
+     "items": [
+        {
+            "tracks": {
+                "artists": [
+                    {
+                        "name": str
+                    }
+                ],
+                "name": str
+            }
+        }
+    ]
+    }
+    ```
