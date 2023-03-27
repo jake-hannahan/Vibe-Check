@@ -19,6 +19,10 @@ services:
     volumes:
       - ./vibe_check:/app
     environment:
+      SIGNING_KEY: 3gdzwsN8Tc51PF1PbiSu5eDqqvRxX8fEViatyRElMuxRk2RdxZ
+      WAIT_HOSTS: mongo:27017
+      WAIT_BEFORE: 5
+      WAIT_TIMEOUT: 60
       MONGO_URL: mongodb://admin:password@mongo
   ghi:
     image: node:lts-bullseye
