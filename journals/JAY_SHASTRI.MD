@@ -15,4 +15,11 @@ Day 3:
     - Created our journal entries and initialized the deployment.
 
 
+Day 4:
+    - Created our API designs and requests
+    - Decided to use MongoDB instead of Postgresql
 
+
+Day 5:
+    - Began coding the Authentication process
+    - Finish the Login and Logout Features
