@@ -13,3 +13,6 @@ Day 2:
 Day 3:
     - Created out Git group repository, and followed the instructions from the README.MD to setup our project deployment
     - Created our journal entries and initialized the deployment.
+
+
+
