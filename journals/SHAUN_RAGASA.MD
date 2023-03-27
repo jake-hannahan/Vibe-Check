@@ -12,3 +12,5 @@ Development Journal
 > > [W13:D4] 23 March 2023 | Thursday
 > > Edited wire frame design on Excalidraw to make card components on pages more verbose.
 > > Started looking into Tailwind to help determine if it is a viable option vs Bootstrap to achieve the MVP.
+
+> > [W14:D1] 27 March 2023 | Monday
