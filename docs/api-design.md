@@ -268,21 +268,6 @@
 
 ### GET playlist using Spotify api
 
--   Endpoint path: /api/<playlist_id>/
--   Endpoint method: GET
--   URL: https://api.spotify.com/v1/playlists/{playlist_id}/tracks
--   Headers:
--   Authorization: Bearer + token
-<!-- Grabbing playlist data using the selected playlist ID that is linked to the vibe -->
-
-*   Endpoint path: /vibes/<int:id>/playlist/
-*   Endpoint method: GET
-*   URL: https://api.spotify.com/v1/playlists/{playlist_id}/tracks
-*   Headers:
-    -   Authorization: Bearer + token
-
-### GET playlist using Spotify api
-
 <!-- Searching up playlist using Spotify API to add to vibe instance -->
 
 -   Endpoint path: /api/<playlist_id>/
