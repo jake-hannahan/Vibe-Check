@@ -1,17 +1,18 @@
 from authenticator import authenticator
 from fastapi import APIRouter, Depends
-
-# from models import Vibe
+from models import VibeIn, VibeOut
 from queries.vibes import VibeQueries
 
 router = APIRouter()
 
 
-@router.post("/api/vibes", response_model=vibe_list)
+@router.post("/api/vibes", response_model=VibeOut)
 async def create_vibe(
-    account_data: dict = Depends(authenticator.get_account_data),
+    params: VibeIn,
+    queries: VibeQueries = Depends(),
+    # TODO: Add authentication
 ):
-    pass
+    return queries.create(params)
 
 
 # line 11 should be current user data
