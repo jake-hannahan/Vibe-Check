@@ -1,6 +1,7 @@
 from authenticator import authenticator
 from fastapi import APIRouter, Depends
-from models import Vibe
+
+# from models import Vibe
 from queries.vibes import VibeQueries
 
 router = APIRouter()

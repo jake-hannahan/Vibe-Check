@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
 from authenticator import authenticator
+from routers import accounts
 
 app = FastAPI()
 
@@ -30,3 +31,4 @@ def launch_details():
 
 app.include_router(accounts.router, tags=["Accounts"])
 app.include_router(authenticator.router, tags=["Accounts"])
+# app.include_router(vibes.router, tags=["Vibes"])
