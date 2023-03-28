@@ -1,4 +1,4 @@
-Day 1:
+> > [W13:D1] 20 March 2023 | Monday
 Decided on a project (Vibe Check!) and got some advice on scope from Riley.
 Vibe Check allows users to create 'vibes' that are grouped by moods.
 Here are the actions users can take in the MVP:
@@ -35,17 +35,22 @@ Here are the actions users can take in the MVP:
     a. Form with email, username, password, password confirmation fields, plus a join button and link to sign in.
 
 
-
-Day 2:
+> > [W13:D2] 21 March 2023 | Tuesday
 Started wireframing.
 
-Day 3:
+> > [W13:D3] 22 March 2023 | Wednesday
 Finished wireframing and started API documentation. Completed initial deloyment set up on Render.
 
-Day 4:
+> > [W13:D4] 23 March 2023 | Thursday
 Talked about ubiquitous language and made some adjustments to our wireframes.
 
-Day 5:
+> > [W13:D5] 24 March 2023 | Friday
 Decided to use MongoDB as our database and completed our code of conduct. Agreed to read up on authentication and integrating mongo with fastapi.
 
-
+> > [W14:D1] 27 March 2023 | Monday
+Hashed out final api design issues--met with Riley to ask about:
+    1. How do we handle token expiration?
+        a. logic is basically: if status code = expired, go get new token
+    2. How do we handle populating our finite list of moods?
+        a. use pydantic enum (in the basemodel, I think), no table, just a list
+We then started on our authentication process.
