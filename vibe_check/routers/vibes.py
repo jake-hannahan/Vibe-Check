@@ -46,6 +46,7 @@ async def get_all_vibes(
     vibe = queries.get_all()
     return vibe
 
+
 @router.delete("/api/vibes/{vibe_id}")
 async def delete_vibe(
     vibe_id: str,

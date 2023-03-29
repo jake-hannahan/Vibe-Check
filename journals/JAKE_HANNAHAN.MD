@@ -11,3 +11,6 @@ Development Journal
 
 > > [W13:D4] 23 March 2023 | Thursday
 > > Continued working on wireframing as well as API design.
+
+> > [W14:D1] 27 March 2023 | Monday
+> > Worked on user authentication.
