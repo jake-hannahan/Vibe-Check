@@ -63,7 +63,7 @@ class Activity(BaseModel):
 class VibeIn(BaseModel):
     mood: Mood
     name: str
-    playlist_id: int
+    playlist_id: str
     picture_url: str
     activities: List[Activity]
 
@@ -71,3 +71,13 @@ class VibeIn(BaseModel):
 class VibeOut(VibeIn):
     id: str
     created_by: str
+
+
+class Song(BaseModel):
+    artist: str
+    song: str
+
+class Playlist(BaseModel):
+    name: str
+    spotify_id: str
+    songs: List[Song]
