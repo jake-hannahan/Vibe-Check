@@ -15,20 +15,6 @@ app.add_middleware(
 )
 
 
-@app.get("/api/launch-details")
-def launch_details():
-    return {
-        "launch_details": {
-            "year": 2022,
-            "month": 12,
-            "day": "9",
-            "hour": 19,
-            "min": 0,
-            "tz:": "PST",
-        }
-    }
-
-
 app.include_router(accounts.router, tags=["Accounts"])
 app.include_router(authenticator.router, tags=["Accounts"])
 app.include_router(vibes.router, tags=["Vibes"])

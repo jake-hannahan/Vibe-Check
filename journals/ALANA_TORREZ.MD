@@ -52,5 +52,8 @@ Hashed out final api design issues--met with Riley to ask about:
     1. How do we handle token expiration?
         a. logic is basically: if status code = expired, go get new token
     2. How do we handle populating our finite list of moods?
-        a. use pydantic enum (in the basemodel, I think), no table, just a list
+        a. use pydantic enum , no table, just a list
 We then started on our authentication process.
+
+> > [W14:D2] 27 March 2023 | Tuesday
+Consulted Riley about enum usage for ActivityCategory and Mood. He mentioned that the get request for all moods would loop through all moods. 
