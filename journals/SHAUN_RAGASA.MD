@@ -17,3 +17,7 @@ Development Journal
 > > Moved wireframe and API-design documentation from Excalidraw to docs directory. Went over API-design with the group to finalize, refactor, and catch any possible future issues. Added my Spotify token access code to api-design. Began coding user authentication as a group.
 
 > > [W14:D2] 28 March 2023 | Tuesday
+> > Finished authentication. Began coding the vibes routes and queries.
+
+> > [W14:D3] 29 March 2023 | Wednesday
+> > As a team, we finished the routes and queries for our vibe model. We also enabled authentication for each of those routes so that only logged in users have access to these endpoints.
