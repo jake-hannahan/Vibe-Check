@@ -30,7 +30,8 @@ class VibeQueries(Queries):
     DB_NAME = "mongo"
     COLLECTION = "vibes"
 
-    def create(self, params: VibeIn, created_by: str) -> VibeOut:
+
+    def create(self, params: VibeIn, created_by: str, account_data: dict) -> VibeOut:
         vibe = params.dict()
         vibe["created_by"] = created_by
         result = self.collection.insert_one(vibe)
@@ -38,7 +39,8 @@ class VibeQueries(Queries):
         vibe["id"] = str(vibe["_id"])
         return VibeOut(**vibe)
 
-    def get_one(self, vibe_id:str) -> VibeOut:
+
+    def get_one(self, vibe_id:str, account_data: dict) -> VibeOut:
         vibe = self.collection.find_one({"_id": ObjectId(vibe_id)})
         if vibe:
             vibe["id"] = str(vibe["_id"])
@@ -47,7 +49,7 @@ class VibeQueries(Queries):
             return None
 
 
-    def get_all(self) -> List[VibeOut]:
+    def get_all(self, account_data: dict) -> List[VibeOut]:
         vibes = self.collection.find()
         result = []
         for vibe in vibes:
@@ -56,15 +58,16 @@ class VibeQueries(Queries):
         return result
 
 
-    def get_all_by_creator(self, created_by: str) -> List[VibeOut]:
-        vibes = self.collection.find({"created_by": created_by})
+    def get_all_by_creator(self, account_data: dict) -> List[VibeOut]:
+        vibes = self.collection.find({"created_by": account_data["username"] })
         result = []
         for vibe in vibes:
             vibe["id"] = str(vibe["_id"])
             result.append(VibeOut(**vibe))
         return result
 
-    def get_all_by_mood(self, mood: str) -> List[VibeOut]:
+
+    def get_all_by_mood(self, mood: str, account_data: dict) -> List[VibeOut]:
         vibes = self.collection.find({"mood": mood})
         result = []
         for vibe in vibes:
@@ -73,14 +76,15 @@ class VibeQueries(Queries):
         return result
 
 
-    def edit(self, vibe_id: str, params: VibeIn, created_by: str) -> VibeOut:
+    def edit(self, vibe_id: str, params: VibeIn, account_data: dict) -> VibeOut:
         vibe = params.dict()
         self.collection.update_one({"_id": ObjectId(vibe_id)}, {"$set": vibe})
         vibe["_id"] = ObjectId(vibe_id)
         vibe["id"] = str(vibe["_id"])
-        vibe["created_by"] = created_by
+        vibe["created_by"] = account_data["username"]
         return VibeOut(**vibe)
 
-    def delete(self, vibe_id: str) -> bool:
+
+    def delete(self, vibe_id: str, account_data: dict) -> bool:
         result = self.collection.delete_one({"_id": ObjectId(vibe_id)})
         return result.deleted_count > 0
