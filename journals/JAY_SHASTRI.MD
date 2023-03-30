@@ -35,3 +35,7 @@ JOURNAL ENTRY
     - Working on our Vibe routers and queries
     - Finished testing and setting up the routers and queries
     - Included a created_by field in our VibeOut Model to be accessed through account_data.username from the AccountOut Model
+
+
+> > [W14:D4] 30 March 2023 | Thursday
+    - 
