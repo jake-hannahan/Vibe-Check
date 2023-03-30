@@ -21,3 +21,6 @@ Development Journal
 
 > > [W14:D3] 29 March 2023 | Wednesday
 > > As a team, we finished the routes and queries for our vibe model. We also enabled authentication for each of those routes so that only logged in users have access to these endpoints.
+
+> > [W14:D4] 30 March 2023 | Thursday
+> > As a team, we got our environmental variables and Spotify API calls to start working.
