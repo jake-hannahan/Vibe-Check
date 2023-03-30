@@ -55,5 +55,11 @@ Hashed out final api design issues--met with Riley to ask about:
         a. use pydantic enum , no table, just a list
 We then started on our authentication process.
 
-> > [W14:D2] 27 March 2023 | Tuesday
-Consulted Riley about enum usage for ActivityCategory and Mood. He mentioned that the get request for all moods would loop through all moods. 
+> > [W14:D2] 28 March 2023 | Tuesday
+Consulted Riley about enum usage for ActivityCategory and Mood. He mentioned that the get request for all moods would loop through all moods.
+
+> > [W14:D3] 29 March 2023 | Wednesday
+Finished all routers and queries except our Spotify ones.
+
+> > [W14:D4] 30 March 2023 | Thursday
+Started setting up Spotify routes
