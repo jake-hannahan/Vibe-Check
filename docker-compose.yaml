@@ -20,6 +20,8 @@ services:
             - ./vibe_check:/app
         environment:
             SIGNING_KEY: ${SIGNING_KEY}
+            CLIENT_ID: ${CLIENT_ID}
+            CLIENT_SECRET: ${CLIENT_SECRET}
             WAIT_HOSTS: mongo:27017
             WAIT_BEFORE: 5
             WAIT_TIMEOUT: 60
