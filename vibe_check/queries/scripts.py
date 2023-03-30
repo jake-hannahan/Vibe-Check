@@ -34,3 +34,5 @@ def get_auth_header(token):
     return {"Authorization": "Bearer " + token}
 
 token = get_token()
+
+header = get_auth_header(token)
