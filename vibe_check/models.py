@@ -77,7 +77,12 @@ class Song(BaseModel):
     artist: str
     song: str
 
+
 class Playlist(BaseModel):
     name: str
     spotify_id: str
     songs: List[Song]
+
+
+class PlaylistOut(Playlist):
+    id: str

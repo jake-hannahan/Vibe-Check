@@ -30,8 +30,10 @@ def get_token():
     except Exception as e:
         return {"message": "Error: ${e}"}
 
+
 def get_auth_header(token):
     return {"Authorization": "Bearer " + token}
+
 
 token = get_token()
 
