@@ -38,4 +38,10 @@ JOURNAL ENTRY
 
 
 > > [W14:D4] 30 March 2023 | Thursday
-    - 
+    - Worked on setting up our .env file and debugged the issues involved with it
+    - Finished setting up the get_spotify_playlist method to retrieve information from the Spotify API
+
+
+> > [W15:D1] 03 April 2023 | Monday
+    - Completed the Sptify api endpoints, routers and queries and made sure it runs fine
+    - MVP back-end goals have been complete
