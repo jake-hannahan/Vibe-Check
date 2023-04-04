@@ -63,3 +63,6 @@ Finished all routers and queries except our Spotify ones.
 
 > > [W14:D4] 30 March 2023 | Thursday
 Started setting up Spotify routes
+
+> > [W15:D1] 03 April 2023 | Monday
+Finished setting up Spotify backend routers/queries. 
