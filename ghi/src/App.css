@@ -1,14 +1,68 @@
 .App {
-  text-align: center;
+	text-align: center;
+	background: linear-gradient(90deg, #22c55e 0%, #60a5fa 100%);
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	/* background-color: #282c34; */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+h2 {
+	position: relative;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	font-size: 10vw;
+	font-weight: 900;
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	background-size: 120% 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+	-ms-background-clip: text;
+	-ms-text-fill-color: transparent;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.first {
+	background-image: linear-gradient(45deg, #7794ff, #44107a, #ff1361, #fff800);
+}
+
+.second {
+	background-image: linear-gradient(45deg, #7794ff, #44107a, #ff1361, #fff800);
+}
+
+.shake {
+	animation: 0.8s shake infinite alternate;
+}
+
+@keyframes shake {
+	0% {
+		transform: skewX(-15deg);
+	}
+	5% {
+		transform: skewX(15deg);
+	}
+	10% {
+		transform: skewX(-15deg);
+	}
+	15% {
+		transform: skewX(15deg);
+	}
+	20% {
+		transform: skewX(0deg);
+	}
+	100% {
+		transform: skewX(0deg);
+	}
 }
