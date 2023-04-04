@@ -24,3 +24,9 @@ Development Journal
 
 > > [W14:D4] 30 March 2023 | Thursday
 > > As a team, we got our environmental variables and Spotify API calls to start working.
+
+> > [W15:D1] 3 April 2023 | Monday
+> > As a team, we finished the backend portion of our MVP!! I coded for the day and shared my screen.
+
+> > [W15:D2] 4 April 2023 | Tuesday
+> > As a team, we installed Tailwind and Redux into our project. We began coding the redux portion of our login.
