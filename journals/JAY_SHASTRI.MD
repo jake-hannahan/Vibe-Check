@@ -50,3 +50,8 @@ JOURNAL ENTRY
 > > [W15:D2] 04 April 2023 | Tuesday
     - Organized the frontend and debugged some Tailwind installation issues 
     - Created the login slice
+
+
+> > [W15:D3] 05 April 2023 | Wednesday
+    - Worked on the Frontend authorization features and created the signup slice
+    - Tried to debug a 422 Object not initialized Error in the frontend of our signup feature and got through to making it work
