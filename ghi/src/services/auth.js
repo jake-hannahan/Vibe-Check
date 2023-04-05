@@ -3,8 +3,8 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const authApi = createApi({
     reducerPath: 'authApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: `${process.env.REACT_APP_API_HOST}`,
-        credentials: "include" // sends cookie to FastAPI
+        baseUrl: `${process.env.REACT_APP_VIBE_CHECK_API_HOST}`,
+        credentials: "include"
     }),
     endpoints: (builder) => ({
         getAccount: builder.query({
@@ -24,16 +24,30 @@ export const authApi = createApi({
                     credentials: "include"
                 }
             },
-            invalidatesTags: ['Account', { type: 'Things', id: 'LIST' }]
+            invalidatesTags: ['Account']
         }),
         logout: builder.mutation({
             query: () => ({
                 url: '/token',
                 method: 'DELETE'
             }),
-            invalidatesTags: ['Account', { type: 'Things', id: 'LIST' }]
+            invalidatesTags: ['Account']
+        }),
+        signup: builder.mutation({
+            query: (body) => {
+                const request = {
+                username: `${body.username}`,
+                password: `${body.password}` }
+                return {
+                    url: '/api/accounts',
+                    method: 'POST',
+                    body: request,
+                    credentials: "include"
+                }
+            },
+            invalidatesTags: ['Account']
         })
     })
 })
 
-export const { useGetAccountQuery, useLogoutMutation, useLoginMutation } = authApi;
+export const { useGetAccountQuery, useLogoutMutation, useLoginMutation, useSignupMutation } = authApi;

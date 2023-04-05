@@ -34,7 +34,7 @@ build-front-end-job:
     # You need to substitute in your real values for
     # GROUP_NAME, PROJECT_NAME, & WEBSERVICE_NAME below.
     PUBLIC_URL: https://vibe-check.gitlab.io/module3-project-gamma/
-    REACT_APP_SAMPLE_SERVICE_API_HOST: https://vibe-check-ytit.onrender.com
+    REACT_APP_VIBE_CHECK_API_HOST: https://vibe-check-ytit.onrender.com
   script:
     - cd ghi
     - npm install
