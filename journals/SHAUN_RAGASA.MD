@@ -1,5 +1,7 @@
 Development Journal
 
+<!---------------- WEEK 13 ---------------->
+
 > > [W13:D1] 20 March 2023 | Monday
 > > Collaborated with project partners to brainstorm possible project gamma ideas. Narrowed down most realistic choices for achieving MVP within time allotted.
 
@@ -13,6 +15,8 @@ Development Journal
 > > Edited wire frame design on Excalidraw to make card components on pages more verbose.
 > > Started looking into Tailwind to help determine if it is a viable option vs Bootstrap to achieve the MVP.
 
+<!---------------- WEEK 14 ---------------->
+
 > > [W14:D1] 27 March 2023 | Monday
 > > Moved wireframe and API-design documentation from Excalidraw to docs directory. Went over API-design with the group to finalize, refactor, and catch any possible future issues. Added my Spotify token access code to api-design. Began coding user authentication as a group.
 
@@ -25,8 +29,19 @@ Development Journal
 > > [W14:D4] 30 March 2023 | Thursday
 > > As a team, we got our environmental variables and Spotify API calls to start working.
 
+<!---------------- WEEK 15 ---------------->
+
 > > [W15:D1] 3 April 2023 | Monday
 > > As a team, we finished the backend portion of our MVP!! I coded for the day and shared my screen.
 
 > > [W15:D2] 4 April 2023 | Tuesday
 > > As a team, we installed Tailwind and Redux into our project. We began coding the redux portion of our login.
+
+> > [W15:D3] 5 April 2023 | Wednesday
+> > As a team, we finished coding the signup/login/logout portions of our frontend.
+
+<!---------------- WEEK 16 ---------------->
+
+<!---------------- WEEK 17 ---------------->
+
+<!---------------- WEEK 18 ---------------->
