@@ -45,3 +45,8 @@ JOURNAL ENTRY
 > > [W15:D1] 03 April 2023 | Monday
     - Completed the Sptify api endpoints, routers and queries and made sure it runs fine
     - MVP back-end goals have been complete
+
+
+> > [W15:D2] 04 April 2023 | Tuesday
+    - Organized the frontend and debugged some Tailwind installation issues 
+    - Created the login slice
