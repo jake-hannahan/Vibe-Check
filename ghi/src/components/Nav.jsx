@@ -1,7 +1,22 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function Nav() {
-   
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const handleClick = () => {
+        setIsNavOpen(!isNavOpen);
+        console.log("Stringsssss")
+    }
+
+    
+    const visible = () => {
+        return("!visible flex-grow basis-[100%] items-center lg:!flex lg:basis-auto")
+    }
+
+    const hidden = () => {
+        return("!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto")
+    }
+
     return (
 <nav
   className="relative flex w-full flex-wrap items-center justify-between bg-neutral-900 py-3 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start"
@@ -10,6 +25,7 @@ function Nav() {
     <button
       className="block border-0 bg-transparent px-2.5 py-2 text-neutral-200 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
       type="button"
+      onClick={handleClick}
       data-te-collapse-init
       data-te-target="#navbarSupportedContent4"
       aria-controls="navbarSupportedContent4"
@@ -31,16 +47,16 @@ function Nav() {
 
     
     <div
-      className="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+      className= {isNavOpen?"hidden":"visible"}
       id="navbarSupportedContent4"
       data-te-collapse-item>
-      <a className="pr-2 text-xl font-semibold text-white" href="#">VibeCheck</a>
+      <NavLink className="pr-2 text-xl font-semibold text-white" to="/">VibeCheck</NavLink>
       <ul
         className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
         data-te-navbar-nav-ref>
         <li className="p-2" data-te-nav-item-ref>
           <NavLink
-            className="text-white disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+            className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
             to="account/login"
             data-te-nav-link-ref
             >Login
@@ -48,7 +64,7 @@ function Nav() {
         </li>
         <li className="p-2" data-te-nav-item-ref>
           <NavLink
-            className="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+            className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
             to="account/signup"
             data-te-nav-link-ref
             >Signup
@@ -56,7 +72,7 @@ function Nav() {
         </li>
         <li className="p-2" data-te-nav-item-ref>
           <NavLink
-            className="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+            className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
             to="account/logout"
             data-te-nav-link-ref
             >Logout
