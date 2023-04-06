@@ -55,3 +55,8 @@ JOURNAL ENTRY
 > > [W15:D3] 05 April 2023 | Wednesday
     - Worked on the Frontend authorization features and created the signup slice
     - Tried to debug a 422 Object not initialized Error in the frontend of our signup feature and got through to making it work
+
+
+> > [W15:D4] 06 April 2023 | Thursday
+    - Finised front-end authentication and started working on the main page
+    - Figured out how to fix the issues we had with sizing the divs and buttons on the main page

@@ -40,6 +40,9 @@ Development Journal
 > > [W15:D3] 5 April 2023 | Wednesday
 > > As a team, we finished coding the signup/login/logout portions of our frontend.
 
+> > [W15:D4] 6 April 2023 | Thursday
+> > As a team, we completed the front-end sign-up form. We also installed React-Router-Dom, built the skeleton for our navbar, and began coding the main page. We also included some placeholder css styling for our pages until we decide on a proper theme for our website.
+
 <!---------------- WEEK 16 ---------------->
 
 <!---------------- WEEK 17 ---------------->
