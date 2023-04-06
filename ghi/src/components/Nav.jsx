@@ -39,28 +39,28 @@ function Nav() {
         className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
         data-te-navbar-nav-ref>
         <li className="p-2" data-te-nav-item-ref>
-          <a
+          <NavLink
             className="text-white disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
+            to="account/login"
             data-te-nav-link-ref
-            >Vibe Details</a
-          >
+            >Login
+            </NavLink>
         </li>
         <li className="p-2" data-te-nav-item-ref>
-          <a
+          <NavLink
             className="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
+            to="account/signup"
             data-te-nav-link-ref
-            >My Vibes</a
-          >
+            >Signup
+            </NavLink>
         </li>
         <li className="p-2" data-te-nav-item-ref>
-          <a
+          <NavLink
             className="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
+            to="account/logout"
             data-te-nav-link-ref
-            >All Vibes</a
-          >
+            >Logout
+            </NavLink>
         </li>
       </ul>
     </div>
