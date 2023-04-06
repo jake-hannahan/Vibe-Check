@@ -4,7 +4,7 @@ const initialState = {
   fields: {
     username: "",
     password: "",
- //   passwordConfirmation: ""
+    passwordConfirmation: ""
   },
   errorMessage: null,
 };
@@ -19,17 +19,22 @@ const signupSlice = createSlice({
     handlePasswordChange: (state, action) => {
       state.fields.password = action.payload;
     },
-    // handlePasswordConfirmationChange: (state, action) => {
-    //   state.fields.passwordConfirmation = action.payload;
-    // },
+    handlePasswordConfirmationChange: (state, action) => {
+      state.fields.passwordConfirmation = action.payload;
+    },
+    error: (state, action) => {
+      state.errorMessage = action.payload;
+    },
     reset: () => initialState,
   },
+
 });
 
 export const {
   handlePasswordChange,
   handleUsernameChange,
-//  handlePasswordConfirmationChange,
+  handlePasswordConfirmationChange,
+  error,
   reset,
 } = signupSlice.actions;
 

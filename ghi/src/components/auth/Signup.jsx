@@ -1,20 +1,26 @@
 import React from "react";
+import ErrorNotification from "../ErrorNotification";
 import { useSelector, useDispatch } from "react-redux";
 import {
   handlePasswordChange,
   handleUsernameChange,
-//  handlePasswordConfirmationChange,
+  handlePasswordConfirmationChange,
   reset,
+  error,
 } from "../../features/auth/signupSlice";
 import { useSignupMutation } from "../../services/auth";
 
 const Signup = () => {
   const dispatch = useDispatch();
   const [signup] = useSignupMutation();
-  const { fields } = useSelector((state) => state.signup);
+  const { fields, errorMessage } = useSelector((state) => state.signup);
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("handleSubmit");
+    if (fields.password != fields.passwordConfirmation){
+      dispatch(error("Password does not match confirmation."));
+      return;
+    }
     console.log({ fields });
     signup(fields);
     dispatch(reset());
@@ -29,6 +35,7 @@ const Signup = () => {
           <h5 className="text-xl font-medium text-gray-900 dark:text-white">
             Signup
           </h5>
+          {errorMessage && <ErrorNotification>{errorMessage}</ErrorNotification>}
           <div className="">
             <label
               htmlFor=""
@@ -65,7 +72,7 @@ const Signup = () => {
               onChange={(e) => dispatch(handlePasswordChange(e.target.value))}
             />
           </div>
-          {/* <div>
+          <div>
             <label
               htmlFor=""
               className="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300"
@@ -82,7 +89,7 @@ const Signup = () => {
               value={fields.passwordConfirmation}
               onChange={(e) => dispatch(handlePasswordConfirmationChange(e.target.value))}
             />
-          </div> */}
+          </div>
           <button
             type="submit"
             className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4
