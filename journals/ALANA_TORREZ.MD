@@ -65,4 +65,13 @@ Finished all routers and queries except our Spotify ones.
 Started setting up Spotify routes
 
 > > [W15:D1] 03 April 2023 | Monday
-Finished setting up Spotify backend routers/queries. 
+Finished setting up Spotify backend routers/queries.
+
+> > [W15:D2] 03 April 2023 | Tuesday
+Started with redux auth.
+
+> > [W15:D3] 04 April 2023 | Wednesday
+Finished login, logout, started signup.
+
+> > [W15:D3] 05 April 2023 | Thursday
+Finished signup, set up router page, added links for front-end auth. Started on main page.
