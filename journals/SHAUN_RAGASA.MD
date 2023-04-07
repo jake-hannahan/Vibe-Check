@@ -43,6 +43,9 @@ Development Journal
 > > [W15:D4] 6 April 2023 | Thursday
 > > As a team, we completed the front-end sign-up form. We also installed React-Router-Dom, built the skeleton for our navbar, and began coding the main page. We also included some placeholder css styling for our pages until we decide on a proper theme for our website.
 
+> > [W15:D5] 7 April 2023 | Friday
+> > Decided to take a more chill approach to working today as a group. We decided what remaining components were necessary to complete our MVP, stepped through each component's logic so that we were on the same page as a team, and decided to work on coming up with our app theme/design style over Spring Break so that we can come back and go straight into pair programming each component.
+
 <!---------------- WEEK 16 ---------------->
 
 <!---------------- WEEK 17 ---------------->
