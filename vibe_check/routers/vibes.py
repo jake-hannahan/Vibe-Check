@@ -15,7 +15,7 @@ async def create_vibe(
     account_data: dict = Depends(authenticator.get_current_account_data),
 ):
     created_by = account_data["username"]
-    return queries.create(params, created_by)
+    return queries.create(params, created_by, account_data)
 
 
 @router.get("/api/vibes/me", response_model=List[VibeOut])
