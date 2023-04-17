@@ -15,7 +15,7 @@ async def create_playlist(
     queries: SpotifyQueries = Depends(),
     account_data: dict = Depends(authenticator.get_current_account_data),
 ):
-    return queries.create_playlist(name, spotify_id)
+    return queries.create_playlist(spotify_id, account_data)
 
 
 @router.get("/api/playlists/{playlist_id}", response_model=PlaylistOut)

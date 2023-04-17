@@ -8,8 +8,8 @@ import json
 
 
 def get_spotify_playlist(playlist_id):
-    url = f"""https://api.spotify.com/v1/playlists/{playlist_id}
-    /tracks?fields=items.track(name,artists(name))"""
+    url = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?fields=items.track(name,artists(name))"
+
     response = get(url, headers=header)
 
     try:
@@ -24,7 +24,7 @@ class SpotifyQueries(Queries):
     COLLECTION = "spotify"
 
     def create_playlist(
-        self, name: str, spotify_id: str, account_data: dict
+        self, spotify_id: str, account_data: dict
     ) -> PlaylistOut:
         try:
             data = get_spotify_playlist(spotify_id)
@@ -37,12 +37,12 @@ class SpotifyQueries(Queries):
 
                 songs.append(song)
 
-            playlist = Playlist(name=name, spotify_id=spotify_id, songs=songs)
+            playlist = Playlist(spotify_id=spotify_id, songs=songs)
             playlist = playlist.dict()
             result = self.collection.insert_one(playlist)
-            id = str(result.inserted_id)
-            playlist["id"] = id
-            del playlist["_id"]
+
+            playlist["_id"] = result.inserted_id
+            playlist["id"] = str(playlist["_id"])
 
             return PlaylistOut(**playlist)
 

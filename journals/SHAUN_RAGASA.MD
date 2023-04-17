@@ -48,6 +48,9 @@ Development Journal
 
 <!---------------- WEEK 16 ---------------->
 
+> > [W16:D1] 17 April 2023 | Monday
+> > As a team, ran Flake8 to refactor and clean up backend code.
+
 <!---------------- WEEK 17 ---------------->
 
 <!---------------- WEEK 18 ---------------->
