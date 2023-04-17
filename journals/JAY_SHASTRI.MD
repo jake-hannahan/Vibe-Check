@@ -58,5 +58,13 @@ JOURNAL ENTRY
 
 
 > > [W15:D4] 06 April 2023 | Thursday
-    - Finised front-end authentication and started working on the main page
+    - Finised front-end authentication and started working on the Nav, App and main page
     - Figured out how to fix the issues we had with sizing the divs and buttons on the main page
+
+
+> > [W16:D1] 17 April 2023 | Monday
+    - Deleted unused files and imports using flake8
+    - Worked on our issue creations today, each of us created 2 or more issues
+    - Working on configuring our playlists to connect and be apart of a vibe when it is created
+    - Had to make changes to the backend vibes and playlist models as well as the vibe and spotify queries
+    - Debugged the errors in our backend connecting our Vibes with the spotify API through collections in queries
