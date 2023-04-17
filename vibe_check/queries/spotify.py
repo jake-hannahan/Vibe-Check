@@ -8,14 +8,15 @@ import json
 
 
 def get_spotify_playlist(playlist_id):
-    url = f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks?fields=items.track(name,artists(name))"
+    url = f"""https://api.spotify.com/v1/playlists/{playlist_id}
+    /tracks?fields=items.track(name,artists(name))"""
     response = get(url, headers=header)
 
     try:
         playlist = json.loads(response.content)
         return playlist
     except Exception as e:
-        return {"message": "Error: ${e}"}
+        return {"message": f"Error: ${e}"}
 
 
 class SpotifyQueries(Queries):

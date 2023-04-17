@@ -1,4 +1,3 @@
-from bson.objectid import ObjectId
 from pydantic import BaseModel
 from typing import List
 from jwtdown_fastapi.authentication import Token

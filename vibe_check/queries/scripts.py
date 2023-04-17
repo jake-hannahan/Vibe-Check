@@ -28,7 +28,7 @@ def get_token():
         token = result["access_token"]
         return token
     except Exception as e:
-        return {"message": "Error: ${e}"}
+        return {"message": f"Error: ${e}"}
 
 
 def get_auth_header(token):

@@ -35,3 +35,6 @@ Development Journal
 
 > > [W15:D4] 6 April 2023 | Thursday
 > > Added to signup compenent. Installed react-router-dom to use in our frontend. Set up routes in App.jsx. Worked on a navbar component in Nav.js. Started on our mainpage component called Mainpage.jsx.
+
+> > [W15:D5] 7 April 2023 | Friday
+> > Mapped out all of our componenets on excalidraw. We will do pair programming when we return from break. During break all members are researching color themes, fonts, and overall styling for our vibe check application.

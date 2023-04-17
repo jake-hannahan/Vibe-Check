@@ -1,6 +1,6 @@
 from authenticator import authenticator
 from fastapi import APIRouter, Depends, HTTPException
-from models import Playlist, PlaylistOut
+from models import PlaylistOut
 from queries.spotify import SpotifyQueries
 from typing import List
 
