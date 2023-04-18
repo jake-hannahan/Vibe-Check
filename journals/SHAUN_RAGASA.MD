@@ -50,6 +50,9 @@ Development Journal
 
 > > [W16:D1] 17 April 2023 | Monday
 > > As a team, ran Flake8 to refactor and clean up backend code.
+> > I coded for the day but we collaborated as team. We refactored our create a vibe query so that it calls the create a playlist function first before creating the vibe. We then began discussing our application's visual theme and design.
+
+> > [W16:D2] 18 April 2023 | Tuesday
 
 <!---------------- WEEK 17 ---------------->
 
