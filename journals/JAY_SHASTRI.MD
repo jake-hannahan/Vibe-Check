@@ -68,3 +68,12 @@ JOURNAL ENTRY
     - Working on configuring our playlists to connect and be apart of a vibe when it is created
     - Had to make changes to the backend vibes and playlist models as well as the vibe and spotify queries
     - Debugged the errors in our backend connecting our Vibes with the spotify API through collections in queries
+
+
+> > [W16:D2] 18 April 2023 | Tuesday
+    - Finished debugging the errors in the backend and have completely moved on to the front-end now
+    - Created Songlist component for other components and the card carousel component for the main page
+    - Decided which components to split up and owkr on individually for the next day
+
+
+> > [W16:D3] 19 April 2023 | Wednesday
