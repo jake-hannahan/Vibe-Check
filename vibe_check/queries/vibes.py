@@ -89,6 +89,23 @@ class VibeQueries(Queries):
         self, vibe_id: str, params: VibeIn, account_data: dict
     ) -> VibeOut:
         vibe = params.dict()
+
+        oldVibe = self.get_one(vibe_id, account_data)
+        if vibe["spotify_id"] == oldVibe.dict()["spotify_id"]:
+            pass
+        else:
+            playlist = SpotifyQueries
+            self.COLLECTION = "spotify"
+            playlist.delete_playlist(
+                self, playlist_id=oldVibe.dict()["playlist_id"], account_data=account_data
+            )
+            actualPlaylist = playlist.create_playlist(
+                self, spotify_id=vibe["spotify_id"], account_data=account_data
+            )
+            actualActualPlaylist = actualPlaylist.dict()
+            self.COLLECTION = "vibes"
+            vibe["playlist_id"] = actualActualPlaylist["id"]
+
         self.collection.update_one({"_id": ObjectId(vibe_id)}, {"$set": vibe})
         vibe["_id"] = ObjectId(vibe_id)
         vibe["id"] = str(vibe["_id"])

@@ -5,6 +5,7 @@ import Logout from "./components/auth/Logout";
 import Signup from "./components/auth/Signup";
 import Nav from "./components/Nav";
 import MainPage from "./components/vibes/MainPage";
+import SongList from "./components/vibes/SongList";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 					<Route path="signup" element={<Signup />}/>
 					<Route path="logout" element={<Logout />}/>
 				</Route>
+				<Route path="song" element={<SongList playlistId="643ecf6a5bbf3e1d03d6ac0a"/>}/>
 			</Routes>
 		</BrowserRouter>
 	);

@@ -1,6 +1,6 @@
 function MainPage() {
-    
-    
+
+
     return (
     <div className="container text-center mx-auto my-auto">
       <h1 className="">Find a Vibe</h1>
