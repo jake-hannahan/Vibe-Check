@@ -5,7 +5,7 @@ import Logout from "./components/auth/Logout";
 import Signup from "./components/auth/Signup";
 import Nav from "./components/Nav";
 import MainPage from "./components/vibes/MainPage";
-import SongList from "./components/vibes/SongList";
+import SongList from "./components/cards/SongList";
 
 
 function App() {
