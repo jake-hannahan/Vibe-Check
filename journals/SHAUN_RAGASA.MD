@@ -53,6 +53,7 @@ Development Journal
 > > I coded for the day but we collaborated as team. We refactored our create a vibe query so that it calls the create a playlist function first before creating the vibe. We then began discussing our application's visual theme and design.
 
 > > [W16:D2] 18 April 2023 | Tuesday
+> > As a team, we made the main page carousel card and song list card components. We also began working on redux for our vibe data. We then decided on how to navigate our remaining work for the upcoming week so that we can finish with enough time to review our work before project submission.
 
 <!---------------- WEEK 17 ---------------->
 
