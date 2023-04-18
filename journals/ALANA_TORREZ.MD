@@ -75,3 +75,6 @@ Finished login, logout, started signup.
 
 > > [W15:D3] 05 April 2023 | Thursday
 Finished signup, set up router page, added links for front-end auth. Started on main page.
+
+> > [W16:D1] 17 April 2023 | Monday
+Wrote issues for projects features. Modified backend to make sure spotify and vibe creation were linked.
