@@ -19,7 +19,7 @@ function App() {
 					<Route path="signup" element={<Signup />}/>
 					<Route path="logout" element={<Logout />}/>
 				</Route>
-				<Route path="song" element={<SongList playlistId="643ecf6a5bbf3e1d03d6ac0a"/>}/>
+				<Route path="song" element={<SongList playlistId="643ecf6a5bbf3e1d03d6ac0a" spotifyId="6dl39Fce97aewH2tI2Rlvi"/>}/>
 			</Routes>
 		</BrowserRouter>
 	);
