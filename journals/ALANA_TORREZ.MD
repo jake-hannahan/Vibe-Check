@@ -78,3 +78,6 @@ Finished signup, set up router page, added links for front-end auth. Started on 
 
 > > [W16:D1] 17 April 2023 | Monday
 Wrote issues for projects features. Modified backend to make sure spotify and vibe creation were linked.
+
+> > [W16:D2] 18 April 2023 | Tuesday
+Tested backend functions some more. Started on my vibe component card. Assigned components to each team member.
