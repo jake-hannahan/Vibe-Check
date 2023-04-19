@@ -56,6 +56,7 @@ Development Journal
 > > As a team, we made the main page carousel card and song list card components. We also began working on redux for our vibe data. We then decided on how to navigate our remaining work for the upcoming week so that we can finish with enough time to review our work before project submission.
 
 > > [W16:D3] 19 April 2023 | Wednesday
+> > Worked on the Vibe Detail page. Found embedded Spotify player and changed SongList component to use that code instead.
 
 <!---------------- WEEK 17 ---------------->
 
