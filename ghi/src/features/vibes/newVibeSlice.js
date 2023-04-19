@@ -47,10 +47,13 @@ export const newVibeSlice = createSlice({
             },
         )
     },
+    handleRemoveActivityChange:(state, action) => {
+        state.activities.pop()
+    },
     reset: () => initialState
   },
 });
 
-export const { handleNameChange, handleMoodChange, handleSpotifyIdChange, handlePictureUrlChange, handleActivitiesChange, handleAddActivityChange, reset } = newVibeSlice.actions;
+export const { handleNameChange, handleMoodChange, handleSpotifyIdChange, handlePictureUrlChange, handleActivitiesChange, handleAddActivityChange, handleRemoveActivityChange, reset } = newVibeSlice.actions;
 
 export default newVibeSlice.reducer;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { handleNameChange, handleMoodChange, handleSpotifyIdChange, handlePictureUrlChange, handleActivitiesChange, handleAddActivityChange, reset } from "../../features/vibes/newVibeSlice";
+import { handleNameChange, handleMoodChange, handleSpotifyIdChange, handlePictureUrlChange, handleActivitiesChange, handleAddActivityChange, handleRemoveActivityChange, reset } from "../../features/vibes/newVibeSlice";
 import { useCreateVibeMutation } from "../../services/vibes";
 
 
@@ -19,6 +19,10 @@ function CreateVibeForm() {
 
   const handleAddActivity = () => {
     dispatch(handleAddActivityChange())
+  }
+
+const handleRemoveActivity = () => {
+    dispatch(handleRemoveActivityChange())
   }
 
   return (
@@ -40,13 +44,26 @@ function CreateVibeForm() {
       </label>
       <label className="block mb-2 font-bold text-gray-600">
         Mood:
-        <input
-          type="text"
-          placeholder="Mood"
-          value={newVibe.mood}
-          onChange={(e) => dispatch(handleMoodChange(e.target.value))}
-          className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:outline-none focus:shadow-outline"
-        />
+            <select
+              id={"moods"}
+              value={newVibe.mood}
+              onChange={(e) => dispatch(handleMoodChange(e.target.value))}
+              className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option value="">Choose a Mood</option>
+              <option value="productive">Productive</option>
+              <option value="adventurous">Adventurous</option>
+              <option value="confident">Confident</option>
+              <option value="romantic">Romantic</option>
+              <option value="energetic">Energetic</option>
+              <option value="destructive">Destructive</option>
+              <option value="gloomy">Gloomy</option>
+              <option value="rejected">Rejected</option>
+              <option value="melancholic">Melancholic</option>
+              <option value="chill">Chill</option>
+              <option value="lazy">Lazy</option>
+              <option value="dreamy">Dreamy</option>
+            </select>
       </label>
       <label className="block mb-2 font-bold text-gray-600">
         Spotify ID:
@@ -97,12 +114,13 @@ function CreateVibeForm() {
               placeholder="Name"
               value={activity.name}
               onChange={(e) => dispatch(handleActivitiesChange({ index, field: 'name', value: e.target.value }))}
-              className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:outline-none focus:shadow-outline"
+              className="w-full p-2 mt-2 mb-2 text-gray-700 bg-gray-200 rounded-lg focus:outline-none focus:shadow-outline"
             />
           </div>
         ))}
       </label>
-    <button type="button" onClick={handleAddActivity} className="w-full p-2 mt-4 bg-gray-500 text-white rounded-lg hover:bg-gray-700">Add another Activity</button>
+    <button type="button" onClick={handleAddActivity} className="p-2 mt-4 mr-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700">Add another Activity</button>
+    <button type="button" onClick={handleRemoveActivity} className="p-2 mt-4 bg-red-500 text-white rounded-lg hover:bg-red-700">Remove last Activity</button>
     <button type="submit" className="w-full p-2 mt-4 bg-gray-500 text-white rounded-lg hover:bg-gray-700">Create Vibe</button>
   </form>
 </>
