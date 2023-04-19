@@ -1,5 +1,7 @@
 import CarouselCard from "../cards/CarouselCard";
 
+
+
 function MainPage() {
 
 
@@ -46,6 +48,7 @@ function MainPage() {
       </div>
       <CarouselCard />
     </div>
+
     )
 };
 

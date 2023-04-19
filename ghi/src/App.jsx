@@ -8,6 +8,7 @@ import MainPage from "./components/vibes/MainPage";
 import SongList from "./components/cards/SongList";
 import VibeDetailPage from "./components/vibes/VibeDetailPage";
 import CreateVibeForm from "./components/vibes/CreateVibeForm";
+import VibesListPage from "./components/vibes/VibesListPage";
 
 function App() {
 	return (
