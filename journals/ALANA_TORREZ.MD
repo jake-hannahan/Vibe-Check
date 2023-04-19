@@ -81,3 +81,4 @@ Wrote issues for projects features. Modified backend to make sure spotify and vi
 
 > > [W16:D2] 18 April 2023 | Tuesday
 Tested backend functions some more. Started on my vibe component card. Assigned components to each team member.
+
