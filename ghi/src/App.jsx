@@ -6,7 +6,7 @@ import Signup from "./components/auth/Signup";
 import Nav from "./components/Nav";
 import MainPage from "./components/vibes/MainPage";
 import SongList from "./components/cards/SongList";
-// import VibeDetailPage from "./components/vibes/VibeDetailPage";
+import VibeDetailPage from "./components/vibes/VibeDetailPage";
 import CreateVibeForm from "./components/vibes/CreateVibeForm";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 					element={<SongList playlistId="643ecf6a5bbf3e1d03d6ac0a" spotifyId="6dl39Fce97aewH2tI2Rlvi" />}
 				/>
 				<Route path="new" element={<CreateVibeForm />} />
-				{/* <Route path="detail" element={<VibeDetailPage vibeId="64401b1e741a5c8cf7a908db" />} /> */}
+				<Route path="detail" element={<VibeDetailPage vibeId="64401b1e741a5c8cf7a908db" />} />
 				{/* Alana */}
 				{/* Jay */}
 			</Routes>

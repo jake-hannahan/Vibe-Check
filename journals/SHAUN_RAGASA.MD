@@ -55,6 +55,8 @@ Development Journal
 > > [W16:D2] 18 April 2023 | Tuesday
 > > As a team, we made the main page carousel card and song list card components. We also began working on redux for our vibe data. We then decided on how to navigate our remaining work for the upcoming week so that we can finish with enough time to review our work before project submission.
 
+> > [W16:D3] 19 April 2023 | Wednesday
+
 <!---------------- WEEK 17 ---------------->
 
 <!---------------- WEEK 18 ---------------->
