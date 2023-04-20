@@ -97,7 +97,9 @@ class VibeQueries(Queries):
             playlist = SpotifyQueries
             self.COLLECTION = "spotify"
             playlist.delete_playlist(
-                self, playlist_id=oldVibe.dict()["playlist_id"], account_data=account_data
+                self,
+                playlist_id=oldVibe.dict()["playlist_id"],
+                account_data=account_data,
             )
             actualPlaylist = playlist.create_playlist(
                 self, spotify_id=vibe["spotify_id"], account_data=account_data

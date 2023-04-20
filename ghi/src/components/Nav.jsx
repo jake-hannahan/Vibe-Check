@@ -5,7 +5,6 @@ function Nav() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const handleClick = () => {
 		setIsNavOpen(!isNavOpen);
-		console.log("Stringsssss");
 	};
 
 	const visible = "!visible flex-grow basis-[100%] items-center lg:!flex lg:basis-auto";

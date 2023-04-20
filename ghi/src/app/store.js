@@ -5,6 +5,7 @@ import { authApi } from "../services/auth";
 import signupReducer from "../features/auth/signupSlice";
 import { spotifyApi } from "../services/spotify";
 import { vibeApi } from "../services/vibes";
+import newVibeReducer from "../features/vibes/newVibeSlice";
 
 export const store = configureStore({
 	reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
 		[authApi.reducerPath]: authApi.reducer,
 		[spotifyApi.reducerPath]: spotifyApi.reducer,
 		[vibeApi.reducerPath]: vibeApi.reducer,
+		newVibe: newVibeReducer,
 	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware().concat([authApi.middleware, spotifyApi.middleware, vibeApi.middleware]),

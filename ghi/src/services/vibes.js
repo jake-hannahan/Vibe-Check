@@ -27,7 +27,17 @@ export const vibeApi = createApi({
       query: (props) => `/${props.vibeId}`,
       providesTags: ["Vibe"],
     }),
-  }),
-});
+    createVibe: builder.mutation({
+        query: (body) => ({
+            url: '',
+            method: 'POST',
+            body: body,
+            credentials: "include"
+        }),
+        invalidatesTags: [{ type: 'Vibes', id: 'LIST' }]
+    }),
+    })
+})
 
-export const { useGetVibesQuery, useGetVibesByCreatorQuery, useGetVibeQuery } = vibeApi;
+
+export const { useGetVibesQuery, useGetVibesByCreatorQuery, useGetVibeQuery, useCreateVibeMutation } = vibeApi;
