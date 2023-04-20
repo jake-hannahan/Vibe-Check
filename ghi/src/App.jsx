@@ -30,6 +30,7 @@ const testVibe = {
     created_by: "user",
     playlist_id: "643ecf6a5bbf3e1d03d6ac0a"
   };
+import MyVibesCard from "./components/cards/MyVibeCard";
 
 function App() {
 	return (
@@ -51,7 +52,7 @@ function App() {
 				<Route path="detail" element={<VibeDetailPage vibeId="64417679a41679470e8a72d3" />} />
 				{/* Alana */}
 				{/* Jay */}
-
+				<Route path="my" element={<MyVibesCard />} />
 			</Routes>
 		</BrowserRouter>
 	);
