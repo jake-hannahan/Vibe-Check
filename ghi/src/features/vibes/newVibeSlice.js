@@ -48,7 +48,9 @@ export const newVibeSlice = createSlice({
         )
     },
     handleRemoveActivityChange:(state, action) => {
-        state.activities.pop()
+        if (state.activities.length > 1) {
+            state.activities.pop()
+        }
     },
     reset: () => initialState
   },
