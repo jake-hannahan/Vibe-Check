@@ -9,7 +9,7 @@ router = APIRouter()
 
 
 @router.post("/api/playlists", response_model=PlaylistOut)
-async def create_playlist(
+def create_playlist(
     name: str,
     spotify_id: str,
     queries: SpotifyQueries = Depends(),
