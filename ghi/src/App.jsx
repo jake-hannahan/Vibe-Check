@@ -26,7 +26,7 @@ function App() {
 					element={<SongList playlistId="643ecf6a5bbf3e1d03d6ac0a" spotifyId="6dl39Fce97aewH2tI2Rlvi" />}
 				/>
 				<Route path="new" element={<CreateVibeForm />} />
-				<Route path="detail" element={<VibeDetailPage vibeId="64417679a41679470e8a72d3" />} />
+				<Route path="detail" element={<VibeDetailPage vibeId="64417aa0a41679470e8a72d5" />} />
 				{/* Alana */}
 				{/* Jay */}
 			</Routes>
