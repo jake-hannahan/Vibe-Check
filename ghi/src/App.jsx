@@ -9,6 +9,7 @@ import SongList from "./components/cards/SongList";
 import VibeDetailPage from "./components/vibes/VibeDetailPage";
 import CreateVibeForm from "./components/vibes/CreateVibeForm";
 import VibesListPage from "./components/vibes/VibesListPage";
+import MyVibesCard from "./components/cards/MyVibeCard";
 
 function App() {
 	return (
@@ -29,6 +30,7 @@ function App() {
 				<Route path="detail" element={<VibeDetailPage vibeId="64417679a41679470e8a72d3" />} />
 				{/* Alana */}
 				{/* Jay */}
+				<Route path="my" element={<MyVibesCard />} />
 			</Routes>
 		</BrowserRouter>
 	);
