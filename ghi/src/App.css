@@ -1,4 +1,5 @@
-.App {
+/* Original CSS */
+/* .App {
 	text-align: center;
 }
 
@@ -11,4 +12,54 @@
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
+} */
+
+/* Shaun Messing With CSS */
+.App {
+	text-align: center;
+	background: linear-gradient(90deg, #22c55e 0%, #60a5fa 100%);
+}
+
+.App-header {
+	/* background-color: #282c34; */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.bg {
+	background-image: linear-gradient(45deg, #028090, #f0f3bd, #02c39a, #00a896);
+}
+
+.shake {
+	animation: 0.8s shake infinite alternate;
+}
+
+@keyframes shake {
+	0% {
+		transform: skewX(-15deg);
+	}
+	5% {
+		transform: skewX(15deg);
+	}
+	10% {
+		transform: skewX(-15deg);
+	}
+	15% {
+		transform: skewX(15deg);
+	}
+	20% {
+		transform: skewX(0deg);
+	}
+	100% {
+		transform: skewX(0deg);
+	}
+}
+
+.goback:hover {
+	background-color: #00a896;
 }
