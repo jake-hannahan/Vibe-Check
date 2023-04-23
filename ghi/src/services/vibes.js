@@ -48,4 +48,4 @@ export const vibeApi = createApi({
 })
 
 
-export const { useGetVibesQuery, useGetVibesByCreatorQuery, useGetVibeQuery, useCreateVibeMutation, useUpdateVibeMutation } = vibeApi;
+export const { useGetVibesQuery, useGetVibesByCreatorQuery, useGetVibeQuery, useGetVibeByMoodQuery, useCreateVibeMutation, useUpdateVibeMutation } = vibeApi;
