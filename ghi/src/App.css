@@ -59,3 +59,7 @@
 		transform: skewX(0deg);
 	}
 }
+
+.goback:hover {
+	background-color: #00a896;
+}
