@@ -10,6 +10,7 @@ import VibeDetailPage from "./components/vibes/VibeDetailPage";
 import CreateVibeForm from "./components/vibes/CreateVibeForm";
 // import VibesListPage from "./components/vibes/VibesListPage";
 import EditVibeForm from "./components/vibes/EditVibeForm";
+import MyVibesCard from "./components/cards/MyVibeCard";
 
 const testVibe = {
     mood: "chill",
@@ -30,7 +31,7 @@ const testVibe = {
     created_by: "user",
     playlist_id: "643ecf6a5bbf3e1d03d6ac0a"
   };
-import MyVibesCard from "./components/cards/MyVibeCard";
+
 
 function App() {
 	return (
