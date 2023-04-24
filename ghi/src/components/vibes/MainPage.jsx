@@ -24,6 +24,34 @@ function MainPage() {
         "rejected",
         "melancholic"
     ];
+    const colorArr = [
+        "sky",
+        "teal",
+        "cyan",
+        "orange",
+        "yellow",
+        "amber",
+        "rose",
+        "lime",
+        "stone",
+        "gray",
+        "violet",
+        "indigo"
+    ]
+    const colors = {
+        sky: 'bg-sky-400',
+        teal: 'bg-teal-400',
+        cyan: 'bg-cyan-400',
+        orange: 'bg-orange-400',
+        yellow: 'bg-yellow-400',
+        amber: 'bg-amber-400',
+        rose: 'bg-rose-400',
+        lime: 'bg-lime-400',
+        stone: 'bg-stone-400',
+        gray: 'bg-gray-400',
+        violet: 'bg-violet-400',
+        indigo: 'bg-indigo-400',
+    }
     // let start = 0
     // let end = 4
     // const changeSlice = () => {
@@ -133,17 +161,17 @@ function MainPage() {
                 </button>
             </div>
       </div>
-      <div className="relative mt-8 p-8 bg-blue-400">
+      <div className={`relative mt-8 p-8 ${colors[colorArr[count]]}`}>
         <h1 className="absolute top-3 left-3 text-2xl text-gray-800 font-bold rounded-md">Vibes for when you're feeling {moodArr[count]}</h1>
       </div>
-      <div className="grid grid-cols-4 gap-4 bg-blue-400 pb-4 pl-10">
+      <div className={`grid grid-cols-4 gap-4 ${colors[colorArr[count]]} p-2`}>
         {data.filter(vibe => vibe.mood === moodArr[count]).slice(0,4).map(vibe => {
             return (
-                    <CarouselCard vibe={vibe} key={vibe.id}/>
+                    <CarouselCard vibe={vibe} color={colorArr[count]} key={vibe.id}/>
             )
         })}
       </div>
-      <div className="relative p-8 bg-blue-400">
+      <div className={`relative p-8 ${colors[colorArr[count]]}`}>
         <NavLink type="button" to={"list"} className="absolute top-0 right-20 bg-blue-500 hover:bg-blue-700 text-white font-bold my-1 py-3 px-4 rounded-full">
             Show All Vibes
         </NavLink>
