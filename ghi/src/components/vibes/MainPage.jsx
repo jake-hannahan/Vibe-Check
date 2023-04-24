@@ -67,7 +67,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(3))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-orange-400 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-full"
                     >
                     Productive
                 </button>
@@ -75,7 +75,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(4))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-2 px-4 border-b-4 border-yellow-700 hover:border-yellow-500 rounded w-full"
                     >
                     Adventurous
                 </button>
@@ -83,7 +83,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(5))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-amber-500 hover:bg-amber-400 text-white font-bold py-2 px-4 border-b-4 border-amber-700 hover:border-amber-500 rounded w-full"
                     >
                     Confident
                 </button>
@@ -91,7 +91,7 @@ function MainPage() {
              <div>
                 <button
                     onClick={() => dispatch(set(6))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-rose-500 hover:bg-rose-400 text-white font-bold py-2 px-4 border-b-4 border-rose-700 hover:border-rose-500 rounded w-full"
                     >
                     Romantic
                 </button>
@@ -99,7 +99,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(7))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-lime-500 hover:bg-lime-400 text-white font-bold py-2 px-4 border-b-4 border-lime-700 hover:border-lime-500 rounded w-full"
                     >
                     Energetic
                 </button>
@@ -107,7 +107,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(8))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-stone-500 hover:bg-stone-400 text-white font-bold py-2 px-4 border-b-4 border-stone-700 hover:border-stone-500 rounded w-full"
                     >
                     Destructive
                 </button>
@@ -115,7 +115,7 @@ function MainPage() {
              <div>
                 <button
                     onClick={() => dispatch(set(9))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-gray-700 hover:border-gray-500 rounded w-full"
                     >
                     Gloomy
                 </button>
@@ -123,7 +123,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(10))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-violet-500 hover:bg-violet-400 text-white font-bold py-2 px-4 border-b-4 border-violet-700 hover:border-violet-500 rounded w-full"
                     >
                     Rejected
                 </button>
@@ -131,7 +131,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(11))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-2 px-4 border-b-4 border-indigo-700 hover:border-indigo-500 rounded w-full"
                     >
                     Melancholic
                 </button>
@@ -139,7 +139,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(0))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-sky-500 hover:bg-sky-400 text-white font-bold py-2 px-4 border-b-4 border-sky-700 hover:border-sky-500 rounded w-full"
                     >
                     Chill
                 </button>
@@ -147,7 +147,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(1))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 border-b-4 border-teal-700 hover:border-teal-500 rounded w-full"
                     >
                     Lazy
                 </button>
@@ -155,7 +155,7 @@ function MainPage() {
             <div>
                 <button
                     onClick={() => dispatch(set(2))}
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    className="bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-2 px-4 border-b-4 border-cyan-700 hover:border-cyan-500 rounded w-full"
                     >
                     Dreamy
                 </button>
@@ -164,7 +164,7 @@ function MainPage() {
       <div className={`relative mt-8 p-8 ${colors[colorArr[count]]}`}>
         <h1 className="absolute top-3 left-3 text-2xl text-gray-800 font-bold rounded-md">Vibes for when you're feeling {moodArr[count]}</h1>
       </div>
-      <div className={`grid grid-cols-4 gap-4 ${colors[colorArr[count]]} p-2`}>
+      <div className={`grid grid-cols-4 gap-1 justify-items-center p-1 ${colors[colorArr[count]]}`}>
         {data.filter(vibe => vibe.mood === moodArr[count]).slice(0,4).map(vibe => {
             return (
                     <CarouselCard vibe={vibe} color={colorArr[count]} key={vibe.id}/>
