@@ -7,6 +7,7 @@ function Nav() {
 		setIsNavOpen(!isNavOpen);
 	};
 
+
 	const visible = "!visible flex-grow basis-[100%] items-center lg:!flex lg:basis-auto";
 
 	const hidden = "!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto";
@@ -42,12 +43,27 @@ function Nav() {
 						</svg>
 					</span>
 				</button>
-
+				<NavLink className="pr-2 text-xl font-semibold text-white" to="/">VibeCheck</NavLink>
 				<div className={isNavOpen ? hidden : visible} id="navbarSupportedContent4" data-te-collapse-item>
-					<NavLink className="pr-2 text-xl font-semibold text-white" to="/">
-						VibeCheck
-					</NavLink>
 					<ul className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
+						<li className="p-2" data-te-nav-item-ref>
+							<NavLink
+								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+								to=""
+								data-te-nav-link-ref
+							>
+								Home
+							</NavLink>
+						</li>
+						<li className="p-2" data-te-nav-item-ref>
+							<NavLink
+								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+								to="new"
+								data-te-nav-link-ref
+							>
+								Craft Vibe
+							</NavLink>
+						</li>
 						<li className="p-2" data-te-nav-item-ref>
 							<NavLink
 								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
@@ -78,8 +94,8 @@ function Nav() {
 					</ul>
 				</div>
 
-				<div className="relative flex items-center">
-					<div className="relative" data-te-dropdown-ref>
+				{/* <div className="relative flex items-center">
+					<div className="relative" data-te-dropdown-ref> */}
 						{/* For stretch goals, the notification feature! */}
 						{/* <a
           className="hidden-arrow mr-4 flex items-center text-white opacity-60 hover:opacity-80 focus:opacity-80"
@@ -106,7 +122,7 @@ function Nav() {
           >
         </a> */}
 
-						<ul
+						{/* <ul
 							className="absolute left-auto right-0 z-[1000] float-left m-0 mt-1 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
 							aria-labelledby="dropdownMenuButton1"
 							data-te-dropdown-menu-ref
@@ -190,9 +206,9 @@ function Nav() {
 									Something else here
 								</a>
 							</li>
-						</ul>
-					</div>
-				</div>
+						</ul> */}
+					{/* </div>
+				</div> */}
 			</div>
 		</nav>
 	);

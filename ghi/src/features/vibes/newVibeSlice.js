@@ -30,9 +30,6 @@ export const newVibeSlice = createSlice({
     handlePictureUrlChange: (state, action) => {
         state.picture_url = action.payload
     },
-    handleNameChange: (state, action) => {
-        state.name = action.payload
-    },
     handleActivitiesChange: (state, action) => {
         const { index, field, value } = action.payload;
         const newActivities = [...state.activities];

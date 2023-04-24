@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import SongList from "../cards/SongList";
 import { useGetVibeQuery } from "../../services/vibes";
 
@@ -50,7 +51,7 @@ function VibeDetailPage(props) {
 						{/* Creating white space between mood and activities */}
 						<div className="h-8 w-auto"></div>
 						{data.activities.map((activity) => (
-							<div key={activity.name}>
+							<div key={activity.name} className="mb-3">
 								<h1 className="text-center text-2xl text-white font-bold">
 									{capitalizeString(activity.category)}
 								</h1>
@@ -62,6 +63,13 @@ function VibeDetailPage(props) {
 					<div className="col-span-1 flex justify-center">
 						<SongList spotifyId={data.spotify_id} />
 					</div>
+				</div>
+				<div className="col-span-3 flex justify-end items-end mt-2">
+					<button className="text-white font-bold py-2 px-4 rounded-full bg-[#02c39a] hover:bg-[#00a896]">
+						<NavLink className="pr-2 text-xl font-semibold text-white" to="../">
+							Back to All the Vibes
+						</NavLink>
+					</button>
 				</div>
 			</div>
 		</>
