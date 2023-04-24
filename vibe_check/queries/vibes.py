@@ -42,11 +42,11 @@ class VibeQueries(Queries):
         actualPlaylist = playlist.create_playlist(
             self, spotify_id=vibe["spotify_id"], account_data=account_data
         )
-        actualActualPlaylist = actualPlaylist.dict()
+        # actualPlaylist = actualPlaylist.dict()
 
         self.COLLECTION = "vibes"
 
-        vibe["playlist_id"] = actualActualPlaylist["id"]
+        vibe["playlist_id"] = actualPlaylist.dict()["id"]
         result = self.collection.insert_one(vibe)
         vibe["_id"] = result.inserted_id
         vibe["id"] = str(vibe["_id"])
