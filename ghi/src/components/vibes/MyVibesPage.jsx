@@ -7,7 +7,6 @@ function MyVibesPage() {
     
     const { data, isLoading } = useGetVibesByCreatorQuery();
     if (isLoading) return <div>Loading...</div>
-    console.log(data)
     const rows = Math.ceil(data.length/3);
     
 

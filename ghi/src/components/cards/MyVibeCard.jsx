@@ -1,12 +1,11 @@
 import React from "react";
 import { useGetVibesByCreatorQuery } from "../../services/vibes";
 import SongList from "./SongList";
+import { NavLink } from "react-router-dom";
 
 
 function MyVibesCard(props) {
-    // const { data, isLoading } = useGetVibesByCreatorQuery(props)
-    // console.log(props)
-    // if (isLoading) return <div>Loading...</div>
+
     return (
     <>
         <div className="flex justify-center bg-black text-white mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg border-x-4 border-y-4 border-green-500">
@@ -24,6 +23,14 @@ function MyVibesCard(props) {
                                         </div>
                                     ))}
                                 </li>
+                            </ul>
+                            <ul>
+                                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                                    <NavLink to={{pathname:'/edit'}} state={{vibe: props.vibe}}>Edit</NavLink>
+                                </button>
+                                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                                    <NavLink to={{pathname: '/detail'}} state={{vibeId: props.vibe.id}}>Details</NavLink>
+                                </button>
                             </ul>
                     </div>
                     <div className="border-2 border-sky-500 flex-2 overflow-hidden overflow-y-auto float-right rounded-lg w-full h-full grow">

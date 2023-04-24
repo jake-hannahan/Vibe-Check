@@ -2,24 +2,27 @@ import { useSelector, useDispatch } from "react-redux";
 import { handleNameChange, handleMoodChange, handleSpotifyIdChange, handlePictureUrlChange, handleActivitiesChange, handleAddActivityChange, handleRemoveActivityChange, reset } from "../../features/vibes/newVibeSlice";
 import { useUpdateVibeMutation } from "../../services/vibes";
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 
-function EditVibeForm(props) {
+function EditVibeForm() {
   const dispatch = useDispatch()
   const [updateVibe] = useUpdateVibeMutation()
   const newVibe = useSelector((state) => state.newVibe);
   const activities = useSelector((state) => state.newVibe.activities);
+  const location = useLocation()
+  const {state} = location
 
 
   const setNewVibeData = () => {
-    dispatch(handleNameChange(props.vibe.name))
-    dispatch(handleMoodChange(props.vibe.mood))
-    dispatch(handleSpotifyIdChange(props.vibe.spotify_id))
-    dispatch(handlePictureUrlChange(props.vibe.picture_url))
-    for(let i=0; i<props.vibe.activities.length - 1; i++) {
+    dispatch(handleNameChange(state.vibe.name))
+    dispatch(handleMoodChange(state.vibe.mood))
+    dispatch(handleSpotifyIdChange(state.vibe.spotify_id))
+    dispatch(handlePictureUrlChange(state.vibe.picture_url))
+    for(let i=0; i<state.vibe.activities.length - 1; i++) {
         handleAddActivity()
     }
-    {props.vibe.activities.map((activity, index) => (
+    {state.vibe.activities.map((activity, index) => (
         dispatch(handleActivitiesChange({ index, field: "category", value: activity.category})),
         dispatch(handleActivitiesChange({ index, field: 'name', value: activity.name }))
   ))}
@@ -31,8 +34,8 @@ function EditVibeForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(newVibe, props.vibe.id)
-    updateVibe({ id: props.vibe.id, body: newVibe })
+    console.log(newVibe, state.vibe.id)
+    updateVibe({ id: state.vibe.id, body: newVibe })
     dispatch(reset())
   };
 
