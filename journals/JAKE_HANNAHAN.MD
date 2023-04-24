@@ -38,3 +38,18 @@ Development Journal
 
 > > [W15:D5] 7 April 2023 | Friday
 > > Mapped out all of our componenets on excalidraw. We will do pair programming when we return from break. During break all members are researching color themes, fonts, and overall styling for our vibe check application.
+
+> > [W16:D1] 17 April 2023 | Monday
+> > Ran Flake8 on our code and cleaned it up. We changed our create a vibe so it creates a playlist, grabs that playlist id, places it into our vibe, and then creates the vibe.
+
+> > [W16:D2] 18 April 2023 | Tuesday
+> > Team coding, created a CarouselCard.jsx component to use on our mainpage. Created a SongList.jsx component to use in our MyVibeCard.jsx and VibeDetailPage.jsx. Then we mapped out the work to complete as a team on excalidraw.
+
+> > [W16:D3] 19 April 2023 | Wednesday
+> > I worked on CreateVibeForm.jsx which needed newVibeSlice.js in order to use and update redux state with data for a new vibe. Added an API endpoint to create a vibe from our frontend.
+
+> > [W16:D4] 20 April 2023 | Thursday
+> > Finished up CreateVibeForm.jsx. A user can no longer remove an activity if there is only one. Finished EditVibeForm.jsx and added an API endpoint to update a vibe from our frontend. Added Craft a vibe to our navbar.
+
+> > [W17:D1] 24 April 2023 | Monday
+> > Added carousel to MainPage.jsx that uses the CarouselCard.jsx component to populate it. Created a counterSlice.jsx to increment or set value that ranges from 0-11 and those correlate with our 12 different moods. Need this in order to update the carousel when a user clicks on a mood or when a user clicks the arrow button on the carousel. Added background color to carousel and CarouselCards.jsx and those background colors change with each mood.

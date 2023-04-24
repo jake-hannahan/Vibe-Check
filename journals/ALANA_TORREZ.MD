@@ -82,3 +82,8 @@ Wrote issues for projects features. Modified backend to make sure spotify and vi
 > > [W16:D2] 18 April 2023 | Tuesday
 Tested backend functions some more. Started on my vibe component card. Assigned components to each team member.
 
+> > [W16:D3] 19 April 2023 | Wednesday
+Got started on building out listcard component and listvibes page.
+
+> > [W17:D4] 20 April 2023 | Thursday
+Continued with building out components assigned to me. Shaun peer coded with me so I could move past some blockers. 
