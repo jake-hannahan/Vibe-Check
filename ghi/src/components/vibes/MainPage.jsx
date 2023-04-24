@@ -2,7 +2,7 @@ import React from "react";
 import CarouselCard from "../cards/CarouselCard";
 import { useGetVibesQuery } from "../../services/vibes";
 import { useSelector, useDispatch } from 'react-redux'
-import { increment } from "../../features/vibes/counterSlice";
+import { increment, set } from "../../features/vibes/counterSlice";
 import { NavLink } from "react-router-dom";
 
 function MainPage() {
@@ -24,6 +24,12 @@ function MainPage() {
         "rejected",
         "melancholic"
     ];
+    // let start = 0
+    // let end = 4
+    // const changeSlice = () => {
+    //     start += 4;
+    //     end += 4
+    // }
 
     return (
 <>
@@ -31,40 +37,100 @@ function MainPage() {
       <h1 className="overflow-hidden text-center text-5xl text-gray-800 font-bold rounded-md p-3 my-6">Find a Vibe</h1>
       <div className="container grid gap-2 md:grid-cols-3 xs:grid-cols-1 sm:grid-cols-2">
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Productive</button>
+                <button
+                    onClick={() => dispatch(set(3))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Productive
+                </button>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Adventurous</button>
+                <button
+                    onClick={() => dispatch(set(4))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Adventurous
+                </button>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Confident</button>
+                <button
+                    onClick={() => dispatch(set(5))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Confident
+                </button>
             </div>
              <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Romantic</button>
+                <button
+                    onClick={() => dispatch(set(6))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Romantic
+                </button>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Energetic</button>
+                <button
+                    onClick={() => dispatch(set(7))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Energetic
+                </button>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Destructive</button>
+                <button
+                    onClick={() => dispatch(set(8))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Destructive
+                </button>
             </div>
              <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Gloomy</button>
+                <button
+                    onClick={() => dispatch(set(9))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Gloomy
+                </button>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Rejected</button>
+                <button
+                    onClick={() => dispatch(set(10))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Rejected
+                </button>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Melancholic</button>
+                <button
+                    onClick={() => dispatch(set(11))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Melancholic
+                </button>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Chill</button>
+                <button
+                    onClick={() => dispatch(set(0))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Chill
+                </button>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Lazy</button>
+                <button
+                    onClick={() => dispatch(set(1))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Lazy
+                </button>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full">Dreamy</button>
+                <button
+                    onClick={() => dispatch(set(2))}
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-full"
+                    >
+                    Dreamy
+                </button>
             </div>
       </div>
       <div className="relative mt-8 p-8 bg-blue-400">
