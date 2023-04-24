@@ -1,18 +1,41 @@
 import { useSelector, useDispatch } from "react-redux";
 import { handleNameChange, handleMoodChange, handleSpotifyIdChange, handlePictureUrlChange, handleActivitiesChange, handleAddActivityChange, handleRemoveActivityChange, reset } from "../../features/vibes/newVibeSlice";
-import { useCreateVibeMutation } from "../../services/vibes";
+import { useUpdateVibeMutation } from "../../services/vibes";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 
-function CreateVibeForm() {
+function EditVibeForm() {
   const dispatch = useDispatch()
-  const [createVibe] = useCreateVibeMutation()
+  const [updateVibe] = useUpdateVibeMutation()
   const newVibe = useSelector((state) => state.newVibe);
   const activities = useSelector((state) => state.newVibe.activities);
+  const location = useLocation()
+  const {state} = location
+
+
+  const setNewVibeData = () => {
+    dispatch(handleNameChange(state.vibe.name))
+    dispatch(handleMoodChange(state.vibe.mood))
+    dispatch(handleSpotifyIdChange(state.vibe.spotify_id))
+    dispatch(handlePictureUrlChange(state.vibe.picture_url))
+    for(let i=0; i<state.vibe.activities.length - 1; i++) {
+        handleAddActivity()
+    }
+    {state.vibe.activities.map((activity, index) => (
+        dispatch(handleActivitiesChange({ index, field: "category", value: activity.category})),
+        dispatch(handleActivitiesChange({ index, field: 'name', value: activity.name }))
+  ))}
+};
+  useEffect(() => {
+        setNewVibeData();
+    }, []);
 
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    createVibe(newVibe)
+    console.log(newVibe, state.vibe.id)
+    updateVibe({ id: state.vibe.id, body: newVibe })
     dispatch(reset())
   };
 
@@ -20,13 +43,12 @@ function CreateVibeForm() {
     dispatch(handleAddActivityChange())
   }
 
-const handleRemoveActivity = () => {
+  const handleRemoveActivity = () => {
     dispatch(handleRemoveActivityChange())
   }
-
   return (
 <>
-      <h1 className="text-4xl mt-4 mb-2 font-bolder text-gray-900 text-center">Create a Vibe</h1>
+      <h1 className="text-4xl mt-4 mb-2 font-bolder text-gray-900 text-center">Edit a Vibe</h1>
     <form
       onSubmit={handleSubmit}
       className="max-w-sm mx-auto p-6 bg-gray-400 rounded-lg shadow-md"
@@ -120,10 +142,10 @@ const handleRemoveActivity = () => {
       </label>
     <button type="button" onClick={handleAddActivity} className="p-2 mt-4 mr-4 bg-blue-500 text-white rounded-lg hover:bg-blue-700">Add another Activity</button>
     <button type="button" onClick={handleRemoveActivity} className="p-2 mt-4 bg-red-500 text-white rounded-lg hover:bg-red-700">Remove last Activity</button>
-    <button type="submit" className="w-full p-2 mt-4 bg-gray-500 text-white rounded-lg hover:bg-gray-700">Create Vibe</button>
+    <button type="submit" className="w-full p-2 mt-4 bg-gray-500 text-white rounded-lg hover:bg-gray-700">Edit Vibe</button>
   </form>
 </>
   );
 };
 
-export default CreateVibeForm;
+export default EditVibeForm;

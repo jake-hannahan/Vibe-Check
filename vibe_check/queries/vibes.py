@@ -3,6 +3,9 @@ from models import Mood, ActivityCategory, VibeIn, VibeOut
 from typing import List
 from bson import ObjectId
 from .spotify import SpotifyQueries
+from pydantic import ValidationError
+import time
+
 
 
 class MoodQueries(Queries):
@@ -39,6 +42,7 @@ class VibeQueries(Queries):
 
         playlist = SpotifyQueries
         self.COLLECTION = "spotify"
+
         actualPlaylist = playlist.create_playlist(
             self, spotify_id=vibe["spotify_id"], account_data=account_data
         )
@@ -50,6 +54,7 @@ class VibeQueries(Queries):
         result = self.collection.insert_one(vibe)
         vibe["_id"] = result.inserted_id
         vibe["id"] = str(vibe["_id"])
+
 
         return VibeOut(**vibe)
 
@@ -92,6 +97,7 @@ class VibeQueries(Queries):
 
         oldVibe = self.get_one(vibe_id, account_data)
         if vibe["spotify_id"] == oldVibe.dict()["spotify_id"]:
+            vibe["playlist_id"] = oldVibe.dict()["playlist_id"]
             pass
         else:
             playlist = SpotifyQueries

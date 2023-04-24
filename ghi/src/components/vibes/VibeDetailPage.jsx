@@ -2,9 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import SongList from "../cards/SongList";
 import { useGetVibeQuery } from "../../services/vibes";
+import { useLocation } from "react-router-dom";
 
-function VibeDetailPage(props) {
-	const { data, isLoading } = useGetVibeQuery(props);
+function VibeDetailPage() {
+	const location = useLocation()
+  	const {state} = location
+	const { data, isLoading } = useGetVibeQuery(state);
 	if (isLoading) return <div>Vibe Loading...</div>;
 
 	// Our moods are all lower case; this just capitalizes them for pretty aesthetic
