@@ -47,24 +47,24 @@ function MyVibesCard(props) {
             darkColor: 'bg-indigo-500'},
     };
 
-  const moodColor = moodColorMap[props.vibe.mood.toLowerCase()].darkColor||"bg-gray-400";
-  const moodNameBackgroundColor = moodColorMap[props.vibe.mood.toLowerCase()].color||"bg-gray-500";
+  const moodColor = moodColorMap[props.vibe.mood.toLowerCase()].color||"bg-gray-400";
+  const moodNameBackgroundColor = moodColorMap[props.vibe.mood.toLowerCase()].darkColor||"bg-gray-500";
 
     return (
     <>
         <div className={`flex justify-center bg-black text-white mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg ${moodColor}`}>
                 <div className="flex grid grid-cols-2 w-full h-full space-x-2" key={props.vibe.id}>
                     {/* Left side of the card */}
-                    <div className="relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl space-y-4">{capitalize(props.vibe.name)}
+                    <div className="relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4">{capitalize(props.vibe.name)}
                         {/* Mood box */}
                         <div 
-                            className={`relative left-0 top-2 flex-1 p-2 w-full text-2xl font-apple-system text-black text-center border-dotted border-2 border-white rounded-lg ${moodNameBackgroundColor}`}>{capitalize(props.vibe.mood)}
+                            className={`relative left-0 top-2 flex-1 p-2 w-full text-2xl md:text-lg lg:text-lg xl:text-xl font-apple-system text-black text-center border-dotted border-2 border-white rounded-lg ${moodNameBackgroundColor}`}>{capitalize(props.vibe.mood)}
                         </div>
                             {/* Activity box */}
-                            <ul className="absolute pt-4 right-10 left-10 max-h-48 flex-1 text-lg font-apple-system text-black text-center overflow-hidden overflow-y-auto divide-y divide-gray-400 divide-opacity-25">{props.vibe.activities.map((activity) => (
+                            <ul className="absolute pt-4 right-10 left-10 max-h-48 max-w-prose flex-1 text-base md:text-sm lg:text-base xl:text-lg font-apple-system text-black text-center overflow-hidden overflow-y-auto divide-y divide-gray-400 divide-opacity-25">{props.vibe.activities.map((activity) => (
                                 <li key={activity.name} className="p-2 max-w-prose">
                                     <span className="text-black">{capitalize(activity.category)}</span><br />
-                                    <span className="text-white">{capitalize(activity.name)}</span>
+                                    <span className="text-gray-700">{capitalize(activity.name)}</span>
                                 </li>
                                 ))}
                             </ul>
