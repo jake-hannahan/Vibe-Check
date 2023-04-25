@@ -77,14 +77,19 @@ function VibesListPage() {
 
       // needs scrollbar
 
-      <div className="p-5 bg-black">
-        <div className="grid grid-cols-6 gap-4 grid-flow-row grid-">
+      <div
+        className="p-5 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))]
+          from-emerald-800 via-indigo-900 to-zinc-900"
+      >
+        <div className="grid gap-4 grid-flow-row grid- lg:grid-cols-6 md:grid-cols-3 xs:grid-cols-1 sm:grid-cols-2">
           <div className="p-5 text-center bg-white row-start-1 row-end-1 col-start-5 col-end-5">
-            <div className="relative w-full lg:max-w-sm">
+            <div className="p-5 relative w-full lg:max-w-sm">
               <select
                 onChange={(e) => setSelectedMood(e.target.value)}
                 className="`flex justify-end w-full p-2.5 text-gray-500
-              bg-white border rounded-md shadow-sm outline-none appearance-none"
+              bg-white border rounded-md border-black shadow-sm outline-none appearance-none
+              hover:bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))]
+          from-emerald-800 via-indigo-900 to-zinc-900 hover:text-white text-center"
               >
                 <option>Pick a Mood</option>
                 {moods.map((mood) => (
@@ -95,15 +100,17 @@ function VibesListPage() {
               </select>
             </div>
           </div>
-          <div className="p-5 text-center bg-white col-start-1 col-end-5 font-extrabold">
+          <div className="p-9 text-center 2xl:text-6xl text-4xl bg-white col-start-1 col-end-5 italic font-effect-neon">
             VIBES FOR LIFE
           </div>
-          <div className="p-5 text-center bg-white col-start-6 col-end-7">
-            Current Mood: {selectedMood}
+          <div className="p-10 text-bold text-center bg-white col-start-6 col-end-7">
+            Current Mood:
+            {"\n"}
+            <div>{selectedMood}</div>
           </div>
           <div
             // onChange={handleChange}
-            className="p-5 text-center bg-white col-start-1 col-end-7 row-start-2 row-auto col-auto"
+            className="p-5 text-center 2xl:h-screen bg-white col-start-1 col-end-7 row-start-2 row-end-auto col-auto"
           >
             <div className="flex flex-row ">
               <div className="flex flex-wrap -mx-1">
@@ -115,7 +122,7 @@ function VibesListPage() {
               </div>
             </div>
           </div>
-        {/* </div> */}
+          {/* </div> */}
         </div>
       </div>
     );
