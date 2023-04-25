@@ -24,7 +24,7 @@ function SongList(props) {
 export default SongList;
 
 // Our original plain code
-{
+
 	/*
     <div className="bg-black flex items-center justify-end top-0 right-0 z-10 pt-4 pr-12">
         <Link
@@ -52,4 +52,3 @@ export default SongList;
         </div>
     </div>
 */
-}

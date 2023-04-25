@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { handleNameChange, handleMoodChange, handleSpotifyIdChange, handlePictureUrlChange, handleActivitiesChange, handleAddActivityChange, handleRemoveActivityChange, reset } from "../../features/vibes/newVibeSlice";
 import { useUpdateVibeMutation } from "../../services/vibes";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 
@@ -13,23 +13,30 @@ function EditVibeForm() {
   const location = useLocation()
   const {state} = location
 
+  const handleAddActivityCallback = useCallback(() => {
+    dispatch(handleAddActivityChange())
+  }, [dispatch]);
 
-  const setNewVibeData = () => {
-    dispatch(handleNameChange(state.vibe.name))
-    dispatch(handleMoodChange(state.vibe.mood))
-    dispatch(handleSpotifyIdChange(state.vibe.spotify_id))
-    dispatch(handlePictureUrlChange(state.vibe.picture_url))
-    for(let i=0; i<state.vibe.activities.length - 1; i++) {
-        handleAddActivity()
-    }
-    {state.vibe.activities.map((activity, index) => (
-        dispatch(handleActivitiesChange({ index, field: "category", value: activity.category})),
-        dispatch(handleActivitiesChange({ index, field: 'name', value: activity.name }))
-  ))}
-};
   useEffect(() => {
-        setNewVibeData();
-    }, []);
+    const setNewVibeData = () => {
+      dispatch(handleNameChange(state.vibe.name));
+      dispatch(handleMoodChange(state.vibe.mood));
+      dispatch(handleSpotifyIdChange(state.vibe.spotify_id));
+      dispatch(handlePictureUrlChange(state.vibe.picture_url));
+      for (let i = 0; i < state.vibe.activities.length - 1; i++) {
+        handleAddActivityCallback();
+      }
+      state.vibe.activities.forEach((activity, index) => {
+        dispatch(
+          handleActivitiesChange({ index, field: "category", value: activity.category })
+        );
+        dispatch(
+          handleActivitiesChange({ index, field: "name", value: activity.name })
+        );
+      });
+    };
+    setNewVibeData();
+  }, [dispatch, handleAddActivityCallback, state.vibe.activities, state.vibe.mood, state.vibe.name, state.vibe.picture_url, state.vibe.spotify_id]);
 
 
   const handleSubmit = (e) => {
