@@ -7,53 +7,58 @@ import {
 	handleActivitiesChange,
 	handleAddActivityChange,
 	handleRemoveActivityChange,
-	reset,
+	// reset,
 } from "../../features/vibes/newVibeSlice";
+import EditVibeSuccess from "../notifications/EditVibeSuccess";
 import { useUpdateVibeMutation } from "../../services/vibes";
-import { useEffect, useCallback } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect, useCallback } from "react";
+import { useLocation } from "react-router-dom";
 
 function EditVibeForm() {
+	const [notification, setNotification] = useState(false);
 	const dispatch = useDispatch();
 	const [updateVibe] = useUpdateVibeMutation();
 	const newVibe = useSelector((state) => state.newVibe);
 	const activities = useSelector((state) => state.newVibe.activities);
 	const location = useLocation();
-	const navigate = useNavigate();
 	const { state } = location;
 
-  const handleAddActivityCallback = useCallback(() => {
-    dispatch(handleAddActivityChange())
-  }, [dispatch]);
+	const handleAddActivityCallback = useCallback(() => {
+		dispatch(handleAddActivityChange());
+	}, [dispatch]);
 
-  useEffect(() => {
-    const setNewVibeData = () => {
-      dispatch(handleNameChange(state.vibe.name));
-      dispatch(handleMoodChange(state.vibe.mood));
-      dispatch(handleSpotifyIdChange(state.vibe.spotify_id));
-      dispatch(handlePictureUrlChange(state.vibe.picture_url));
-      for (let i = 0; i < state.vibe.activities.length - 1; i++) {
-        handleAddActivityCallback();
-      }
-      state.vibe.activities.forEach((activity, index) => {
-        dispatch(
-          handleActivitiesChange({ index, field: "category", value: activity.category })
-        );
-        dispatch(
-          handleActivitiesChange({ index, field: "name", value: activity.name })
-        );
-      });
-    };
-    setNewVibeData();
-  }, [dispatch, handleAddActivityCallback, state.vibe.activities, state.vibe.mood, state.vibe.name, state.vibe.picture_url, state.vibe.spotify_id]);
-
-	const HandleSubmit = (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 		// console.log(newVibe, state.vibe.id);
 		updateVibe({ id: state.vibe.id, body: newVibe });
-		dispatch(reset());
-		navigate("/my", { state: { notification: true } });
+		// dispatch(reset());
+		setNotification(true);
 	};
+
+	useEffect(() => {
+		const setNewVibeData = () => {
+			dispatch(handleNameChange(state.vibe.name));
+			dispatch(handleMoodChange(state.vibe.mood));
+			dispatch(handleSpotifyIdChange(state.vibe.spotify_id));
+			dispatch(handlePictureUrlChange(state.vibe.picture_url));
+			for (let i = 0; i < state.vibe.activities.length - 1; i++) {
+				handleAddActivityCallback();
+			}
+			state.vibe.activities.forEach((activity, index) => {
+				dispatch(handleActivitiesChange({ index, field: "category", value: activity.category }));
+				dispatch(handleActivitiesChange({ index, field: "name", value: activity.name }));
+			});
+		};
+		setNewVibeData();
+	}, [
+		dispatch,
+		handleAddActivityCallback,
+		state.vibe.activities,
+		state.vibe.mood,
+		state.vibe.name,
+		state.vibe.picture_url,
+		state.vibe.spotify_id,
+	]);
 
 	const handleAddActivity = () => {
 		dispatch(handleAddActivityChange());
@@ -65,7 +70,7 @@ function EditVibeForm() {
 	return (
 		<>
 			<h1 className="text-4xl mt-4 mb-2 font-bolder text-gray-900 text-center">Edit a Vibe</h1>
-			<form onSubmit={HandleSubmit} className="max-w-sm mx-auto p-6 bg-gray-400 rounded-lg shadow-md">
+			<form onSubmit={handleSubmit} className="max-w-sm mx-auto p-6 bg-gray-400 rounded-lg shadow-md">
 				<label className="block mb-2 font-bold text-gray-600">
 					Name:
 					<input
@@ -173,6 +178,9 @@ function EditVibeForm() {
 					Edit Vibe
 				</button>
 			</form>
+			<div className="fixed bottom-5 right-5 hover:drop-shadow-xl">
+				{notification === true ? <EditVibeSuccess className="fixed bottom-5 right-5" /> : null}
+			</div>
 		</>
 	);
 }

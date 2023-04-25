@@ -83,13 +83,13 @@ function VibesListPage() {
       >
         <div className="grid gap-4 grid-flow-row grid- lg:grid-cols-6 md:grid-cols-3 xs:grid-cols-1 sm:grid-cols-2">
           <div className="p-5 text-center bg-white row-start-1 row-end-1 col-start-5 col-end-5">
-            <div className="p-5 relative w-full lg:max-w-sm">
+            <div className="p-5 relative w-full lg:max-w-sm ">
               <select
                 onChange={(e) => setSelectedMood(e.target.value)}
-                className="`flex justify-end w-full p-2.5 text-gray-500
+                className="flex justify-end w-full p-2.5 text-center text-gray-500
               bg-white border rounded-md border-black shadow-sm outline-none appearance-none
-              hover:bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))]
-          from-emerald-800 via-indigo-900 to-zinc-900 hover:text-white text-center"
+              hover:bg-indigo-900 hover:text-white
+              "
               >
                 <option>Pick a Mood</option>
                 {moods.map((mood) => (
@@ -110,7 +110,7 @@ function VibesListPage() {
           </div>
           <div
             // onChange={handleChange}
-            className="p-5 text-center 2xl:h-screen bg-white col-start-1 col-end-7 row-start-2 row-end-auto col-auto"
+            className="p-5 text-center 2xl:h-auto bg-white col-start-1 col-end-7 row-start-2 row-end-auto col-auto"
           >
             <div className="flex flex-row ">
               <div className="flex flex-wrap -mx-1">

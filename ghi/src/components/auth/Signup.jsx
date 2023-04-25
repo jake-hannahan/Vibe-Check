@@ -9,11 +9,13 @@ import {
   error,
 } from "../../features/auth/signupSlice";
 import { useSignupMutation } from "../../services/auth";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const dispatch = useDispatch();
   const [signup] = useSignupMutation();
   const { fields, errorMessage } = useSelector((state) => state.signup);
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("handleSubmit");
@@ -24,6 +26,7 @@ const Signup = () => {
     console.log({ fields });
     signup(fields);
     dispatch(reset());
+    navigate('/')
   };
   return (
     <div className="max-w-2xl mx-auto">

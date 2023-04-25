@@ -1,12 +1,9 @@
 import React from "react";
 import { useGetVibesByCreatorQuery } from "../../services/vibes";
 import MyVibesCard from "../cards/MyVibeCard";
-import { useSelector } from "react-redux";
-import EditVibeSuccess from "../notifications/EditVibeSuccess";
 
 function MyVibesPage() {
 	const { data, isLoading } = useGetVibesByCreatorQuery();
-	const notification = useSelector((state) => state.notification);
 	if (isLoading) return <div>Loading...</div>;
 	const rows = Math.ceil(data.length / 3);
 
@@ -24,7 +21,6 @@ function MyVibesPage() {
 					))}
 				</div>
 			))}
-			<EditVibeSuccess show={notification} />
 		</div>
 	);
 }
