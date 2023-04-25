@@ -6,17 +6,20 @@ import {
   reset,
 } from "../../features/auth/loginSlice";
 import { useLoginMutation } from "../../services/auth";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
   const [login] = useLoginMutation();
   const { fields } = useSelector((state) => state.login);
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("handleSubmit");
     console.log({ fields });
     login(fields);
     dispatch(reset());
+    navigate('/')
   };
   return (
     <div className="container max-w-2xl mx-auto">
