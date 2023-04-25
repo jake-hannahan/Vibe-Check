@@ -1,11 +1,86 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useLogoutMutation } from "../services/auth";
+import { useGetAccountQuery } from '../services/auth';
+
 
 function Nav() {
+	const [logout] = useLogoutMutation();
 	const [isNavOpen, setIsNavOpen] = useState(false);
+	const { data: account } = useGetAccountQuery();
 	const handleClick = () => {
 		setIsNavOpen(!isNavOpen);
 	};
+
+
+	const UserCheck = () => {
+		if (!account) {
+			return (
+				<>
+					<li className="p-2" data-te-nav-item-ref>
+						<NavLink
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							to="account/login"
+							data-te-nav-link-ref
+						>
+							Login
+						</NavLink>
+					</li>
+					<li className="p-2" data-te-nav-item-ref>
+						<NavLink
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							to="account/signup"
+							data-te-nav-link-ref
+						>
+							Signup
+						</NavLink>
+					</li>
+				</>
+			)
+		} else {
+			return (
+				<>
+					<li className="p-2" data-te-nav-item-ref>
+						<NavLink
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							to=""
+							data-te-nav-link-ref
+						>
+							Home
+						</NavLink>
+					</li>
+					<li className="p-2" data-te-nav-item-ref>
+						<NavLink
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							onClick={logout}
+							to="account/logout"
+							data-te-nav-link-ref
+						>
+							Logout
+						</NavLink>
+					</li>
+					<li className="p-2" data-te-nav-item-ref>
+						<NavLink
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							to="new"
+							data-te-nav-link-ref
+						>
+							Craft Vibe
+						</NavLink>
+					</li>
+					<li className="p-2" data-te-nav-item-ref>
+						<NavLink
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							to="my"
+							data-te-nav-link-ref
+						>
+							My Vibes
+						</NavLink>
+					</li>
+				</>
+			)
+		}
+	}
 
 
 	const visible = "!visible flex-grow basis-[100%] items-center lg:!flex lg:basis-auto";
@@ -46,60 +121,7 @@ function Nav() {
 				<NavLink className="pr-2 text-xl font-semibold text-white" to="/">VibeCheck</NavLink>
 				<div className={isNavOpen ? hidden : visible} id="navbarSupportedContent4" data-te-collapse-item>
 					<ul className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
-						<li className="p-2" data-te-nav-item-ref>
-							<NavLink
-								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
-								to=""
-								data-te-nav-link-ref
-							>
-								Home
-							</NavLink>
-						</li>
-						<li className="p-2" data-te-nav-item-ref>
-							<NavLink
-								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
-								to="new"
-								data-te-nav-link-ref
-							>
-								Craft Vibe
-							</NavLink>
-						</li>
-						<li className="p-2" data-te-nav-item-ref>
-							<NavLink
-								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
-								to="account/login"
-								data-te-nav-link-ref
-							>
-								Login
-							</NavLink>
-						</li>
-						<li className="p-2" data-te-nav-item-ref>
-							<NavLink
-								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
-								to="account/signup"
-								data-te-nav-link-ref
-							>
-								Signup
-							</NavLink>
-						</li>
-						<li className="p-2" data-te-nav-item-ref>
-							<NavLink
-								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
-								to="account/logout"
-								data-te-nav-link-ref
-							>
-								Logout
-							</NavLink>
-						</li>
-						<li className="p-2" data-te-nav-item-ref>
-							<NavLink
-								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
-								to="my"
-								data-te-nav-link-ref
-							>
-								My Vibes
-							</NavLink>
-						</li>
+						<UserCheck />
 					</ul>
 				</div>
 
