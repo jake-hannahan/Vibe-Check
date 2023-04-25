@@ -76,4 +76,22 @@ JOURNAL ENTRY
     - Decided which components to split up and owkr on individually for the next day
 
 
-> > [W16:D3] 19 April 2023 | Wednesday
+> > [W16:D3] 20 April 2023 | Wednesday
+
+
+> > [W16:D4] 19 April 2023 | Thursday
+
+
+> > [W17:D1] 23 April 2023 | Monday
+
+
+> > [W17:D2] 24 April 2023 | Tuesday
+
+
+> > [W17:D3] 25 April 2023 | Wednesday
+
+
+> > [W17:D4] 26 April 2023 | Thursday
+
+
+> > [W17:D5] 27 April 2023 | Friday

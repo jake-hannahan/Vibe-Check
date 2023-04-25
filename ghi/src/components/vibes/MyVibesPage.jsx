@@ -7,7 +7,6 @@ import EditVibeSuccess from "../notifications/EditVibeSuccess";
 function MyVibesPage() {
 	const { data, isLoading } = useGetVibesByCreatorQuery();
 	const notification = useSelector((state) => state.notification);
-
 	if (isLoading) return <div>Loading...</div>;
 	const rows = Math.ceil(data.length / 3);
 
