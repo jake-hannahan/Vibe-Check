@@ -10,11 +10,15 @@ const ProtectedRoute = () => {
     useEffect(() => {
         if (!isLoading && !account) {
             navigate('account/login');
-        } else if (!isLoading && account){
-            setIsLoading(false);
         }
     }, [account, navigate, isLoading]);
-    return <Outlet />;
+    useEffect(() => {
+        if (isLoading && account) {
+            setIsLoading(false);
+        }
+    }, [account, isLoading]);
+
+    return isLoading ? null: <Outlet />;
 };
 
 export default ProtectedRoute;
