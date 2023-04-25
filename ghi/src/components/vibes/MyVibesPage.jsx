@@ -13,6 +13,9 @@ function MyVibesPage() {
     return(
         
         <div className="flex flex-wrap justify-center">
+                <div className="text-4xl p-4 text-bold">
+                    My Vibes!
+                </div>
                 {/* loop through each row */}
                 {Array.from({ length: rows }).map((_, i) => (                
                 <div className="flex justify-center" key={i}>
