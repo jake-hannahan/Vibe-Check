@@ -12,26 +12,6 @@ import VibesListPage from "./components/vibes/VibesListPage";
 import EditVibeForm from "./components/vibes/EditVibeForm";
 import MyVibesPage from "./components/vibes/MyVibesPage";
 
-// const testVibe = {
-//     mood: "chill",
-//     name: "string",
-//     spotify_id: "6dl39Fce97aewH2tI2Rlvi",
-//     picture_url: "string",
-//     activities: [
-//       {
-//         category: "food/snack",
-//         name: "string"
-//       },
-//       {
-//         category: "game",
-//         name: "feawfe"
-//       }
-//     ],
-//     id: "643ecab3b8ea601398ca835f",
-//     created_by: "user",
-//     playlist_id: "643ecf6a5bbf3e1d03d6ac0a"
-//   };
-
 
 function App() {
 	return (
