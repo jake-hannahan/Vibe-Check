@@ -16,12 +16,11 @@ function ListCard(props) {
 
       adventurous: "bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400",
       confident:
-        "bg-amber-bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-indigo-500400",
+        "bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-900 to-yellow-300",
       romantic: "bg-gradient-to-r from-fuchsia-600 to-pink-600",
       energetic:
         "bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-emerald-200 via-emerald-100 to-emerald-500",
-      destructive:
-        "bg-stone-400bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-rose-900 via-amber-800 to-rose-400",
+      destructive: "bg-gradient-to-r from-slate-500 to-yellow-100",
       gloomy:
         "bg-gray-400bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r",
       rejected:
@@ -54,7 +53,7 @@ const addDefaultSrc = (e) => {
                 <img
                   alt="Placeholder"
                   className="block h-auto w-full"
-                  src="https://picsum.photos/600/400/?random"
+                  src={props.vibe.picture_url}
                 />
               </a>
 
