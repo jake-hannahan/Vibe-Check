@@ -1,8 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useLogoutMutation } from "../services/auth";
-import { useGetAccountQuery } from '../services/auth';
-
+import { useGetAccountQuery } from "../services/auth";
 
 function Nav() {
 	const [logout] = useLogoutMutation();
@@ -11,7 +10,6 @@ function Nav() {
 	const handleClick = () => {
 		setIsNavOpen(!isNavOpen);
 	};
-
 
 	const UserCheck = () => {
 		if (!account) {
@@ -36,7 +34,7 @@ function Nav() {
 						</NavLink>
 					</li>
 				</>
-			)
+			);
 		} else {
 			return (
 				<>
@@ -53,7 +51,7 @@ function Nav() {
 						<NavLink
 							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
 							onClick={logout}
-							to="account/logout"
+							to="account/login"
 							data-te-nav-link-ref
 						>
 							Logout
@@ -78,10 +76,9 @@ function Nav() {
 						</NavLink>
 					</li>
 				</>
-			)
+			);
 		}
-	}
-
+	};
 
 	const visible = "!visible flex-grow basis-[100%] items-center lg:!flex lg:basis-auto";
 
@@ -118,7 +115,9 @@ function Nav() {
 						</svg>
 					</span>
 				</button>
-				<NavLink className="pr-2 text-xl font-semibold text-white" to="/">VibeCheck</NavLink>
+				<NavLink className="pr-2 text-xl font-semibold text-white" to="/">
+					VibeCheck
+				</NavLink>
 				<div className={isNavOpen ? hidden : visible} id="navbarSupportedContent4" data-te-collapse-item>
 					<ul className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
 						<UserCheck />
@@ -127,8 +126,8 @@ function Nav() {
 
 				{/* <div className="relative flex items-center">
 					<div className="relative" data-te-dropdown-ref> */}
-						{/* For stretch goals, the notification feature! */}
-						{/* <a
+				{/* For stretch goals, the notification feature! */}
+				{/* <a
           className="hidden-arrow mr-4 flex items-center text-white opacity-60 hover:opacity-80 focus:opacity-80"
           href="#"
           id="dropdownMenuButton1"
@@ -153,7 +152,7 @@ function Nav() {
           >
         </a> */}
 
-						{/* <ul
+				{/* <ul
 							className="absolute left-auto right-0 z-[1000] float-left m-0 mt-1 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
 							aria-labelledby="dropdownMenuButton1"
 							data-te-dropdown-menu-ref
@@ -238,7 +237,7 @@ function Nav() {
 								</a>
 							</li>
 						</ul> */}
-					{/* </div>
+				{/* </div>
 				</div> */}
 			</div>
 		</nav>
