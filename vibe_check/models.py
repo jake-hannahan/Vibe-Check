@@ -70,7 +70,7 @@ class VibeIn(BaseModel):
 class VibeOut(VibeIn):
     id: str
     created_by: str
-    playlist_id: str
+# playlist_id: str
 
 
 class Song(BaseModel):
