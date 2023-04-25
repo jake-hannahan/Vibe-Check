@@ -4,11 +4,13 @@ export const authApi = createApi({
     reducerPath: 'authApi',
     baseQuery: fetchBaseQuery({
         baseUrl: `${process.env.REACT_APP_VIBE_CHECK_API_HOST}`,
-        credentials: "include"
     }),
     endpoints: (builder) => ({
         getAccount: builder.query({
-            query: () => '/token',
+            query: () => ({
+                url: '/token',
+                credentials: 'include',
+            }),
             transformResponse: (response) => response?.account,
             providesTags: ['Account']
         }),
@@ -21,7 +23,7 @@ export const authApi = createApi({
                     url: '/token',
                     method: 'POST',
                     body: formData,
-                    credentials: "include"
+                    credentials: 'include'
                 }
             },
             invalidatesTags: ['Account']
@@ -29,7 +31,8 @@ export const authApi = createApi({
         logout: builder.mutation({
             query: () => ({
                 url: '/token',
-                method: 'DELETE'
+                method: 'DELETE',
+                credentials: 'include'
             }),
             invalidatesTags: ['Account']
         }),
@@ -42,7 +45,7 @@ export const authApi = createApi({
                     url: '/api/accounts',
                     method: 'POST',
                     body: request,
-                    credentials: "include"
+                    credentials: 'include'
                 }
             },
             invalidatesTags: ['Account']
