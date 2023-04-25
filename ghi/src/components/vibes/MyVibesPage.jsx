@@ -4,7 +4,6 @@ import MyVibesCard from "../cards/MyVibeCard";
 
 function MyVibesPage() {
 	const { data, isLoading } = useGetVibesByCreatorQuery();
-
 	if (isLoading) return <div>Loading...</div>;
 	const rows = Math.ceil(data.length / 3);
 

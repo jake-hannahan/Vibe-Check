@@ -164,7 +164,7 @@ const MainPage = () => {
                 </button>
             </div>
       </div>
-      <div className={`relative mt-8 p-8 ${colors[colorArr[count]]}`}>
+      <div className={`relative mt-8 p-8 rounded-t-3xl ${colors[colorArr[count]]}`}>
         <h1 className="absolute top-3 left-3 text-2xl text-gray-800 font-bold rounded-md">Vibes for when you're feeling {moodArr[count]}</h1>
       </div>
       <div className={`grid grid-cols-4 gap-1 justify-items-center p-1 ${colors[colorArr[count]]}`}>
@@ -174,7 +174,7 @@ const MainPage = () => {
             )
         })}
       </div>
-      <div className={`relative p-8 ${colors[colorArr[count]]}`}>
+      <div className={`relative p-8 rounded-b-3xl ${colors[colorArr[count]]}`}>
         <NavLink type="button" to={"list"} className="absolute top-0 right-20 bg-blue-500 hover:bg-blue-700 text-white font-bold my-1 py-3 px-4 rounded-full">
             Show All Vibes
         </NavLink>
