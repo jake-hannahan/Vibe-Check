@@ -4,8 +4,11 @@ import { useGetVibesQuery } from "../../services/vibes";
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, set } from "../../features/vibes/counterSlice";
 import { NavLink } from "react-router-dom";
+import Login from "../auth/Login";
+import { useGetAccountQuery } from "../../services/auth";
 
-function MainPage() {
+
+const MainPage = () => {
     const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch()
     const { data, isLoading } = useGetVibesQuery();
@@ -184,4 +187,11 @@ function MainPage() {
     )
 };
 
-export default MainPage;
+export const Main = () => {
+    const { data: account } = useGetAccountQuery();
+    return (
+        <div>
+            {account ? <MainPage /> : <Login />}
+        </div>
+    );
+};

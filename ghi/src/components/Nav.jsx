@@ -1,11 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useLogoutMutation } from "../services/auth";
+
 
 function Nav() {
+	const [logout] = useLogoutMutation();
 	const [isNavOpen, setIsNavOpen] = useState(false);
 	const handleClick = () => {
 		setIsNavOpen(!isNavOpen);
 	};
+
 
 
 	const visible = "!visible flex-grow basis-[100%] items-center lg:!flex lg:basis-auto";
@@ -85,6 +89,7 @@ function Nav() {
 						<li className="p-2" data-te-nav-item-ref>
 							<NavLink
 								className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+								onClick={logout}
 								to="account/logout"
 								data-te-nav-link-ref
 							>
