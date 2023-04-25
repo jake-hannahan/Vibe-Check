@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom'
-import { useGetAccountQuery } from '../services/auth'
+import { Outlet } from 'react-router-dom';
+import { useGetAccountQuery } from '../services/auth';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 

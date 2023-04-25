@@ -9,41 +9,67 @@ function MyVibesCard(props) {
     };
 
     const moodColorMap = {
-        chill: 'bg-sky-400',
-        lazy: 'bg-teal-400',
-        dreamy: 'bg-cyan-400',
-        productive: 'bg-orange-400',
-        adventurous: 'bg-yellow-400',
-        confident: 'bg-amber-400',
-        romantic: 'bg-rose-400',
-        energetic: 'bg-lime-400',
-        destructive: 'bg-stone-400',
-        gloomy: 'bg-gray-400',
-        rejected: 'bg-violet-400',
-        melancholic: 'bg-indigo-400',
+        chill: {
+            color: 'bg-sky-400', 
+            darkColor: 'bg-sky-500'},
+        lazy: {
+            color: 'bg-teal-400',
+            darkColor: 'bg-teal-500'},
+        dreamy: {
+            color: 'bg-cyan-400',
+            darkColor: 'bg-cyan-500'},
+        productive: {
+            color: 'bg-orange-400',
+            darkColor: 'bg-orange-500'},
+        adventurous: {
+            color: 'bg-yellow-400',
+            darkColor: 'bg-yellow-500'},
+        confident: {
+            color: 'bg-amber-400',
+            darkColor: 'bg-amber-500'},
+        romantic: {
+            color: 'bg-rose-400',
+            darkColor: 'bg-rose-500'},
+        energetic: {
+            color: 'bg-lime-400',
+            darkColor: 'bg-lime-500'},
+        destructive: {
+            color: 'bg-stone-400',
+            darkColor: 'bg-stone-500'},
+        gloomy: {
+            color: 'bg-gray-400',
+            darkColor: 'bg-gray-500'},
+        rejected: {
+            color: 'bg-violet-400',
+            darkColor: 'bg-violet-500'},
+        melancholic: {
+            color: 'bg-indigo-400', 
+            darkColor: 'bg-indigo-500'},
     };
 
-    const moodColor = moodColorMap[props.vibe.mood.toLowerCase()]||"bg-gray-400";
+  const moodColor = moodColorMap[props.vibe.mood.toLowerCase()].darkColor||"bg-gray-400";
+  const moodNameBackgroundColor = moodColorMap[props.vibe.mood.toLowerCase()].color||"bg-gray-500";
 
     return (
     <>
         <div className={`flex justify-center bg-black text-white mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg ${moodColor}`}>
-                <div className="flex grid grid-cols-2 w-full h-full" key={props.vibe.id}>
+                <div className="flex grid grid-cols-2 w-full h-full space-x-2" key={props.vibe.id}>
                     {/* Left side of the card */}
-                    <div className="relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl">{capitalize(props.vibe.name)}
+                    <div className="relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl space-y-4">{capitalize(props.vibe.name)}
                         {/* Mood box */}
                         <div 
-                            className="relative left-0 flex-1 p-2 w-full text-2xl font-apple-system text-black text-center border-2 border-white rounded-lg bg-blend-darken">{capitalize(props.vibe.mood)}
-                        </div> 
-                            <ul className="absolute right-10 left-10 flex-1 text-base font-apple-system text-black text-center overflow-hidden divide-y divide-gray-400 divide-opacity-25">{props.vibe.activities.map((activity) => (
+                            className={`relative left-0 top-2 flex-1 p-2 w-full text-2xl font-apple-system text-black text-center border-dotted border-2 border-white rounded-lg ${moodNameBackgroundColor}`}>{capitalize(props.vibe.mood)}
+                        </div>
+                            {/* Activity box */}
+                            <ul className="absolute pt-4 right-10 left-10 max-h-48 flex-1 text-base font-apple-system text-black text-center overflow-hidden overflow-y-auto divide-y divide-gray-400 divide-opacity-25">{props.vibe.activities.map((activity) => (
                                 <li key={activity.name} className="p-2 max-w-prose">
-                                    <span className="text-gray-400">{capitalize(activity.category)}</span><br />
+                                    <span className="text-black">{capitalize(activity.category)}</span><br />
                                     <span className="text-white">{capitalize(activity.name)}</span>
                                 </li>
                                 ))}
                             </ul>
                             {/* Buttons box */}
-                            <ul className="absolute bottom-0 left-3 flex justify-center mt-auto gap-x-6">
+                            <ul className="absolute bottom-0 left-3 flex justify-center mt-auto gap-x-6 text-base">
                                 <li>
                                     <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-lg">
                                         <NavLink to={{pathname:'/edit'}} state={{vibe: props.vibe}}>Edit</NavLink>
@@ -68,11 +94,44 @@ function MyVibesCard(props) {
 
 export default MyVibesCard;
 
+// const moodColorMap = {
+//     chill: {
+//         color: 'bg-sky-400', 
+//         darkColor: 'bg-sky-700'},
+//     lazy: {
+//         color: 'bg-teal-400',
+//         darkColor: 'bg-teal-700'},
+//     dreamy: {
+//         color: 'bg-cyan-400',
+//         darkColor: 'bg-cyan-700'},
+//     productive: {
+//         color: 'bg-orange-400',
+//         darkColor: 'bg-orange-700'},
+//     adventurous: {
+//         color: 'bg-yellow-400',
+//         darkColor: 'bg-yellow-700'},
+//     confident: {
+//         color: 'bg-amber-400',
+//         darkColor: 'bg-amber-700'},
+//     romantic: {
+//         color: 'bg-rose-400',
+//         darkColor: 'bg-rose-700'},
+//     energetic: {
+//         color: 'bg-lime-400',
+//         darkColor: 'bg-lime-700'},
+//     destructive: {
+//         color: 'bg-stone-400',
+//         darkColor: 'bg-stone-700'},
+//     gloomy: {
+//         color: 'bg-gray-400',
+//         darkColor: 'bg-gray-700'},
+//     rejected: {
+//         color: 'bg-violet-400',
+//         darkColor: 'bg-violet-700'},
+//     melancholic: {
+//         color: 'bg-indigo-400', 
+//         darkColor: 'bg-indigo-700'},
+//   };
 
-// <ul className="absolute right-10 left-10 flex-1 text-base font-apple-system text-black text-center overflow-hidden divide-y divide-gray-400 divide-opacity-25">{props.vibe.activities.map((activity) => (
-//     <li key={activity.name} className="p-2 max-w-prose">
-//         <span className="text-gray-400">{capitalize(activity.category)}</span><br />
-//         <span className="text-white">{capitalize(activity.name)}</span>
-//     </li>
-//     ))}
-// </ul>
+//   const moodColor = moodColorMap[props.vibe.mood.toLowerCase()].color||"bg-gray-400";
+//   const moodNameBackgroundColor = moodColorMap[props.vibe.mood.toLowerCase()].darkColor||"bg-gray-700";
