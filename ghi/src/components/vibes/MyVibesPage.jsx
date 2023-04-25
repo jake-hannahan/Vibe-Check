@@ -12,8 +12,8 @@ function MyVibesPage() {
 
     return(
         
-        <div className="flex flex-wrap justify-center">
-                <div className="text-4xl p-4 text-bold">
+        <div className="flex bg-black flex-wrap justify-center">
+                <div className="text-4xl p-4 text-bold tracking-wider text-white rounded-lg p-4">
                     My Vibes!
                 </div>
                 {/* loop through each row */}

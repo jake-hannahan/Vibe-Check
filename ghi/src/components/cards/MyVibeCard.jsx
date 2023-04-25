@@ -30,21 +30,17 @@ function MyVibesCard(props) {
         <div className={`flex justify-center bg-black text-white mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg ${moodColor}`}>
                 <div className="flex grid grid-cols-2 w-full h-full" key={props.vibe.id}>
                     {/* Left side of the card */}
-                    <div className="relative flex-1 p-2 w-full font-apple-system text-lg font-bold text-justify text-black">{capitalize(props.vibe.name)}
+                    <div className="relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl">{capitalize(props.vibe.name)}
                         {/* Mood box */}
                         <div 
-                            className="static left-0 flex-1 p-2 w-full text-base font-apple-system text-black text-center">{capitalize(props.vibe.mood)}
+                            className="relative left-0 flex-1 p-2 w-full text-2xl font-apple-system text-black text-center border-2 border-white rounded-lg bg-blend-darken">{capitalize(props.vibe.mood)}
                         </div> 
-                            <ul>
-                                <li>
-                                    {props.vibe.activities.map((activity) => (
-                                        // activities box
-                                        <div className="static right-10 left-10 flex-1 text-base font-apple-system text-black text-center" key={activity.name}>
-                                            <li className="p-2 max-w-prose">{capitalize(activity.category)}</li>
-                                            <li className="p-2 max-w-prose">{capitalize(activity.name)}</li>                                           
-                                        </div>
-                                    ))}
+                            <ul className="absolute right-10 left-10 flex-1 text-base font-apple-system text-black text-center overflow-hidden divide-y divide-gray-400 divide-opacity-25">{props.vibe.activities.map((activity) => (
+                                <li key={activity.name} className="p-2 max-w-prose">
+                                    <span className="text-gray-400">{capitalize(activity.category)}</span><br />
+                                    <span className="text-white">{capitalize(activity.name)}</span>
                                 </li>
+                                ))}
                             </ul>
                             {/* Buttons box */}
                             <ul className="absolute bottom-0 left-3 flex justify-center mt-auto gap-x-6">
@@ -71,3 +67,12 @@ function MyVibesCard(props) {
 }
 
 export default MyVibesCard;
+
+
+// <ul className="absolute right-10 left-10 flex-1 text-base font-apple-system text-black text-center overflow-hidden divide-y divide-gray-400 divide-opacity-25">{props.vibe.activities.map((activity) => (
+//     <li key={activity.name} className="p-2 max-w-prose">
+//         <span className="text-gray-400">{capitalize(activity.category)}</span><br />
+//         <span className="text-white">{capitalize(activity.name)}</span>
+//     </li>
+//     ))}
+// </ul>
