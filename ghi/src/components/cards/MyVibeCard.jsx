@@ -71,7 +71,7 @@ function MyVibesCard(props) {
                     <div className={`relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4 ${moodTextColor}`}>{capitalize(props.vibe.name)}
                         {/* Mood box */}
                         <div 
-                            className={`relative left-0 top-2 flex-1 p-2 w-full text-2xl md:text-lg lg:text-lg xl:text-xl font-apple-system text-black text-center border-dotted border-2 border-white rounded-lg ${moodNameBackgroundColor} ${moodTextColor}`}>{capitalize(props.vibe.mood)}
+                            className={`relative left-0 top-2 flex-1 p-2 w-full text-2xl md:text-lg lg:text-lg xl:text-xl font-apple-system text-black text-center rounded-lg ${moodNameBackgroundColor} ${moodTextColor}`}>{capitalize(props.vibe.mood)}
                         </div>
                             {/* Activity box */}
                             <ul className="absolute pt-4 right-10 left-10 max-h-48 max-w-prose flex-1 text-base md:text-sm lg:text-base xl:text-lg font-apple-system text-black text-center overflow-hidden overflow-y-auto divide-y divide-gray-400 divide-opacity-25">{props.vibe.activities.map((activity) => (
