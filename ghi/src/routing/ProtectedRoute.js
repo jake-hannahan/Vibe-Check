@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { useGetAccountQuery } from '../services/auth';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 const ProtectedRoute = () => {
     const { data: account, isLoading } = useGetAccountQuery();

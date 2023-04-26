@@ -27,13 +27,13 @@ function CarouselCard(props) {
     return (
         <>
             <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
-                <div className={`relative w-auto h-auto rounded-xl border-2 p-1 border-gray-900 drop-shadow-lg ${colors[props.color]}`}>
-                    <div className="w-auto h-auto flex justify-center">
-                        <img className="w-auto h-auto rounded-full" onError={addDefaultSrc} src={props.vibe.picture_url} alt="Invalid url" />
-                    </div>
-                    <div className="text-center font-bold text-2xl">
+                <div className={`col-span-1 grid grid-rows-4 w-32 md:w-42 lg:w-48 xl:w-56 h-56 lg:h-64 xl:h-72 rounded-xl border-2 border-gray-900 drop-shadow-lg ${colors[props.color]}`}>
+
+                    <img className="row-span-3 object-cover h-full max-h-48 w-full rounded-xl" onError={addDefaultSrc} src={props.vibe.picture_url} alt="Invalid url" />
+
+                    <p className="row-span-1 absolute inset-x-0 bottom-4 font-bold text-2xl">
                         {props.vibe.name}
-                    </div>
+                    </p>
                 </div>
             </NavLink>
         </>

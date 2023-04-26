@@ -1,0 +1,17 @@
+.glow {
+    box-shadow: 0 0 50px 15px #e21f63;
+}
+
+.red-button {
+    background-color: #e21f63;
+    color: white;
+    opacity: 80%;
+}
+
+.red-button:hover {
+    opacity: 100%;
+}
+
+.red-text {
+    color: #e21f63;
+}
