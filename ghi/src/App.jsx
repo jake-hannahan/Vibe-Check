@@ -14,24 +14,26 @@ import Logout from "./components/auth/Logout";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Nav />
-			<Routes>
-				<Route path="/" element={<Main />} />
-				<Route path="account">
-					<Route path="login" element={<Login />} />
-					<Route path="signup" element={<Signup />} />
-					<Route path="logout" element={<Logout />} />
-				</Route>
-				<Route element={<ProtectedRoute />}>
-					<Route path="edit" element={<EditVibeForm />} />
-					<Route path="new" element={<CreateVibeForm />} />
-					<Route path="detail" element={<VibeDetailPage />} />
-					<Route path="list" element={<VibesListPage />} />
-					<Route path="my" element={<MyVibesPage />} />
-				</Route>
-			</Routes>
-		</BrowserRouter>
+		<div className="bg">
+			<BrowserRouter>
+				<Nav />
+				<Routes>
+					<Route path="/" element={<Main />} />
+					<Route path="account">
+						<Route path="login" element={<Login />} />
+						<Route path="signup" element={<Signup />} />
+						<Route path="logout" element={<Logout />} />
+					</Route>
+					<Route element={<ProtectedRoute />}>
+						<Route path="edit" element={<EditVibeForm />} />
+						<Route path="new" element={<CreateVibeForm />} />
+						<Route path="detail" element={<VibeDetailPage />} />
+						<Route path="list" element={<VibesListPage />} />
+						<Route path="my" element={<MyVibesPage />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
+		</div>
 	);
 }
 

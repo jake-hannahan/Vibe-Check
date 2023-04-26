@@ -5,8 +5,8 @@ import { useGetVibeQuery } from "../../services/vibes";
 import { useLocation } from "react-router-dom";
 
 function VibeDetailPage() {
-	const location = useLocation()
-  	const {state} = location
+	const location = useLocation();
+	const { state } = location;
 	const { data, isLoading } = useGetVibeQuery(state);
 	if (isLoading) return <div>Vibe Loading...</div>;
 
@@ -27,12 +27,12 @@ function VibeDetailPage() {
 			<div className="container m-auto grid grid-cols-3 gap-1 w-screen h-[65vh]">
 				{/* Vibe Name Div */}
 				<div className="col-span-3 flex justify-center items-center">
-					<h1 className="overflow-hidden text-center text-5xl text-white font-bold shake rounded-md bg p-3 mt-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+					<h1 className="overflow-hidden text-center text-5xl text-white font-bold shake rounded-md p-3 mt-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
 						{data.name}
 					</h1>
 				</div>
 				{/* Detail Card Div */}
-				<div className="col-span-3 grid grid-cols-3 gap-1 w-100 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] rounded-md bg p-3 mt-3 h-content">
+				<div className="col-span-3 grid grid-cols-3 gap-1 w-100 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] rounded-md p-3 mt-3 h-content detailCard">
 					{/* Vibe Info: Pic + Created By Div */}
 					<div className="col-span-1 flex flex-col h-100">
 						<div className="w-100 h-100 mx-auto">
