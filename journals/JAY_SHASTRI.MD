@@ -77,19 +77,24 @@ JOURNAL ENTRY
 
 
 > > [W16:D3] 20 April 2023 | Wednesday
-
+    - I worked on the MyVibesCard component needed for the MyVibesPage
+    - Figured out how to add the Songlist Component into the card and have it sized correctly
 
 > > [W16:D4] 19 April 2023 | Thursday
-
+    - Worked on getting the content inside the card displayed correctly and come styling issues
+    - Working on creating a dynamic list option for activity categories and activity names
 
 > > [W17:D1] 23 April 2023 | Monday
-
+    - Finished creating the MyVibesCard component and creating the functionality for the MyVibesPage
+    - Added color mapping for moods so that the card color matches the color the mood is set to
 
 > > [W17:D2] 24 April 2023 | Tuesday
-
+    - Finished fucntionality and content fetching correctly on the MyVibesPage
+    - Edited issues with MyVibesCard because it was not populating correctly on the MyVibesPage
+    - Made the card and page dynamically resize itself according to screen size and breakpoints
 
 > > [W17:D3] 25 April 2023 | Wednesday
-
+    - Started designing the MyVibesPage and MyVibesCard as a group so the whole app can have a similar and uniform design 
 
 > > [W17:D4] 26 April 2023 | Thursday
 
