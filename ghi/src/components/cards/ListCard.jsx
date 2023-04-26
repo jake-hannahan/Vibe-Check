@@ -49,32 +49,32 @@ const addDefaultSrc = (e) => {
               className={`overflow-hidden rounded-lg shadow-lg shadow-zinc-900 ${moodColor}`}
               onError={addDefaultSrc}
             >
-              <a href="#">
-                <img
-                  alt="Placeholder"
-                  className="block h-auto w-full"
-                  src={props.vibe.picture_url}
-                />
-              </a>
+
+              <img
+                alt="Placeholder"
+                className="block h-auto w-full"
+                src={props.vibe.picture_url}
+              />
+
 
               <header className="flex items-center justify-between leading-tight p-3 md:p-12">
-                <h1 className="text-lg">
-                  <a className="no-underline text-black">{props.vibe.name}</a>
+                <h1 className="text-lg text-black">
+                  {props.vibe.name}
                 </h1>
               </header>
               <h2 className="text-sm">
                 {props.vibe.activities.map((activity) => (
-                  <>
+                  <div key={activity.name}>
                     <div className="text-sm mb-2">{activity.category} </div>
                     <div className="text-sm mb-2">{activity.name}</div>
-                  </>
+                  </div>
                 ))}
               </h2>
 
               <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                <a className="flex items-center no-underline hover:underline text-black">
+                <div className="flex items-center text-black">
                   <p className="ml-8 text-sm">{props.vibe.created_by}</p>
-                </a>
+                </div>
               </footer>
             </article>
           </div>

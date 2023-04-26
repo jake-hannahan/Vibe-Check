@@ -58,7 +58,7 @@ function VibesListPage() {
       );
     } else if (isSuccess) {
       vibesData = filteredData().map((vibe) => {
-        return <ListCard vibe={vibe} />;
+        return <ListCard vibe={vibe} key={vibe.id}/>;
       });
     } else if (isError) {
       vibesData = <div className="alert alert-danger">{error}</div>;
