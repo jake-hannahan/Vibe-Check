@@ -6,7 +6,7 @@ import {
   reset,
 } from "../../features/auth/loginSlice";
 import { useLoginMutation } from "../../services/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -22,15 +22,17 @@ const Login = () => {
     navigate('/')
   };
   return (
-    <div className="container max-w-2xl mx-auto">
+    <div className="grid justify-items-center">
       <div
-        className="bg-white shadow-md border border-gray-200
-      rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700"
+        className="w-96 h-full mt-8 bg-white shadow-md border border-gray-200
+      rounded-lg p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700"
       >
         <form className="space-y-6" onSubmit={handleSubmit}>
-          <h5 className="text-xl font-medium text-gray-900 dark:text-white">
-            Login
-          </h5>
+          <div className="text-center">
+            <h5 className="text-2xl font-medium text-gray-900 dark:text-white">
+              Login
+            </h5>
+          </div>
           <div className="">
             <label
               htmlFor=""
@@ -76,6 +78,11 @@ const Login = () => {
             Login
           </button>
         </form>
+        <div className="mt-8 text-center">
+          <NavLink to="/account/signup" className="text-lg text-blue-600 hover:underline">
+            Don't have an account? Join the Vibes here.
+          </NavLink>
+        </div>
       </div>
     </div>
   );

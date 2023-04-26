@@ -53,3 +53,6 @@ Development Journal
 
 > > [W17:D1] 24 April 2023 | Monday
 > > Added carousel to MainPage.jsx that uses the CarouselCard.jsx component to populate it. Created a counterSlice.jsx to increment or set value that ranges from 0-11 and those correlate with our 12 different moods. Need this in order to update the carousel when a user clicks on a mood or when a user clicks the arrow button on the carousel. Added background color to carousel and CarouselCards.jsx and those background colors change with each mood.
+
+> > [W17:D2] 25 April 2023 | Tuesday
+> > Modified Mainpage.jsx and CarouselCard.jsx styling. Created a routing folder with ProtectedRoute.js that deals with frontend auth. A user who is not logged in can only access login and signup pages. Changed the navbar the be different for a logged in user vs a logged in user. Added link from login to signup and from signup to login. Added dependencies to my useEffect calls to get rid of errors.
