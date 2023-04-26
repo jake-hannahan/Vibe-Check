@@ -51,7 +51,7 @@ function Nav() {
 						<NavLink
 							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
 							onClick={logout}
-							to="account/login"
+							to="account/logout"
 							data-te-nav-link-ref
 						>
 							Logout

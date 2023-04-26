@@ -1,15 +1,34 @@
 import React from "react";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const CreateVibeSuccess = () => {
+	const [close, setClose] = useState(false);
+
+	let showNotification;
+
+	close ? (showNotification = "hidden") : (showNotification = "");
+
+	const handleClose = () => {
+		setClose(!close);
+	};
+
 	return (
 		<div
 			id="logout"
-			className="flex items-center w-fit max-w-s p-4 space-x-3 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
+			className={`${showNotification} flex items-center w-fit max-w-s p-4 space-x-3 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800`}
 			role="alert"
 		>
 			<div className="text-md font-normal text-center">
 				<p>
 					You have <span style={{ color: "green" }}>successfully </span> crafted a vibe! 🤙
+				</p>
+				<p>
+					Click{" "}
+					<span style={{ color: "green", textDecoration: "green underline" }}>
+						<NavLink to="../my">here</NavLink>
+					</span>{" "}
+					to check out your vibes!
 				</p>
 			</div>
 			<button
@@ -17,6 +36,7 @@ const CreateVibeSuccess = () => {
 				className="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
 				data-dismiss-target="#logout"
 				aria-label="Close"
+				onClick={handleClose}
 			>
 				<span className="sr-only">Close</span>
 				<svg
