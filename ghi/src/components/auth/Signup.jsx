@@ -9,7 +9,7 @@ import {
   error,
 } from "../../features/auth/signupSlice";
 import { useSignupMutation } from "../../services/auth";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -31,13 +31,15 @@ const Signup = () => {
   return (
     <div className="grid justify-items-center">
       <div
-        className="w-96 h-full m-8 bg-white shadow-md border border-gray-200
+        className="w-96 h-full mt-8 bg-white shadow-md border border-gray-200
       rounded-lg max-w-sm p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700"
       >
         <form className="space-y-6" onSubmit={handleSubmit}>
-          <h5 className="text-xl font-medium text-gray-900 dark:text-white">
-            Signup
-          </h5>
+          <div className="text-center">
+            <h5 className="text-2xl font-medium text-gray-900 dark:text-white">
+              Signup
+            </h5>
+          </div>
           {errorMessage && <ErrorNotification>{errorMessage}</ErrorNotification>}
           <div className="">
             <label
@@ -102,6 +104,11 @@ const Signup = () => {
             Signup
           </button>
         </form>
+        <div className="mt-8 text-center">
+          <NavLink to="/account/login" className="text-lg text-blue-600 hover:underline">
+            Have an account? Login here.
+          </NavLink>
+        </div>
       </div>
     </div>
   );
