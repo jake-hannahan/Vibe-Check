@@ -10,6 +10,7 @@ import VibesListPage from "./components/vibes/VibesListPage";
 import EditVibeForm from "./components/vibes/EditVibeForm";
 import MyVibesPage from "./components/vibes/MyVibesPage";
 import ProtectedRoute from "./routing/ProtectedRoute";
+import Logout from "./components/auth/Logout";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route path="account">
 					<Route path="login" element={<Login />} />
 					<Route path="signup" element={<Signup />} />
+					<Route path="logout" element={<Logout />} />
 				</Route>
 				<Route element={<ProtectedRoute />}>
 					<Route path="edit" element={<EditVibeForm />} />

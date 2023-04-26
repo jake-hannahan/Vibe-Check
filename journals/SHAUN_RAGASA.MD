@@ -58,6 +58,15 @@ Development Journal
 > > [W16:D3] 19 April 2023 | Wednesday
 > > Worked on the Vibe Detail page. Found embedded Spotify player and changed SongList component to use that code instead.
 
+> > [W16:D4] 20 April 2023 | Thursday
+> > Finished vibe detail page functionality and initial styling.
+
 <!---------------- WEEK 17 ---------------->
+
+> > [W17:D1] 24 April 2023 | Monday
+> > Began working on the notification system for the website. Altered styling for detail page.
+
+> > [W17:D2] 25 April 2023 | Tuesday
+> > Finished notification system. Created logout component to be shown when a person clicks logout. Also fixed the redirect functionality for that.
 
 <!---------------- WEEK 18 ---------------->
