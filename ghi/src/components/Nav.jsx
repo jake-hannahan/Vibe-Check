@@ -1,7 +1,9 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useLogoutMutation } from "../services/auth";
 import { useGetAccountQuery } from "../services/auth";
+import { ReactComponent as VibeCheckLogo } from "../static/logo-no-background.svg";
 
 function Nav() {
 	const [logout] = useLogoutMutation();
@@ -115,8 +117,8 @@ function Nav() {
 						</svg>
 					</span>
 				</button>
-				<NavLink className="pr-2 text-xl font-semibold text-white" to="/">
-					VibeCheck
+				<NavLink className="pr-2" to="/">
+					<VibeCheckLogo className="inline-block h-12 w-40" />
 				</NavLink>
 				<div className={isNavOpen ? hidden : visible} id="navbarSupportedContent4" data-te-collapse-item>
 					<ul className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
