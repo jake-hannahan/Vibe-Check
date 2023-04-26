@@ -1,9 +1,11 @@
 import React from "react";
 import SongList from "./SongList";
 import { NavLink } from "react-router-dom";
+import { useDeleteVibeMutation } from "../../services/vibes";
 
 
 function MyVibesCard(props) {
+    const [deleteVibe] = useDeleteVibeMutation();
     const capitalize = (str) => {
         return str.split(" ").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ").replace(/_/g, " ");
     };
@@ -11,7 +13,7 @@ function MyVibesCard(props) {
     const moodColorMap = {
         chill: {
             hoverColor: 'sky-200',
-            color: 'sky-400', 
+            color: 'sky-400',
             darkColor: 'sky-500',
             textColor: 'sky-900'},
         lazy: {
@@ -66,7 +68,7 @@ function MyVibesCard(props) {
             textColor: 'violet-900'},
         melancholic: {
             hoverColor: 'sky-200',
-            color: 'indigo-400', 
+            color: 'indigo-400',
             darkColor: 'indigo-500',
             textColor: 'indigo-900'},
     };
@@ -78,12 +80,13 @@ function MyVibesCard(props) {
 
     return (
     <>
+    <NavLink to={{pathname: '/detail'}} state={{vibeId: props.vibe.id}}>
         <div className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 hover:scale-105 bg-${moodColor} hover:bg-${moodHoverColor} border-2 border-${moodHoverColor} hover:border-${moodHoverColor}`}>
                 <div className="flex grid grid-cols-2 w-full h-full space-x-2" key={props.vibe.id}>
                     {/* Left side of the card */}
                     <div className={`relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4 text-${moodTextColor}`}>{capitalize(props.vibe.name)}
                         {/* Mood box */}
-                        <div 
+                        <div
                             className={`relative left-0 top-2 flex-1 p-2 w-full text-2xl md:text-lg lg:text-lg xl:text-xl font-apple-system text-black text-center rounded-lg bg-${moodNameBackgroundColor} text-${moodTextColor} hover:bg-${moodColor}`}>{capitalize(props.vibe.mood)}
                         </div>
                             {/* Activity box */}
@@ -102,8 +105,11 @@ function MyVibesCard(props) {
                                     </button>
                                 </li>
                                 <li>
-                                    <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-lg">
-                                        <NavLink to={{pathname: '/detail'}} state={{vibeId: props.vibe.id}}>Details</NavLink>
+                                    <button
+                                        className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-lg"
+                                        onClick={() => deleteVibe(props.vibe.id)}
+                                    >
+                                        Delete
                                     </button>
                                 </li>
                             </ul>
@@ -114,6 +120,7 @@ function MyVibesCard(props) {
                     </div>
                 </div>
         </div>
+    </NavLink>
     </>
     )
 }
