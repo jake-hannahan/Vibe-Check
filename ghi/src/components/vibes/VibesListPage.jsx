@@ -64,33 +64,19 @@ function VibesListPage() {
       vibesData = <div className="alert alert-danger">{error}</div>;
     }
 
-      // const handleChange = () => {
-      //   setChangeColor(!changeColor);
-      // };
     return (
-      // needs text that shows applied filter type
-      // but default filter is most recent vibes
-
-      // needs large filter button to the left that has a dropdown of moods and recent moods
-
-      // needs to load all on first load, then load according to mood...will use listcard somehow here
-
-      // needs scrollbar
 
       <div
         className="p-5 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))]
-          from-emerald-800 via-indigo-900 to-zinc-900"
-      >
-        <div className="grid gap-4 grid-flow-row grid- lg:grid-cols-6 md:grid-cols-3 xs:grid-cols-1 sm:grid-cols-2">
+          from-emerald-800 via-indigo-900 to-zinc-900">
+        <div className="grid gap-4 grid-flow-row grid- xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
           <div className="p-5 text-center bg-white row-start-1 row-end-1 col-start-5 col-end-5">
             <div className="p-5 relative w-full lg:max-w-sm ">
               <select
                 onChange={(e) => setSelectedMood(e.target.value)}
                 className="flex justify-end w-full p-2.5 text-center text-gray-500
               bg-white border rounded-md border-black shadow-sm outline-none appearance-none
-              hover:bg-indigo-900 hover:text-white
-              "
-              >
+              hover:bg-indigo-900 hover:text-white">
                 <option>Pick a Mood</option>
                 {moods.map((mood) => (
                   <option value={mood.name} key={mood.id}>
@@ -109,20 +95,13 @@ function VibesListPage() {
             <div>{selectedMood}</div>
           </div>
           <div
-            // onChange={handleChange}
-            className="p-5 text-center 2xl:h-auto bg-white col-start-1 col-end-7 row-start-2 row-end-auto col-auto"
-          >
-            <div className="flex flex-row ">
+            className="p-5 text-center 2xl:h-auto bg-white col-start-1 col-end-7 row-start-2 row-end-auto col-auto">
+            <div className="flex flex-row">
               <div className="flex flex-wrap -mx-1">
-                {/* <div className="w-2/5 p-2"></div> */}
-                {/* <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3"> */}
-
                 {vibesData}
-                {/* <ListCard /> */}
               </div>
             </div>
           </div>
-          {/* </div> */}
         </div>
       </div>
     );
