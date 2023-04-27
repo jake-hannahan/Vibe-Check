@@ -10,17 +10,6 @@ function VibeDetailPage() {
 	const { data, isLoading } = useGetVibeQuery(state);
 	if (isLoading) return <div>Vibe Loading...</div>;
 
-	// Our moods are all lower case; this just capitalizes them for pretty aesthetic
-	const capitalizeString = (string) => {
-		if (string === "food/snack") {
-			return "Food/Snack";
-		} else if (string === "movie/tv_show") {
-			return "Movie/TV Show";
-		} else if (string === "physical_activity") {
-			return "Movie/TV Show";
-		}
-		return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
-	};
 
 	return (
 		<>
@@ -48,7 +37,7 @@ function VibeDetailPage() {
 								className="text-center text-2xl text-white font-bold rounded-xl"
 								style={{ backgroundColor: "white", color: "#00a896" }}
 							>
-								Mood: {capitalizeString(data.mood)}
+								Mood: {data.mood}
 							</h1>
 						</div>
 						{/* Creating white space between mood and activities */}
@@ -56,7 +45,7 @@ function VibeDetailPage() {
 						{data.activities.map((activity) => (
 							<div key={activity.name} className="mb-3">
 								<h1 className="text-center text-2xl text-white font-bold">
-									{capitalizeString(activity.category)}
+									{activity.category}
 								</h1>
 								<h1 className="text-center text-2xl text-white font-bold">• {activity.name}</h1>
 							</div>

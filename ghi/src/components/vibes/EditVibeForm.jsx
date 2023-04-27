@@ -29,7 +29,6 @@ function EditVibeForm() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// console.log(newVibe, state.vibe.id);
 		updateVibe({ id: state.vibe.id, body: newVibe });
 		// dispatch(reset());
 		setNotification(true);
@@ -143,10 +142,10 @@ function EditVibeForm() {
 								className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 							>
 								<option value="">Choose a Category</option>
-								<option value="food/snack">Food/Snack</option>
-								<option value="movie/tv_show">Movie/TV Show</option>
-								<option value="game">Game</option>
-								<option value="physical_activity">Physical Activity</option>
+								<option value="Food or Snack">Food or Snack</option>
+								<option value="Movie or TV Series">Movie or TV Series</option>
+								<option value="Game">Game</option>
+								<option value="Physical Activity">Physical Activity</option>
 							</select>
 							<input
 								type="text"
