@@ -11,7 +11,7 @@
 
 ### Description
 
--   **Vibe**: A **feeling.** A **sensation.** An **emotion.** An **experience.**
+-   **[Vibe]** | A **feeling.** A **sensation.** An **emotion.** An **experience.**
 
 A community for exploring, creating, and sharing vibes with one another.
 
@@ -21,7 +21,7 @@ A community for exploring, creating, and sharing vibes with one another.
 
 ## Intended Market
 
-##### Everyone down for a good vibe.
+##### Everyone that's down for a good vibe.
 
 ## Functionality
 
@@ -33,8 +33,8 @@ A community for exploring, creating, and sharing vibes with one another.
     -   Filter vibes by different moods.
     -   Listen to any vibe's playlist.
 -   Create/Update/Delete a vibe.
-    -   With name, image, mood, activities, and a playlist.
--   See their vibes My Vibes.
+    -   With a name, an image, a mood, activities, and a playlist.
+-   See their vibes in My Vibes.
 
 ## Project Initialization
 
