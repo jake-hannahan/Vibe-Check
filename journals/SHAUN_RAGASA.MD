@@ -73,5 +73,6 @@ Development Journal
 > > Began restyling vibe detail page. As a team, we decided on an app logo and general theme of the website. We also brainstormed how to style our pages.
 
 > > [W17:D4] 27 April 2023 | Thursday
+> > As a team, we finalized our backend. Finished formatting with Black and ran Flake8. Deleted unnecessary code. Finished writing our unit tests. Adjusted our gitlab-ci file. Finished writing our app's README.md. Worked on styling.
 
 <!---------------- WEEK 18 ---------------->
