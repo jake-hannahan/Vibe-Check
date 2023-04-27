@@ -51,9 +51,8 @@ const Signup = () => {
                   Username:
                 </label>
                 <input
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm
-                    rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
-                    dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                  className="sm:text-sm rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
+                  bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
                   placeholder="username"
                   type={`text`}
                   id="login_username"
@@ -69,9 +68,8 @@ const Signup = () => {
                   Password:
                 </label>
                 <input
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm
-                  rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
-                  dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                  className="sm:text-sm rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
+                  bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
                   placeholder="password"
                   type={`password`}
                   id="login_password"
@@ -87,9 +85,8 @@ const Signup = () => {
                   Password Confirmation:
                 </label>
                 <input
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm
-                  rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
-                  dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                  className="sm:text-sm rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
+                  bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
                   placeholder="password"
                   type={`password`}
                   id="Login__password"
