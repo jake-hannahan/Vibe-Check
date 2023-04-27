@@ -88,20 +88,17 @@ function MyVibesCard(props) {
     },
   };
 
-  const moodColor =
-    moodColorMap[props.vibe.mood.toLowerCase()].color || "gray-400";
+  const moodColor = moodColorMap[props.vibe.mood].color || "gray-400";
   const moodNameBackgroundColor =
-    moodColorMap[props.vibe.mood.toLowerCase()].darkColor || "gray-500";
-  const moodTextColor =
-    moodColorMap[props.vibe.mood.toLowerCase()].textColor || "gray-900";
-  const moodHoverColor =
-    moodColorMap[props.vibe.mood.toLowerCase()].hoverColor || "gray-200";
+    moodColorMap[props.vibe.mood].darkColor || "gray-500";
+  const moodTextColor = moodColorMap[props.vibe.mood].textColor || "gray-900";
+  const moodHoverColor = moodColorMap[props.vibe.mood].hoverColor || "gray-200";
 
   return (
     <>
       <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
         <div
-          className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 hover:scale-105 bg-${moodColor} hover:bg-${moodHoverColor}`}
+          className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 bg-${moodColor} hover:bg-${moodHoverColor}`}
         >
           <div
             className="flex grid grid-cols-2 w-full h-full space-x-2"
@@ -123,9 +120,7 @@ function MyVibesCard(props) {
               <ul className="absolute pt-4 right-10 left-10 max-h-48 max-w-prose flex-1 text-base md:text-sm lg:text-base xl:text-lg font-apple-system text-black text-center overflow-hidden overflow-y-auto divide-y divide-gray-400 divide-opacity-25">
                 {props.vibe.activities.map((activity) => (
                   <li key={activity.name} className="p-2 max-w-prose">
-                    <span className="text-black">
-                      {capitalize(activity.category)}
-                    </span>
+                    <span className="text-black">{activity.category}</span>
                     <br />
                     <span className="text-gray-700">
                       {capitalize(activity.name)}
