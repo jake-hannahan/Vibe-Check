@@ -84,6 +84,7 @@ function MyVibesCard(props) {
         <div className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 hover:scale-105 bg-${moodColor} hover:bg-${moodHoverColor} border-2 border-${moodHoverColor} hover:border-${moodHoverColor}`}>
                 <div className="flex grid grid-cols-2 w-full h-full space-x-2" key={props.vibe.id}>
                     {/* Left side of the card */}
+                    
                     <div className={`relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4 text-${moodTextColor}`}>{capitalize(props.vibe.name)}
                         {/* Mood box */}
                         <div
@@ -105,15 +106,17 @@ function MyVibesCard(props) {
                                     </button>
                                 </li>
                                 <li>
+                                
                                     <button
-                                        className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-lg"
-                                        onClick={() => deleteVibe(props.vibe.id)}
-                                    >
-                                        Delete
+                                        className="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded-lg"
+                                        onClick={() => deleteVibe(props.vibe.id)}>
+                                        <NavLink to={{pathname:'/my'}} state={{vibe: props.vibe}}>Delete</NavLink> 
                                     </button>
+                                
                                 </li>
                             </ul>
                     </div>
+                    
                     {/* Songlist box */}
                     <div className="flex-2 overflow-hidden overflow-y-auto float-right rounded-lg w-full h-full grow">
                         <SongList spotifyId = {props.vibe.spotify_id} />

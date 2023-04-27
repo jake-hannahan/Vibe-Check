@@ -8,7 +8,7 @@ function MyVibesPage() {
 	const rows = Math.ceil(data.length / 3);
 
 	return (
-		<div className="grid justify-center bg-white">
+		<div className="grid justify-center">
 			<div className="container text-center text-4xl p-4 text-bold text-black">My Vibes!</div>
 			{/* loop through each row */}
 			{Array.from({ length: rows }).map((_, i) => (
