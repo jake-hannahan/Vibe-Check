@@ -19,9 +19,9 @@
 
 ## Design
 
--   #### [API Design](https://gitlab.com/vibe-check/module3-project-gamma/-/blob/main/docs/api-design.md)
+-   #### [API Design](https://gitlab.com/vibe-check/vibe-check/-/blob/main/docs/api-design.md)
 
--   #### [Wireframe Design](https://gitlab.com/vibe-check/module3-project-gamma/-/blob/main/docs/wireframe.png)
+-   #### [Wireframe Design](https://gitlab.com/vibe-check/vibe-check/-/blob/main/docs/wireframe.png)
 
 ## Intended Market
 
