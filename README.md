@@ -2,10 +2,10 @@
 
 ### Meet the team
 
--   Alana Torrez |
--   Shaun Ragasa | sragasa97@gmail.com - [LinkedIn](https://www.linkedin.com/in/sragasa97/)
--   Jay Shastri |
--   Jake Hannahan | jakehannahan@gmail.com - [LinkedIn](https://www.linkedin.com/in/jakehannahan/)
+-   Alana Torrez -
+-   Shaun Ragasa -
+-   Jay Shastri - jayshastri20@gmail.com [linkedIn](https://www.linkedin.com/in/jay-shastri/)
+-   Jake Hannahan - jakehannahan@gmail.com [linkedIn](https://www.linkedin.com/in/jakehannahan/)
 
 ## Design
 
