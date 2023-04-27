@@ -25,29 +25,24 @@ const Login = () => {
   return (
     <div className="bg-neutral-800 w-screen h-screen flex justify-center items-center">
       <div className="grid gap-8 justify-items-center">
-      {/* <div
-        className="w-96 h-full mt-8 bg-white shadow-md border border-gray-200
-      rounded-lg p-4 sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700"
-      > */}
         <div className="relative group">
           <div className="z-10 p-8 bg-neutral-900 rounded-lg glow">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="text-center">
-                <h5 className="text-2xl font-medium text-gray-900 dark:text-white">
+                <h5 className="text-2xl font-medium text-white">
                   Login
                 </h5>
               </div>
               <div className="">
                 <label
                   htmlFor=""
-                  className="text-sm font-medium text-gray-900 block mb-2 dark:text-gray-300"
+                  className="text-sm font-medium text-gray-300 block mb-2"
                 >
                   Username:
                 </label>
                 <input
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm
-                    rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
-                    dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                  className="sm:text-sm rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
+                    bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
                   placeholder="username"
                   type={`text`}
                   id="login_username"
@@ -63,9 +58,8 @@ const Login = () => {
                   Password:
                 </label>
                 <input
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm
-                  rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
-                  dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                  className="sm:text-sm rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5
+                  bg-gray-600 border-gray-500 placeholder-gray-400 text-white"
                   placeholder="password"
                   type={`password`}
                   id="Login__password"
