@@ -1,6 +1,7 @@
 import React from "react";
 import SongList from "./SongList";
 import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useDeleteVibeMutation } from "../../services/vibes";
 
 
@@ -13,108 +14,110 @@ function MyVibesCard(props) {
       .join(" ")
       .replace(/_/g, " ");
   };
+
   const navigate = useNavigate();
 
   const moodColorMap = {
     Chill: {
-      hoverColor: "sky-200",
-      color: "sky-400",
-      darkColor: "sky-500",
-      textColor: "sky-900",
+      hoverColor: "hover:bg-sky-200",
+      color: "bg-sky-400",
+      darkColor: "bg-sky-500",
+      textColor: "text-sky-900",
     },
     Lazy: {
-      hoverColor: "teal-200",
-      color: "teal-400",
-      darkColor: "teal-500",
-      textColor: "teal-900",
+      hoverColor: "hover:bg-teal-200",
+      color: "bg-teal-400",
+      darkColor: "bg-teal-500",
+      textColor: "text-teal-900",
     },
     Dreamy: {
-      hoverColor: "cyan-200",
-      color: "cyan-400",
-      darkColor: "cyan-500",
-      textColor: "cyan-900",
+      hoverColor: "hover:bg-cyan-200",
+      color: "bg-cyan-400",
+      darkColor: "bg-cyan-500",
+      textColor: "text-cyan-900",
     },
     Productive: {
-      hoverColor: "orange-200",
-      color: "orange-400",
-      darkColor: "orange-500",
-      textColor: "orange-900",
+      hoverColor: "hover:bg-orange-200",
+      color: "bg-orange-400",
+      darkColor: "bg-orange-500",
+      textColor: "text-orange-900",
     },
     Adventurous: {
-      hoverColor: "yellow-200",
-      color: "yellow-400",
-      darkColor: "yellow-500",
-      textColor: "yellow-900",
+      hoverColor: "hover:bg-yellow-200",
+      color: "bg-yellow-400",
+      darkColor: "bg-yellow-500",
+      textColor: "text-yellow-900",
     },
     Confident: {
-      hoverColor: "amber-200",
-      color: "amber-400",
-      darkColor: "amber-500",
-      textColor: "amber-900",
+      hoverColor: "hover:bg-amber-200",
+      color: "bg-amber-400",
+      darkColor: "bg-amber-500",
+      textColor: "text-amber-900",
     },
     Romantic: {
-      hoverColor: "rose-200",
-      color: "rose-400",
-      darkColor: "rose-500",
-      textColor: "rose-900",
+      hoverColor: "hover:bg-rose-200",
+      color: "bg-rose-400",
+      darkColor: "bg-rose-500",
+      textColor: "text-rose-900",
     },
     Energetic: {
-      hoverColor: "sky-200",
-      color: "lime-400",
-      darkColor: "lime-500",
-      textColor: "lime-900",
+      hoverColor: "hover:bg-sky-200",
+      color: "bg-lime-400",
+      darkColor: "bg-lime-500",
+      textColor: "text-lime-900",
     },
     Destructive: {
-      hoverColor: "stone-200",
-      color: "stone-400",
-      darkColor: "stone-500",
-      textColor: "stone-900",
+      hoverColor: "hover:bg-stone-200",
+      color: "bg-stone-400",
+      darkColor: "bg-stone-500",
+      textColor: "text-stone-900",
     },
     Gloomy: {
-      hoverColor: "gray-200",
-      color: "gray-400",
-      darkColor: "gray-500",
-      textColor: "gray-900",
+      hoverColor: "hover:bg-gray-200",
+      color: "bg-gray-400",
+      darkColor: "bg-gray-500",
+      textColor: "text-gray-900",
     },
     Rejected: {
-      hoverColor: "violet-200",
-      color: "violet-400",
-      darkColor: "violet-500",
-      textColor: "violet-900",
+      hoverColor: "hover:bg-violet-200",
+      color: "bg-violet-400",
+      darkColor: "bg-violet-500",
+      textColor: "text-violet-900",
     },
     Melancholic: {
-      hoverColor: "sky-200",
-      color: "indigo-400",
-      darkColor: "indigo-500",
-      textColor: "indigo-900",
+      hoverColor: "hover:bg-sky-200",
+      color: "bg-indigo-400",
+      darkColor: "bg-indigo-500",
+      textColor: "text-indigo-900",
     },
   };
 
-  const moodColor = moodColorMap[props.vibe.mood].color || "gray-400";
+  const moodColor = moodColorMap[props.vibe.mood].color || "bg-gray-400";
   const moodNameBackgroundColor =
-    moodColorMap[props.vibe.mood].darkColor || "gray-500";
-  const moodTextColor = moodColorMap[props.vibe.mood].textColor || "gray-900";
-  const moodHoverColor = moodColorMap[props.vibe.mood].hoverColor || "gray-200";
+    moodColorMap[props.vibe.mood].darkColor || "bg-gray-500";
+  const moodTextColor =
+    moodColorMap[props.vibe.mood].textColor || "text-gray-900";
+  const moodHoverColor =
+    moodColorMap[props.vibe.mood].hoverColor || "hover:bg-gray-200";
 
   return (
     <>
       <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
         <div
-          className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 bg-${moodColor} hover:bg-${moodHoverColor}`}
+          className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 ${moodColor} ${moodHoverColor}`}
         >
           <div
             className="flex grid grid-cols-2 w-full h-full space-x-2"
             key={props.vibe.id}
           >
             {/* Left side of the card */}
-
             <div
-              className={`relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4 text-${moodTextColor}`}
+              className={`relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4 ${moodTextColor}`}
             >
               {capitalize(props.vibe.name)}
               {/* Mood box */}
               <div
-                className={`relative left-0 top-2 flex-1 p-2 w-full text-2xl md:text-lg lg:text-lg xl:text-xl font-apple-system text-black text-center rounded-lg bg-${moodNameBackgroundColor} text-${moodTextColor} hover:bg-${moodColor}`}
+                className={`relative left-0 top-2 flex-1 p-2 w-full text-2xl md:text-lg lg:text-lg xl:text-xl font-apple-system text-black text-center rounded-lg ${moodNameBackgroundColor} ${moodTextColor} hover:${moodColor}`}
               >
                 {props.vibe.mood}
               </div>
@@ -157,7 +160,6 @@ function MyVibesCard(props) {
                 </li>
               </ul>
             </div>
-
             {/* Songlist box */}
             <div className="flex-2 overflow-hidden overflow-y-auto float-right rounded-lg w-full h-full grow">
               <SongList spotifyId={props.vibe.spotify_id} />
