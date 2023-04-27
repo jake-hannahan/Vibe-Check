@@ -69,4 +69,9 @@ Development Journal
 > > [W17:D2] 25 April 2023 | Tuesday
 > > Finished notification system. Created logout component to be shown when a person clicks logout. Also fixed the redirect functionality for that.
 
+> > [W17:D3] 26 April 2023 | Wednesday
+> > Began restyling vibe detail page. As a team, we decided on an app logo and general theme of the website. We also brainstormed how to style our pages.
+
+> > [W17:D4] 27 April 2023 | Thursday
+
 <!---------------- WEEK 18 ---------------->
