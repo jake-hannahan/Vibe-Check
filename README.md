@@ -1,11 +1,11 @@
 # Vibe Check
 
-### Meet the team
+### Meet The Team
 
 -   Alana Torrez -
--   Shaun Ragasa -
--   Jay Shastri - jayshastri20@gmail.com [linkedIn](https://www.linkedin.com/in/jay-shastri/)
--   Jake Hannahan - jakehannahan@gmail.com [linkedIn](https://www.linkedin.com/in/jakehannahan/)
+-   Shaun Ragasa | sragasa97@gmail.com - [LinkedIn](https://www.linkedin.com/in/sragasa97/)
+-   Jay Shastri | jayshastri20@gmail.com - [LinkedIn](https://www.linkedin.com/in/jay-shastri/)
+-   Jake Hannahan | jakehannahan@gmail.com - [LinkedIn](https://www.linkedin.com/in/jakehannahan/)
 
 ## Design
 
@@ -17,7 +17,7 @@ A community for exploring, creating, and sharing vibes with one another.
 
 #### [Api Design](https://gitlab.com/vibe-check/module3-project-gamma/-/blob/main/docs/api-design.md)
 
-#### [Wireframe](https://gitlab.com/vibe-check/module3-project-gamma/-/blob/main/docs/wireframe.png)
+#### [Wireframe Design](https://gitlab.com/vibe-check/module3-project-gamma/-/blob/main/docs/wireframe.png)
 
 ## Intended Market
 
@@ -38,15 +38,16 @@ A community for exploring, creating, and sharing vibes with one another.
 
 ## Project Initialization
 
-To vibe out on your local machine follow these steps.
+To vibe out on your local machine, follow these steps:
 
 1. Clone the repository to your local machine.
-1. CD into vibe-check.
-1. Create a .env
+1. CD into vibe-check in your terminal.
+1. Create a .env file.
     - Windows command: `type nul > .env`
     - Mac command: `touch .env`
 1. In that .env add `SIGNING_KEY = <any string>`
     - To get a 32-character key, open any docker container's terminal and run `openssl rand -hex 32`
-1. Run `docker volume create mongo-data`
-1. Run `docker compose up`
+1. Open Docker and run `docker volume create mongo-data` in you terminal.
+1. Run `docker compose up` in your terminal.
 1. View site at `localhost:3000`
+1. Congratulations! You're a part of the vibes!
