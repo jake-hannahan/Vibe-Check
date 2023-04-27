@@ -33,25 +33,25 @@ class AccountToken(Token):
 
 
 class Mood(str, Enum):
-    productive = "productive"
-    adventurous = "adventurous"
-    confident = "confident"
-    romantic = "romantic"
-    energetic = "energetic"
-    destructive = "destructive"
-    gloomy = "gloomy"
-    rejected = "rejected"
-    melancholic = "melancholic"
-    chill = "chill"
-    lazy = "lazy"
-    dreamy = "dreamy"
+    productive = "Productive"
+    adventurous = "Adventurous"
+    confident = "Confident"
+    romantic = "Romantic"
+    energetic = "Energetic"
+    destructive = "Destructive"
+    gloomy = "Gloomy"
+    rejected = "Rejected"
+    melancholic = "Melancholic"
+    chill = "Chill"
+    lazy = "Lazy"
+    dreamy = "Dreamy"
 
 
 class ActivityCategory(str, Enum):
-    food_snack = "food/snack"
-    movie_show = "movie/tv_show"
-    game = "game"
-    physical_activity = "physical_activity"
+    food_snack = "Food or Snack"
+    movie_show = "Movie or TV Series"
+    game = "Game"
+    physical_activity = "Physical Activity"
 
 
 class Activity(BaseModel):
@@ -70,18 +70,3 @@ class VibeIn(BaseModel):
 class VibeOut(VibeIn):
     id: str
     created_by: str
-# playlist_id: str
-
-
-class Song(BaseModel):
-    artist: str
-    song: str
-
-
-class Playlist(BaseModel):
-    spotify_id: str
-    songs: List[Song]
-
-
-class PlaylistOut(Playlist):
-    id: str

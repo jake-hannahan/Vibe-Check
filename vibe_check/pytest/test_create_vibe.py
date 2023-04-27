@@ -16,25 +16,25 @@ def fake_account_data():
 
 
 class Mood(str, Enum):
-    productive = "productive"
-    adventurous = "adventurous"
-    confident = "confident"
-    romantic = "romantic"
-    energetic = "energetic"
-    destructive = "destructive"
-    gloomy = "gloomy"
-    rejected = "rejected"
-    melancholic = "melancholic"
-    chill = "chill"
-    lazy = "lazy"
-    dreamy = "dreamy"
+    productive = "Productive"
+    adventurous = "Adventurous"
+    confident = "Confident"
+    romantic = "Romantic"
+    energetic = "Energetic"
+    destructive = "Destructive"
+    gloomy = "Gloomy"
+    rejected = "Rejected"
+    melancholic = "Melancholic"
+    chill = "Chill"
+    lazy = "Lazy"
+    dreamy = "Dreamy"
 
 
 class ActivityCategory(str, Enum):
-    food_snack = "food/snack"
-    movie_show = "movie/tv_show"
-    game = "game"
-    physical_activity = "physical_activity"
+    food_snack = "Food or Snack"
+    movie_show = "Movie or TV Series"
+    game = "Game"
+    physical_activity = "Physical Activity"
 
 
 class Activity(BaseModel):
@@ -56,11 +56,11 @@ class VibeIn(BaseModel):
 class FakeVibeQueries:
     def create(self, params: VibeIn, created_by: str, account_data: dict):
         return {
-            "mood": "productive",
+            "mood": "Productive",
             "name": "string",
             "spotify_id": "string",
             "picture_url": "string",
-            "activities": [{"category": "food/snack", "name": "string"}],
+            "activities": [{"category": "Food or Snack", "name": "string"}],
             "id": "644a9dd9c609f8a9d72edd17",
             "created_by": "user",
         }
@@ -78,22 +78,22 @@ def test_create_vibe():
     response = client.post(
         "/api/vibes",
         json={
-            "mood": "productive",
+            "mood": "Productive",
             "name": "string",
             "spotify_id": "string",
             "picture_url": "string",
-            "activities": [{"category": "food/snack", "name": "string"}],
+            "activities": [{"category": "Food or Snack", "name": "string"}],
         },
     )
 
     assert response.status_code == 200
     assert response.json()["id"] == "644a9dd9c609f8a9d72edd17"
     assert response.json() == {
-        "mood": "productive",
+        "mood": "Productive",
         "name": "string",
         "spotify_id": "string",
         "picture_url": "string",
-        "activities": [{"category": "food/snack", "name": "string"}],
+        "activities": [{"category": "Food or Snack", "name": "string"}],
         "id": "644a9dd9c609f8a9d72edd17",
         "created_by": "user",
     }

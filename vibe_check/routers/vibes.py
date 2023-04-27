@@ -66,8 +66,11 @@ async def delete_vibe(
 ):
     vibe = queries.get_one(vibe_id, account_data)
     if vibe is None:
-        raise HTTPException(status_code=404, detail="""False:
-          can't delete vibe with given vibe id""")
+        raise HTTPException(
+            status_code=404,
+            detail="""False:
+          can't delete vibe with given vibe id""",
+        )
     return queries.delete(vibe_id, account_data)
 
 
@@ -80,10 +83,10 @@ async def update_vibe(
 ):
     if params.mood not in [m.value for m in Mood]:
         raise HTTPException(status_code=404, detail="Invalid mood")
-
     for activity in params.activities:
         if activity.category not in [c.value for c in ActivityCategory]:
-            raise HTTPException(status_code=404,
-                                detail="Invalid activity category")
+            raise HTTPException(
+                status_code=404, detail="Invalid activity category"
+            )
     vibe = queries.edit(vibe_id, params, account_data)
     return vibe

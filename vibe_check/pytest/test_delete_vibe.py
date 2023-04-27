@@ -17,25 +17,25 @@ def fake_account_data():
 
 
 class Mood(str, Enum):
-    productive = "productive"
-    adventurous = "adventurous"
-    confident = "confident"
-    romantic = "romantic"
-    energetic = "energetic"
-    destructive = "destructive"
-    gloomy = "gloomy"
-    rejected = "rejected"
-    melancholic = "melancholic"
-    chill = "chill"
-    lazy = "lazy"
-    dreamy = "dreamy"
+    productive = "Productive"
+    adventurous = "Adventurous"
+    confident = "Confident"
+    romantic = "Romantic"
+    energetic = "Energetic"
+    destructive = "Destructive"
+    gloomy = "Gloomy"
+    rejected = "Rejected"
+    melancholic = "Melancholic"
+    chill = "Chill"
+    lazy = "Lazy"
+    dreamy = "Dreamy"
 
 
 class ActivityCategory(str, Enum):
-    food_snack = "food/snack"
-    movie_show = "movie/tv_show"
-    game = "game"
-    physical_activity = "physical_activity"
+    food_snack = "Food or Snack"
+    movie_show = "Movie or TV Series"
+    game = "Game"
+    physical_activity = "Physical Activity"
 
 
 class Activity(BaseModel):
@@ -62,11 +62,11 @@ class VibeOut(VibeIn):
 class FakeVibeQueries:
     def get_one(self, vibe_id: str, account_data: dict):
         return {
-            "mood": "productive",
+            "mood": "Productive",
             "name": "string",
             "spotify_id": "string",
             "picture_url": "string",
-            "activities": [{"category": "food/snack", "name": "string"}],
+            "activities": [{"category": "Food or Snack", "name": "string"}],
             "id": vibe_id,
             "created_by": "user",
         }
@@ -87,6 +87,6 @@ def test_delete_vibe():
     response = client.delete("/api/vibes/644a9dd9c609f8a9d72edd17")
 
     assert response.status_code == 200
-    assert response.json() == True
+    assert response.json() is True
 
     app.dependency_overrides = {}
