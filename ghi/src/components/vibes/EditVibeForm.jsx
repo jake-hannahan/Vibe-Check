@@ -89,18 +89,18 @@ function EditVibeForm() {
 						className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 					>
 						<option value="">Choose a Mood</option>
-						<option value="productive">Productive</option>
-						<option value="adventurous">Adventurous</option>
-						<option value="confident">Confident</option>
-						<option value="romantic">Romantic</option>
-						<option value="energetic">Energetic</option>
-						<option value="destructive">Destructive</option>
-						<option value="gloomy">Gloomy</option>
-						<option value="rejected">Rejected</option>
-						<option value="melancholic">Melancholic</option>
-						<option value="chill">Chill</option>
-						<option value="lazy">Lazy</option>
-						<option value="dreamy">Dreamy</option>
+						<option value="Productive">Productive</option>
+						<option value="Adventurous">Adventurous</option>
+						<option value="Confident">Confident</option>
+						<option value="Romantic">Romantic</option>
+						<option value="Energetic">Energetic</option>
+						<option value="Destructive">Destructive</option>
+						<option value="Gloomy">Gloomy</option>
+						<option value="Rejected">Rejected</option>
+						<option value="Melancholic">Melancholic</option>
+						<option value="Chill">Chill</option>
+						<option value="Lazy">Lazy</option>
+						<option value="Dreamy">Dreamy</option>
 					</select>
 				</label>
 				<label className="block mb-2 font-bold text-gray-600">
