@@ -33,13 +33,13 @@ function ListCard(props) {
         "bg-gradient-to-r from-violet-300 to-violet-400",
     };
 
-    const moodColor =
-      moodColorMap[props.vibe.mood.toLowerCase()] || "bg-gray-400";
+  const moodColor =
+    moodColorMap[props.vibe.mood.toLowerCase()] || "bg-gray-400";
 
-const addDefaultSrc = (e) => {
-  e.target.src =
-    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmU0ZjdlNTExN2VmZTE0OGY0YzZjYWM5NzY3MmYxYjc4OTkwNjZhNSZjdD1n/jpbnoe3UIa8TU8LM13/giphy.gif";
-};
+  const addDefaultSrc = (e) => {
+    e.target.src =
+      "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmU0ZjdlNTExN2VmZTE0OGY0YzZjYWM5NzY3MmYxYjc4OTkwNjZhNSZjdD1n/jpbnoe3UIa8TU8LM13/giphy.gif";
+  };
 
 	const capitalizeString = (string) => {
     if (string === "food/snack") {
@@ -55,42 +55,75 @@ const addDefaultSrc = (e) => {
   return (
     <>
       <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
-        <div className="container my-12 mx-auto pt-6 px-3 md:pl-20 hover:animate-pulse h-auto">
-          <div className="flex flex-wrap -mx-1 lg:-mx-1 w-96 2xl:w-64">
-            <article
-              className={`overflow-hidden rounded-lg shadow-lg shadow-zinc-900 ${moodColor}`}
-              onError={addDefaultSrc}
-            >
-              <img
-                alt="Placeholder"
-                className="block h-auto w-full"
-                src={props.vibe.picture_url}
-              />
-              <div className="min-h-56 max-h-56 overflow-y-scroll">
-                <header className="flex items-center justify-between leading-tight p-3 md:p-12">
-                  <h1 className="text-lg text-black">{props.vibe.name}</h1>
-                </header>
-                <h2 className="text-sm">
-                  {props.vibe.activities.map((activity) => (
-                    <div key={activity.name}>
-                      <div className="text-sm mb-2">
-                        {capitalizeString(activity.category)}{" "}
-                      </div>
-                      <div className="text-sm mb-2">{activity.name}</div>
-                    </div>
-                  ))}
-                </h2>
-                <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                  <div className="flex items-center text-black">
-                    <p className="ml-8 text-sm">{props.vibe.created_by}</p>
+        <div
+          className={`col-span-1 grid grid-rows-4 w-60 md:w-52
+          lg:w-56 xl:w-60 h-72 lg:h-80 xl:h-96 rounded-l
+          drop-shadow-xl shadow-zinc-900 m-4 ${moodColor}`}
+        >
+          <img
+            className="row-span-3 object-cover h-full max-h-48 w-full rounded-l"
+            onError={addDefaultSrc}
+            src={props.vibe.picture_url}
+            alt="Invalid url"
+          />
+          <div className="relative h-full bottom-5 pl-2">
+            <h1 className="font-bold text-xl">{props.vibe.name}</h1>
+            <h2 className="text-sm">
+              {props.vibe.activities.map((activity) => (
+                <div key={activity.name}>
+                  <div className="text-sm mb-2">
+                    {capitalizeString(activity.category)}{" "}
                   </div>
-                </footer>
-              </div>
-            </article>
+                  <div className="text-sm mb-2">{activity.name}</div>
+                </div>
+              ))}
+            </h2>
+            <p className="ml-8 text-sm">{props.vibe.created_by}</p>
           </div>
         </div>
       </NavLink>
     </>
+    // <>
+    //   <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
+    //     {/* <div className="border-4 border-green-500 container my-12 mx-auto pt-6 px-3 md:pl-20 hover:animate-pulse h-auto">
+    //       <div className="border-4 border-black-500 flex flex-wrap -mx-1 lg:-mx-1 w-96 2xl:w-64"> */}
+    //     <div
+    //       className={`flex justify-center box-content h-96 max-w-8xl overscroll-contain
+    //         mx-auto hover:animate-pulse border-4 border-purple-500 overflow-hidden rounded-lg shadow-lg shadow-zinc-900 ${moodColor}`}
+    //       onError={addDefaultSrc}
+    //     >
+    //       <div className="">
+    //         <img
+    //           alt="Placeholder"
+    //           className=""
+    //           src={props.vibe.picture_url}
+    //         />
+    //       </div>
+    //       <div className="min-h-56 max-h-56 overflow-y-scroll">
+    //         <header className="flex items-center justify-between leading-tight p-3 md:p-12">
+    //           <h1 className="text-lg text-black">{props.vibe.name}</h1>
+    //         </header>
+    //         <h2 className="text-sm">
+    //           {props.vibe.activities.map((activity) => (
+    //             <div key={activity.name}>
+    //               <div className="text-sm mb-2">
+    //                 {capitalizeString(activity.category)}{" "}
+    //               </div>
+    //               <div className="text-sm mb-2">{activity.name}</div>
+    //             </div>
+    //           ))}
+    //         </h2>
+    //         <footer className="border-4 border-red-500 flex items-center justify-between leading-none p-2 md:p-4">
+    //           <div className="flex items-center text-black">
+    //             <p className="ml-8 text-sm">{props.vibe.created_by}</p>
+    //           </div>
+    //         </footer>
+    //       </div>
+    //     </div>
+    //     {/* </div>
+    //     </div> */}
+    //   </NavLink>
+    // </>
   );
 }
 

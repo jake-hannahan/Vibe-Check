@@ -65,45 +65,43 @@ function VibesListPage() {
     }
 
     return (
-
-      <div
-        className="p-5 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))]
-          from-emerald-800 via-indigo-900 to-zinc-900">
-        <div className="grid gap-4 grid-flow-row grid- xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
-          <div className="p-5 text-center bg-white row-start-1 row-end-1 col-start-5 col-end-5">
-            <div className="p-5 relative w-full lg:max-w-sm ">
-              <select
-                onChange={(e) => setSelectedMood(e.target.value)}
-                className="flex justify-end w-full p-2.5 text-center text-gray-500
-              bg-white border rounded-md border-black shadow-sm outline-none appearance-none
-              hover:bg-indigo-900 hover:text-white">
-                <option>Pick a Mood</option>
-                {moods.map((mood) => (
-                  <option value={mood.name} key={mood.id}>
-                    {mood.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-          <div className="p-9 text-center 2xl:text-6xl text-4xl bg-white col-start-1 col-end-5 italic font-effect-neon">
-            VIBES FOR LIFE
-          </div>
-          <div className="p-10 text-bold text-center bg-white col-start-6 col-end-7">
-            Current Mood:
-            {"\n"}
-            <div>{selectedMood}</div>
-          </div>
-          <div
-            className="p-5 text-center 2xl:h-auto bg-white col-start-1 col-end-7 row-start-2 row-end-auto col-auto">
-            <div className="flex flex-row">
-              <div className="flex flex-wrap -mx-1">
+      // <div
+      //   className="border-4 border-red-500 p-5 bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))]
+      //     from-emerald-800 via-indigo-900 to-zinc-900"
+      //    >
+      //   <div className="border-4 border-red-500 grid gap-4 grid-flow-row grid- xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
+      //     <div className="border-4 border-red-500 p-5 text-center bg-white row-start-1 row-end-1 col-start-5 col-end-5">
+      //       <div className="border-4 border-red-500 p-5 relative w-full lg:max-w-sm ">
+      //         <select
+      //           onChange={(e) => setSelectedMood(e.target.value)}
+      //           className="flex justify-end w-full p-2.5 text-center text-gray-500
+      //         bg-white border rounded-md border-black shadow-sm outline-none appearance-none
+      //         hover:bg-indigo-900 hover:text-white"
+      //         >
+      //           <option>Pick a Mood</option>
+      //           {moods.map((mood) => (
+      //             <option value={mood.name} key={mood.id}>
+      //               {mood.name}
+      //             </option>
+      //           ))}
+      //         </select>
+      //       </div>
+      //     </div>
+      //     <div className="border-4 border-red-500 p-9 text-center 2xl:text-6xl text-4xl bg-white col-start-1 col-end-5 italic font-effect-neon">
+      //       VIBES FOR LIFE
+      //     </div>
+      //     <div className="border-4 border-red-500 p-10 text-bold text-center bg-white col-start-6 col-end-7">
+      //       Current Mood:
+      //       {"\n"}
+      //       <div>{selectedMood}</div>
+      //     </div>
+          // <div className="border-4 border-green-500 p-5 text-center 2xl:h-auto bg-white col-start-1 col-end-7 row-start-2 row-end-auto col-auto">
+              <div className="border-4 border-orange-500 flex flex-wrap">
                 {vibesData}
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          // </div>
+      //   // </div>
+      // </div>
     );
 };
 
