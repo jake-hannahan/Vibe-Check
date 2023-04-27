@@ -91,9 +91,7 @@ function VibesListPage() {
         </div>
         <div className="p-5 bg-gray-900 col-start-1 col-end-7 row-start-2">
           <div className="grid justify-center">
-            <div className="flex flex-wrap justify-center">
-              {vibesData}
-            </div>
+            <div className="flex flex-wrap justify-center">{vibesData}</div>
           </div>
         </div>
       </div>

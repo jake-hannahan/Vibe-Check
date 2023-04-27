@@ -75,47 +75,6 @@ function ListCard(props) {
         </div>
       </NavLink>
     </>
-    // <>
-    //   <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
-    //     {/* <div className="border-4 border-green-500 container my-12 mx-auto pt-6 px-3 md:pl-20 hover:animate-pulse h-auto">
-    //       <div className="border-4 border-black-500 flex flex-wrap -mx-1 lg:-mx-1 w-96 2xl:w-64"> */}
-    //     <div
-    //       className={`flex justify-center box-content h-96 max-w-8xl overscroll-contain
-    //         mx-auto hover:animate-pulse border-4 border-purple-500 overflow-hidden rounded-lg shadow-lg shadow-zinc-900 ${moodColor}`}
-    //       onError={addDefaultSrc}
-    //     >
-    //       <div className="">
-    //         <img
-    //           alt="Placeholder"
-    //           className=""
-    //           src={props.vibe.picture_url}
-    //         />
-    //       </div>
-    //       <div className="min-h-56 max-h-56 overflow-y-scroll">
-    //         <header className="flex items-center justify-between leading-tight p-3 md:p-12">
-    //           <h1 className="text-lg text-black">{props.vibe.name}</h1>
-    //         </header>
-    //         <h2 className="text-sm">
-    //           {props.vibe.activities.map((activity) => (
-    //             <div key={activity.name}>
-    //               <div className="text-sm mb-2">
-    //                 {capitalizeString(activity.category)}{" "}
-    //               </div>
-    //               <div className="text-sm mb-2">{activity.name}</div>
-    //             </div>
-    //           ))}
-    //         </h2>
-    //         <footer className="border-4 border-red-500 flex items-center justify-between leading-none p-2 md:p-4">
-    //           <div className="flex items-center text-black">
-    //             <p className="ml-8 text-sm">{props.vibe.created_by}</p>
-    //           </div>
-    //         </footer>
-    //       </div>
-    //     </div>
-    //     {/* </div>
-    //     </div> */}
-    //   </NavLink>
-    // </>
   );
 }
 
