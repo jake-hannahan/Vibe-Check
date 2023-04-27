@@ -1,7 +1,8 @@
 import React from "react";
 import SongList from "./SongList";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useDeleteVibeMutation } from "../../services/vibes";
+
 
 function MyVibesCard(props) {
   const [deleteVibe] = useDeleteVibeMutation();
@@ -12,6 +13,7 @@ function MyVibesCard(props) {
       .join(" ")
       .replace(/_/g, " ");
   };
+  const navigate = useNavigate();
 
   const moodColorMap = {
     Chill: {
@@ -131,26 +133,26 @@ function MyVibesCard(props) {
               {/* Buttons box */}
               <ul className="absolute bottom-0 left-3 flex justify-center mt-auto gap-x-6 text-base">
                 <li>
-                  <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-lg">
-                    <NavLink
-                      to={{ pathname: "/edit" }}
-                      state={{ vibe: props.vibe }}
-                    >
+                  <button
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-lg"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      navigate("/edit",  { state: { vibe: props.vibe } })
+                    }}
+                  >
                       Edit
-                    </NavLink>
                   </button>
                 </li>
                 <li>
                   <button
                     className="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded-lg"
-                    onClick={() => deleteVibe(props.vibe.id)}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      deleteVibe(props.vibe.id)
+                      navigate("/my",  { state: { vibe: props.vibe } })
+                    }}
                   >
-                    <NavLink
-                      to={{ pathname: "/my" }}
-                      state={{ vibe: props.vibe }}
-                    >
                       Delete
-                    </NavLink>
                   </button>
                 </li>
               </ul>
