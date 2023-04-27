@@ -3,6 +3,7 @@ import SongList from "./SongList";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDeleteVibeMutation } from "../../services/vibes";
 
+
 function MyVibesCard(props) {
   const [deleteVibe] = useDeleteVibeMutation();
   const capitalize = (str) => {
@@ -137,23 +138,23 @@ function MyVibesCard(props) {
                   <button
                     className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-lg"
                     onClick={(e) => {
-                      e.preventDefault();
-                      navigate("/edit", { state: { vibe: props.vibe } });
+                      e.preventDefault()
+                      navigate("/edit",  { state: { vibe: props.vibe } })
                     }}
                   >
-                    Edit
+                      Edit
                   </button>
                 </li>
                 <li>
                   <button
                     className="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded-lg"
                     onClick={(e) => {
-                      e.preventDefault();
-                      deleteVibe(props.vibe.id);
-                      navigate("/my", { state: { vibe: props.vibe } });
+                      e.preventDefault()
+                      deleteVibe(props.vibe.id)
+                      navigate("/my",  { state: { vibe: props.vibe } })
                     }}
                   >
-                    Delete
+                      Delete
                   </button>
                 </li>
               </ul>
