@@ -113,4 +113,5 @@ JOURNAL ENTRY
 
     - Finalizing uniform styling for forms, pages and components for the MVP submission
     - Go over and clean up our code, make sure its easier to read and properly formatted
+    - Formatting the frontend, READme and journals
     - Submitted the MVP for Vibe Check
