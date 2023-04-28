@@ -40,32 +40,32 @@ function CreateVibeForm() {
 	};
 	return (
 		<>
-			<div className="h-screen font-raleway tracking-wide">
-				<div className="grid gap-8 m-8 justify-items-center">
+			<div className="bg-black h-screen flex justify-center items-center font-raleway tracking-wide">
+				<div className="grid gap-8 justify-items-center">
 					<div className="relative group">
 						<div className="bg-neutral-900 rounded-lg">
 							<form
 								onSubmit={handleSubmit}
-								className="max-w-sm mx-auto p-6 bg-gray-400 rounded-lg shadow-md"
+								className="max-w-sm glow mx-auto p-6 bg-neutral-900 rounded-lg shadow-md"
 							>
-								<h5 className="text-4xl font-bolder text-gray-900 text-center">Craft a Vibe</h5>
-								<label className="block mb-2 font-bold text-gray-600">
+								<h5 className="text-4xl font-bolder text-white text-center">Craft a Vibe</h5>
+								<label className="block mb-2 font-bold text-gray-300">
 									Name:
 									<input
 										type="text"
 										placeholder="Name"
 										value={newVibe.name}
 										onChange={(e) => dispatch(handleNameChange(e.target.value))}
-										className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:outline-none focus:shadow-outline"
+										className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63]"
 									/>
 								</label>
-								<label className="block mb-2 font-bold text-gray-600">
+								<label className="block mb-2 font-bold text-gray-300">
 									Mood:
 									<select
 										id={"moods"}
 										value={newVibe.mood}
 										onChange={(e) => dispatch(handleMoodChange(e.target.value))}
-										className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5"
 									>
 										<option value="">Choose a Mood</option>
 										<option value="Productive">Productive</option>
@@ -82,7 +82,7 @@ function CreateVibeForm() {
 										<option value="Dreamy">Dreamy</option>
 									</select>
 								</label>
-								<label className="block mb-2 font-bold text-gray-600">
+								<label className="block mb-2 font-bold text-gray-300">
 									Spotify ID:
 									<span>
 										<button
@@ -105,20 +105,20 @@ function CreateVibeForm() {
 										placeholder="Spotify ID"
 										value={newVibe.spotify_id}
 										onChange={(e) => dispatch(handleSpotifyIdChange(e.target.value))}
-										className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:outline-none focus:shadow-outline"
+										className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63]"
 									/>
 								</label>
-								<label className="block mb-2 font-bold text-gray-600">
+								<label className="block mb-2 font-bold text-gray-300">
 									Picture URL:
 									<input
 										type="text"
 										placeholder="Picture URL"
 										value={newVibe.picture_url}
 										onChange={(e) => dispatch(handlePictureUrlChange(e.target.value))}
-										className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:outline-none focus:shadow-outline"
+										className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63]"
 									/>
 								</label>
-								<label className="block mb-2 font-bold text-gray-600">
+								<label className="block mb-2 font-bold text-gray-300">
 									Activities:
 									{activities.map((activity, index) => (
 										<div key={index}>
@@ -134,7 +134,7 @@ function CreateVibeForm() {
 														})
 													)
 												}
-												className="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+												className="bg-gray-400 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63] block w-full p-2.5"
 											>
 												<option value="">Choose a Category</option>
 												<option value="Food or Snack">Food or Snack</option>
@@ -155,7 +155,7 @@ function CreateVibeForm() {
 														})
 													)
 												}
-												className="w-full p-2 mt-2 mb-2 text-gray-700 bg-gray-200 rounded-lg focus:outline-none focus:shadow-outline"
+												className="w-full p-2 mt-2 mb-2 text-gray-700 bg-gray-200 rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63]"
 											/>
 										</div>
 									))}
@@ -163,20 +163,20 @@ function CreateVibeForm() {
 								<button
 									type="button"
 									onClick={handleAddActivity}
-									className="p-2 mt-4 mr-1 bg-blue-500 text-white rounded-lg hover:bg-blue-700"
+									className="p-2 mt-4 mr-1 bg-blue-700 text-white rounded-lg hover:bg-blue-900"
 								>
 									Add another Activity
 								</button>
 								<button
 									type="button"
 									onClick={handleRemoveActivity}
-									className="p-2 mt-4 bg-red-500 text-white rounded-lg hover:bg-red-700"
+									className="p-2 mt-4 bg-red-700 text-white rounded-lg hover:bg-red-900"
 								>
 									Remove last Activity
 								</button>
 								<button
 									type="submit"
-									className="w-full p-2 mt-4 bg-gray-500 text-white rounded-lg hover:bg-gray-700"
+									className="w-full p-2 mt-4 bg-gray-500 hover:bg-[#e21f63] text-white rounded-lg hover:bg-gray-700"
 								>
 									Create Vibe
 								</button>
