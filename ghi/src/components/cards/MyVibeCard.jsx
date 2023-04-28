@@ -60,7 +60,7 @@ function MyVibesCard(props) {
       textColor: "text-rose-900",
     },
     Energetic: {
-      hoverColor: "hover:bg-sky-200",
+      hoverColor: "hover:bg-lime-200",
       color: "bg-lime-400",
       darkColor: "bg-lime-500",
       textColor: "text-lime-900",
@@ -84,7 +84,7 @@ function MyVibesCard(props) {
       textColor: "text-violet-900",
     },
     Melancholic: {
-      hoverColor: "hover:bg-sky-200",
+      hoverColor: "hover:bg-indigo-200",
       color: "bg-indigo-400",
       darkColor: "bg-indigo-500",
       textColor: "text-indigo-900",
