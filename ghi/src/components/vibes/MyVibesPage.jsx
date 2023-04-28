@@ -20,7 +20,7 @@ function MyVibesPage() {
       {/* loop through each row */}
       {Array.from({ length: rows }).map((_, i) => (
         <div
-          className="flex container gap-4 grid xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1 w-content"
+          className="grid container gap-4 xl:grid-cols-3 lg:grid-cols-1 md:grid-cols-1 w-content"
           key={i}
         >
           {/* display up to 3 items in each row */}

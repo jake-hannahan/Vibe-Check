@@ -116,25 +116,25 @@ function MyVibesCard(props) {
     <>
       <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
         <div
-          className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 shadow-xl ${moodShadowColor} ${moodColor} ${moodHoverColor}`}
+          className={`justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 shadow-xl ${moodShadowColor} ${moodColor} ${moodHoverColor}`}
         >
           <div
-            className="flex grid grid-cols-2 w-full h-full space-x-2"
+            className="grid grid-cols-2 w-full h-full space-x-2"
             key={props.vibe.id}
           >
             {/* Left side of the card */}
             <div
-              className={`relative flex-1 p-2 w-full font-raleway font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4 ${moodTextColor}`}
+              className={`relative p-2 w-full font-raleway font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4 ${moodTextColor}`}
             >
               {capitalize(props.vibe.name)}
               {/* Mood box */}
               <div
-                className={`relative left-0 top-2 flex-1 p-2 w-full tracking-wider text-2xl md:text-lg lg:text-lg xl:text-xl text-black text-center rounded-lg ${moodNameBackgroundColor} ${moodTextColor} hover:${moodColor}`}
+                className={`relative left-0 top-2 p-2 w-full tracking-wider text-2xl md:text-lg lg:text-lg xl:text-xl text-black text-center rounded-lg ${moodNameBackgroundColor} ${moodTextColor} hover:${moodColor}`}
               >
                 {props.vibe.mood}
               </div>
               {/* Activity box */}
-              <ul className="absolute pt-4 right-10 left-10 max-h-48 max-w-prose flex-1 text-base md:text-sm lg:text-base xl:text-lg text-black text-center overflow-hidden overflow-y-auto divide-y divide-gray-400 divide-opacity-25">
+              <ul className="absolute pt-4 right-10 left-10 max-h-48 max-w-prose text-base md:text-sm lg:text-base xl:text-lg text-black text-center overflow-hidden overflow-y-auto divide-y divide-gray-400 divide-opacity-25">
                 {props.vibe.activities.map((activity) => (
                   <li key={activity.name} className="p-2 max-w-prose">
                     <span className="text-black">{activity.category}</span>
@@ -173,7 +173,7 @@ function MyVibesCard(props) {
               </ul>
             </div>
             {/* Songlist box */}
-            <div className="flex-2 overflow-hidden overflow-y-auto float-right rounded-lg w-full h-full grow">
+            <div className="overflow-hidden overflow-y-auto float-right rounded-lg w-full h-full grow">
               <SongList spotifyId={props.vibe.spotify_id} />
             </div>
           </div>
