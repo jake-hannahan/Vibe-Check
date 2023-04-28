@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import Login from "../auth/Login";
 import { useGetAccountQuery } from "../../services/auth";
 import "../auth/form.css";
+import { ReactComponent as Logo } from "../../static/logo-no-background.svg";
 
 const MainPage = () => {
 	const count = useSelector((state) => state.counter.value);
@@ -59,12 +60,9 @@ const MainPage = () => {
 	return (
 		<>
 			<div className="h-screen container text-center mx-auto my-auto">
-				<h1 className="overflow-hidden text-right text-7xl text-white font-bold rounded-md p-3 my-6 font-megrim">
-					<span className="text-8xl text-[#C43749]">V</span>
-					<span className="">ibe</span>
-					<span className="text-8xl text-[#C43749]">C</span>
-					<span className="">heck</span>
-				</h1>
+				<div className="flex justify-center m-8">
+					<Logo className="h-2/3 w-4/5" />
+				</div>
 				<div className="container grid gap-2 md:grid-cols-3 xs:grid-cols-1 sm:grid-cols-2">
 					<div>
 						<button

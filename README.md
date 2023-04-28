@@ -15,7 +15,7 @@
 
 -   So what's Vibe Check?
 
-> It's a community for exploring, creating, and sharing vibes with one another.
+> It's a single page application built on React, Redux.js, FastAPI, and MongoDB intended to allow a community to explore, create, and share vibes with one another. In this app, vibes are data objects that users can create to capture the theme of a moment or sensation. A vibe is comprised of a mood, an image, various activities, and a Spotify playlist.
 
 ## Design
 
