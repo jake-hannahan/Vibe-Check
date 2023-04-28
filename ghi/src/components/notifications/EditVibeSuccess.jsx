@@ -16,7 +16,7 @@ const EditVibeSuccess = () => {
 	return (
 		<div
 			id="logout"
-			className={`${showNotification} flex items-center w-fit max-w-s p-4 space-x-3 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800`}
+			className={`${showNotification} flex items-center w-fit max-w-s p-4 space-x-3 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800 font-raleway`}
 			role="alert"
 		>
 			<div className="text-md font-normal text-center">

@@ -4,7 +4,7 @@ const SignUpSuccess = () => {
 	return (
 		<div
 			id="logout"
-			className="flex items-center w-fit max-w-s p-4 space-x-3 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
+			className="flex items-center w-fit max-w-s p-4 space-x-3 text-gray-500 bg-white divide-x divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800 font-raleway"
 			role="alert"
 		>
 			<div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
