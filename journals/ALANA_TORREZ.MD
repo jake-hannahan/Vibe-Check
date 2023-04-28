@@ -86,4 +86,19 @@ Tested backend functions some more. Started on my vibe component card. Assigned 
 Got started on building out listcard component and listvibes page.
 
 > > [W17:D4] 20 April 2023 | Thursday
-Continued with building out components assigned to me. Shaun peer coded with me so I could move past some blockers. 
+Continued with building out components assigned to me. Shaun peer coded with me so I could move past some blockers.
+
+> > [W18:D1] 24 April 2023 | Monday
+Worked on formatting the card component that gets passed into the vibes List.
+
+> > [W18:D2] 25 April 2023 | Tuesday
+Added drop down options to the vibes list page so that users can select vibes by mood.
+
+> > [W18:D3] 26 April 2023 | Wednesday
+Struggled with formatting list cards in card component so that they look uniform.
+
+> > [W18:D4] 27 April 2023 | Thursday
+Scrapped the card component and list card tailwind and modified code being used in other cards.
+
+> > [W18:D5] 28 April 2023 | Friday
+Finalized mvp styling and formatting for list card and list vibes. 
