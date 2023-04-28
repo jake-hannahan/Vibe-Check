@@ -8,9 +8,8 @@ function VibeDetailPage() {
 	const location = useLocation();
 	const { state } = location;
 	const { data, isLoading } = useGetVibeQuery(state);
+
 	if (isLoading) return <div>Vibe Loading...</div>;
-
-
 	return (
 		<>
 			<div className="container m-auto grid grid-cols-3 gap-1 w-screen h-[65vh]">
@@ -44,9 +43,7 @@ function VibeDetailPage() {
 						<div className="h-8 w-auto"></div>
 						{data.activities.map((activity) => (
 							<div key={activity.name} className="mb-3">
-								<h1 className="text-center text-2xl text-white font-bold">
-									{activity.category}
-								</h1>
+								<h1 className="text-center text-2xl text-white font-bold">{activity.category}</h1>
 								<h1 className="text-center text-2xl text-white font-bold">• {activity.name}</h1>
 							</div>
 						))}
