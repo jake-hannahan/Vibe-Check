@@ -75,4 +75,7 @@ Development Journal
 > > [W17:D4] 27 April 2023 | Thursday
 > > As a team, we finalized our backend. Finished formatting with Black and ran Flake8. Deleted unnecessary code. Finished writing our unit tests. Adjusted our gitlab-ci file. Finished writing our app's README.md. Worked on styling.
 
+> > [W17:D5] 28 April 2023 | Friday
+> > As a team, we finished our styling for MVP. We edited our readme. We formatted frontend code. Finished MVP! Woo!
+
 <!---------------- WEEK 18 ---------------->
