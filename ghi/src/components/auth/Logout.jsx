@@ -5,7 +5,7 @@ import "./logout.css";
 const Logout = () => {
 	return (
 		<>
-			<div className="bg-black w-100 h-screen flex justify-center items-center">
+			<div className="bg-black w-100 h-screen flex justify-center items-center font-raleway">
 				<div className="grid gap-8 items-start justify-center">
 					<div className="relative group">
 						<div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-lg blur-xl opacity-75 group-hover:opacity-100 transition duration-200 tilt"></div>
