@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import SongList from "../cards/SongList";
 import { useGetVibeQuery } from "../../services/vibes";
 import { useLocation } from "react-router-dom";
+import BIRDS from "vanta/dist/vanta.birds.min";
 
 function VibeDetailPage() {
+	const [vantaEffect, setVantaEffect] = useState(null);
+	const ref = useRef(null);
 	const location = useLocation();
 	const { state } = location;
 	const { data, isLoading } = useGetVibeQuery(state);
+
+	useEffect(() => {
+		if (!vantaEffect) {
+			setVantaEffect(
+				BIRDS({
+					el: ref.current,
+				})
+			);
+		}
+		return () => {
+			if (vantaEffect) vantaEffect.destroy();
+		};
+	}, [vantaEffect]);
+
 	if (isLoading) return <div>Vibe Loading...</div>;
-
-
 	return (
 		<>
 			<div className="container m-auto grid grid-cols-3 gap-1 w-screen h-[65vh]">
@@ -19,6 +34,7 @@ function VibeDetailPage() {
 					<h1 className="overflow-hidden text-center text-5xl text-white font-bold shake rounded-md p-3 mt-6 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
 						{data.name}
 					</h1>
+					<div ref={ref} className="w-48 h-48"></div>
 				</div>
 				{/* Detail Card Div */}
 				<div className="col-span-3 grid grid-cols-3 gap-1 w-100 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] rounded-md p-3 mt-3 h-content detailCard">
@@ -44,9 +60,7 @@ function VibeDetailPage() {
 						<div className="h-8 w-auto"></div>
 						{data.activities.map((activity) => (
 							<div key={activity.name} className="mb-3">
-								<h1 className="text-center text-2xl text-white font-bold">
-									{activity.category}
-								</h1>
+								<h1 className="text-center text-2xl text-white font-bold">{activity.category}</h1>
 								<h1 className="text-center text-2xl text-white font-bold">• {activity.name}</h1>
 							</div>
 						))}
