@@ -17,72 +17,84 @@ function MyVibesCard(props) {
 
   const moodColorMap = {
     Chill: {
+      shadowColor: "shadow-sky-500",
       hoverColor: "hover:bg-sky-200",
       color: "bg-sky-400",
       darkColor: "bg-sky-500",
       textColor: "text-sky-900",
     },
     Lazy: {
+      shadowColor: "shadow-teal-500",
       hoverColor: "hover:bg-teal-200",
       color: "bg-teal-400",
       darkColor: "bg-teal-500",
       textColor: "text-teal-900",
     },
     Dreamy: {
+      shadowColor: "shadow-cyan-500",
       hoverColor: "hover:bg-cyan-200",
       color: "bg-cyan-400",
       darkColor: "bg-cyan-500",
       textColor: "text-cyan-900",
     },
     Productive: {
+      shadowColor: "shadow-orange-500",
       hoverColor: "hover:bg-orange-200",
       color: "bg-orange-400",
       darkColor: "bg-orange-500",
       textColor: "text-orange-900",
     },
     Adventurous: {
+      shadowColor: "shadow-yellow-500",
       hoverColor: "hover:bg-yellow-200",
       color: "bg-yellow-400",
       darkColor: "bg-yellow-500",
       textColor: "text-yellow-900",
     },
     Confident: {
+      shadowColor: "shadow-amber-500",
       hoverColor: "hover:bg-amber-200",
       color: "bg-amber-400",
       darkColor: "bg-amber-500",
       textColor: "text-amber-900",
     },
     Romantic: {
+      shadowColor: "shadow-rose-500",
       hoverColor: "hover:bg-rose-200",
       color: "bg-rose-400",
       darkColor: "bg-rose-500",
       textColor: "text-rose-900",
     },
     Energetic: {
+      shadowColor: "shadow-lime-500",
       hoverColor: "hover:bg-lime-200",
       color: "bg-lime-400",
       darkColor: "bg-lime-500",
       textColor: "text-lime-900",
     },
     Destructive: {
+      shadowColor: "shadow-stone-500",
       hoverColor: "hover:bg-stone-200",
       color: "bg-stone-400",
       darkColor: "bg-stone-500",
       textColor: "text-stone-900",
     },
     Gloomy: {
+      shadowColor: "shadow-gray-500",
       hoverColor: "hover:bg-gray-200",
       color: "bg-gray-400",
       darkColor: "bg-gray-500",
       textColor: "text-gray-900",
     },
     Rejected: {
+      shadowColor: "shadow-violet-500",
       hoverColor: "hover:bg-violet-200",
       color: "bg-violet-400",
       darkColor: "bg-violet-500",
       textColor: "text-violet-900",
     },
     Melancholic: {
+      shadowColor: "shadow-indigo-500",
       hoverColor: "hover:bg-indigo-200",
       color: "bg-indigo-400",
       darkColor: "bg-indigo-500",
@@ -97,12 +109,14 @@ function MyVibesCard(props) {
     moodColorMap[props.vibe.mood].textColor || "text-gray-900";
   const moodHoverColor =
     moodColorMap[props.vibe.mood].hoverColor || "hover:bg-gray-200";
+  const moodShadowColor =
+    moodColorMap[props.vibe.mood].shadowColor || "shadow-gray-500";
 
   return (
     <>
       <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
         <div
-          className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 ${moodColor} ${moodHoverColor}`}
+          className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 shadow-lg ${moodShadowColor} ${moodColor} ${moodHoverColor}`}
         >
           <div
             className="flex grid grid-cols-2 w-full h-full space-x-2"
