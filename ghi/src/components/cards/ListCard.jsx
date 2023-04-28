@@ -9,20 +9,28 @@ function ListCard(props) {
     const moodColorMap = {
       chill:
         "bg-gradient-to-r bg-gradient-to-t from-orange-400 to-bg-gradient-to-r from-blue-300 via-green-200 to-yellow-300-400from-blue-400 to-emerald-400",
-      lazy: "bg-teal-4radial-gradient(at center center, rgb(55, 65, 81), rgb(51, 65, 85), rgb(112, 26, 117))00",
-      dreamy: "bg-gradient-to-r from-green-300 to-purple-400",
-      productive: "bg-gradient-to-r from-yellow-600 to-red-600",
-      adventurous: "bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400",
+      lazy:
+        "bg-teal-4radial-gradient(at center center, rgb(55, 65, 81), rgb(51, 65, 85), rgb(112, 26, 117))00",
+      dreamy:
+        "bg-gradient-to-r from-green-300 to-purple-400",
+      productive:
+        "bg-gradient-to-r from-yellow-600 to-red-600",
+      adventurous:
+        "bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400",
       confident:
         "bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-900 to-yellow-300",
-      romantic: "bg-gradient-to-r from-fuchsia-600 to-pink-600",
+      romantic:
+        "bg-gradient-to-r from-fuchsia-600 to-pink-600",
       energetic:
         "bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-emerald-200 via-emerald-100 to-emerald-500",
-      destructive: "bg-gradient-to-r from-slate-500 to-yellow-100",
-      gloomy: "bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400",
+      destructive:
+        "bg-gradient-to-r from-slate-500 to-yellow-100",
+      gloomy:
+        "bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400",
       rejected:
         "bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-900 to-yellow-300",
-      melancholic: "bg-gradient-to-r from-violet-300 to-violet-400",
+      melancholic:
+        "bg-gradient-to-r from-violet-300 to-violet-400",
     };
 
   const moodColor =
@@ -33,16 +41,7 @@ function ListCard(props) {
       "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmU0ZjdlNTExN2VmZTE0OGY0YzZjYWM5NzY3MmYxYjc4OTkwNjZhNSZjdD1n/jpbnoe3UIa8TU8LM13/giphy.gif";
   };
 
-	const capitalizeString = (string) => {
-    if (string === "food/snack") {
-      return "Food/Snack";
-    } else if (string === "movie/tv_show") {
-      return "Movie/TV Show";
-    } else if (string === "physical_activity") {
-      return "Physical Activity";
-    }
-    return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
-  };
+
 
   return (
     <>
@@ -64,7 +63,7 @@ function ListCard(props) {
               {props.vibe.activities.map((activity) => (
                 <div key={activity.name}>
                   <div className="text-sm mb-2">
-                    {capitalizeString(activity.category)}{" "}
+                    {activity.category}
                   </div>
                   <div className="text-sm mb-2">{activity.name}</div>
                 </div>
