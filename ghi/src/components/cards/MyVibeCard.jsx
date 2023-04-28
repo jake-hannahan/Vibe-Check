@@ -116,7 +116,7 @@ function MyVibesCard(props) {
     <>
       <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
         <div
-          className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 shadow-lg ${moodShadowColor} ${moodColor} ${moodHoverColor}`}
+          className={`flex justify-center mx-auto p-4 box-content h-96 max-w-8xl overscroll-contain rounded-lg transform transition duration-300 shadow-xl ${moodShadowColor} ${moodColor} ${moodHoverColor}`}
         >
           <div
             className="flex grid grid-cols-2 w-full h-full space-x-2"
