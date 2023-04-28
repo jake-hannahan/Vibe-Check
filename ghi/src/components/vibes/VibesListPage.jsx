@@ -23,16 +23,10 @@ function VibesListPage() {
     const { data, isLoading, isSuccess, isError, error } = useGetVibesQuery({
     refetchOnMountOrArgChange: true,
   });
-  // use the query function in vibes.js to query our backend endpoint and maps through our vibe model objects
 
     let vibesData;
-// declaring a variable to be used later--instantiate or whatever, not sure exactly what is happening
-    // let currentMood;
 
     const[selectedMood, setSelectedMood] = useState('All')
-    // sets initial state of data to load vibes with chill mood
-        // const[changeColor, setChangeColor] = useState(false)
-    // const[moodDisplay, setMoodDisplay] = useState('chill')
 
     const filteredData = () => {
     if (selectedMood === "All") {
@@ -44,8 +38,6 @@ function VibesListPage() {
       );
   }
 };
-
-
 
 
     if (isLoading) {
@@ -75,9 +67,9 @@ function VibesListPage() {
               hover:bg-indigo-900 hover:text-white"
           >
             {moods.map((mood) => (
-              <option value={mood.name} key={mood.id}>
+            <option value={mood.name} key={mood.id}>
                 {mood.name}
-              </option>
+            </option>
             ))}
           </select>
         </div>
@@ -91,9 +83,7 @@ function VibesListPage() {
         </div>
         <div className="p-5 bg-gray-900 col-start-1 col-end-7 row-start-2">
           <div className="grid justify-center">
-            <div className="flex flex-wrap justify-center">
-              {vibesData}
-            </div>
+            <div className="flex flex-wrap justify-center">{vibesData}</div>
           </div>
         </div>
       </div>

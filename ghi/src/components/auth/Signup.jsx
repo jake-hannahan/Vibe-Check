@@ -32,10 +32,8 @@ const Signup = () => {
   return (
     <div className="bg-neutral-800 w-screen h-screen flex justify-center items-center">
       <div className="grid gap-8 justify-items-center">
-        {/* NEW CODE STARTS HERE */}
         <div className="relative group">
           <div className="z-10 p-8 bg-neutral-900 rounded-lg glow">
-        {/* NEW CODE ENDS HERE */}
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="text-center">
                 <h5 className="text-2xl font-medium text-gray-900 dark:text-white">
@@ -106,10 +104,8 @@ const Signup = () => {
                 Have an account? Login <span className="red-text">here.</span>
               </NavLink>
             </div>
-        {/* NEW CODE STARTS HERE */}
           </div>
         </div>
-        {/* NEW CODE ENDS HERE */}
       </div>
     </div>
   );
