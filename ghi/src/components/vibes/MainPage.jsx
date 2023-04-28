@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import Login from "../auth/Login";
 import { useGetAccountQuery } from "../../services/auth";
 import "../auth/form.css";
+import { ReactComponent as Logo } from "../../static/logo-no-background.svg";
 
 const MainPage = () => {
 	const count = useSelector((state) => state.counter.value);
@@ -59,12 +60,9 @@ const MainPage = () => {
 	return (
 		<>
 			<div className="h-screen container text-center mx-auto my-auto">
-				<h1 className="overflow-hidden text-right text-7xl text-white font-bold rounded-md p-3 my-6 font-megrim">
-					<span className="text-8xl text-[#C43749]">V</span>
-					<span className="">ibe</span>
-					<span className="text-8xl text-[#C43749]">C</span>
-					<span className="">heck</span>
-				</h1>
+				<div className="flex justify-center m-8">
+					<Logo className="h-2/3 w-4/5" />
+				</div>
 				<div className="container grid gap-2 md:grid-cols-3 xs:grid-cols-1 sm:grid-cols-2">
 					<div>
 						<button
@@ -77,7 +75,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(4))}
-							className="bg-yellow-500 hover:bg-yellow-400 text-white font-semibold py-2 px-4 border-b-4 border-yellow-700 hover:border-yellow-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-yellow-400 focus:bg-yellow-400 focus:border-yellow-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-yellow-500 rounded w-full font-raleway tracking-widest"
 						>
 							Adventurous
 						</button>
@@ -85,7 +83,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(5))}
-							className="bg-amber-500 hover:bg-amber-400 text-white font-semibold py-2 px-4 border-b-4 border-amber-700 hover:border-amber-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-amber-400 focus:bg-amber-400 focus:border-amber-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-amber-500 rounded w-full font-raleway tracking-widest"
 						>
 							Confident
 						</button>
@@ -93,7 +91,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(6))}
-							className="bg-rose-500 hover:bg-rose-400 text-white font-semibold py-2 px-4 border-b-4 border-rose-700 hover:border-rose-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-rose-400 focus:bg-rose-400 focus:border-rose-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-rose-500 rounded w-full font-raleway tracking-widest"
 						>
 							Romantic
 						</button>
@@ -101,7 +99,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(7))}
-							className="bg-lime-500 hover:bg-lime-400 text-white font-semibold py-2 px-4 border-b-4 border-lime-700 hover:border-lime-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-lime-400 focus:bg-lime-400 focus:border-lime-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-lime-500 rounded w-full font-raleway tracking-widest"
 						>
 							Energetic
 						</button>
@@ -109,7 +107,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(8))}
-							className="bg-stone-500 hover:bg-stone-400 text-white font-semibold py-2 px-4 border-b-4 border-stone-700 hover:border-stone-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-stone-400 focus:bg-stone-400 focus:border-stone-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-stone-500 rounded w-full font-raleway tracking-widest"
 						>
 							Destructive
 						</button>
@@ -117,7 +115,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(9))}
-							className="bg-gray-500 hover:bg-gray-400 text-white font-semibold py-2 px-4 border-b-4 border-gray-700 hover:border-gray-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-gray-400 focus:bg-gray-400 focus:border-gray-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-gray-500 rounded w-full font-raleway tracking-widest"
 						>
 							Gloomy
 						</button>
@@ -125,7 +123,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(10))}
-							className="bg-violet-500 hover:bg-violet-400 text-white font-semibold py-2 px-4 border-b-4 border-violet-700 hover:border-violet-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-violet-400 focus:bg-violet-400 focus:border-violet-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-violet-500 rounded w-full font-raleway tracking-widest"
 						>
 							Rejected
 						</button>
@@ -133,7 +131,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(11))}
-							className="bg-indigo-500 hover:bg-indigo-400 text-white font-semibold py-2 px-4 border-b-4 border-indigo-700 hover:border-indigo-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-indigo-400 focus:bg-indigo-400 focus:border-indigo-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-indigo-500 rounded w-full font-raleway tracking-widest"
 						>
 							Melancholic
 						</button>
@@ -141,7 +139,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(0))}
-							className="bg-sky-500 hover:bg-sky-400 text-white font-semibold py-2 px-4 border-b-4 border-sky-700 hover:border-sky-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-sky-400 focus:bg-sky-400 focus:border-sky-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-sky-500 rounded w-full font-raleway tracking-widest"
 						>
 							Chill
 						</button>
@@ -149,7 +147,7 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(1))}
-							className="bg-teal-500 hover:bg-teal-400 text-white font-semibold py-2 px-4 border-b-4 border-teal-700 hover:border-teal-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-teal-400 focus:bg-teal-400 focus:border-teal-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-teal-500 rounded w-full font-raleway tracking-widest"
 						>
 							Lazy
 						</button>
@@ -157,18 +155,18 @@ const MainPage = () => {
 					<div>
 						<button
 							onClick={() => dispatch(set(2))}
-							className="bg-cyan-500 hover:bg-cyan-400 text-white font-semibold py-2 px-4 border-b-4 border-cyan-700 hover:border-cyan-500 rounded w-full font-raleway tracking-widest"
+							className="bg-gray-900 hover:bg-cyan-400 focus:bg-cyan-400 focus:border-cyan-500 text-white font-semibold py-2 px-4 border-b-4 border-r-4 border-gray-700 hover:border-cyan-500 rounded w-full font-raleway tracking-widest"
 						>
 							Dreamy
 						</button>
 					</div>
 				</div>
 				<div
-					className={`relative container p-4 mt-4 grid grid-cols-4 grid-flow-row w-screen justify-items-center h-content rounded ${
+					className={`relative container p-4 mt-4 pb-8 grid grid-cols-4 w-screen justify-items-center h-content rounded ${
 						colors[colorArr[count]]
 					}`}
 				>
-					<div className="col-span-4 h-fill mb-4">
+					<div className="col-span-4 h-12 mb-4">
 						<div className="w-fill h-fill mx-auto rounded-lg pt-3 pb-3 pl-5 pr-5 bg-gray-100 bg-opacity-25 shadow-xl">
 							<h1 className="text-3xl text-gray-800 font-raleway font-semibold">
 								Vibes for when you're feeling <br />
@@ -178,17 +176,19 @@ const MainPage = () => {
 							</h1>
 						</div>
 					</div>
-					{data
-						.filter((vibe) => vibe.mood === moodArr[count])
-						.slice(0, 4)
-						.map((vibe) => {
-							return <CarouselCard vibe={vibe} color={colorArr[count]} key={vibe.id} />;
-						})}
-					<div className="absolute right-3 bottom-3 col-span-4 h-content mt-4">
+					<div className="col-span-4 grid grid-cols-4 justify-items-center mt-12 w-full">
+						{data
+							.filter((vibe) => vibe.mood === moodArr[count])
+							.slice(0, 4)
+							.map((vibe) => {
+								return <CarouselCard vibe={vibe} color={colorArr[count]} key={vibe.id} />;
+							})}
+					</div>
+					<div className="col-span-4 h-content mt-8 w-full flex justify-end">
 						<NavLink
 							type="button"
 							to={"list"}
-							className="h-12 p-3 m-1 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full mr-3 font-raleway"
+							className="h-12 p-3 m-1 bg-gray-900 hover:bg-gray-700 text-white font-bold rounded-full mr-3 font-raleway"
 						>
 							Show All Vibes
 						</NavLink>
@@ -196,7 +196,7 @@ const MainPage = () => {
 						<button
 							type="button"
 							onClick={() => dispatch(increment())}
-							className="h-12 p-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full mr-2 font-raleway"
+							className="h-12 p-4 bg-gray-900 hover:bg-gray-700 text-white font-bold rounded-full mr-2 font-raleway"
 						>
 							<svg
 								aria-hidden="true"
