@@ -2,7 +2,7 @@
 
 ### Meet The Team
 
--   **Alana Torrez** -
+-   **Alana Torrez** | alana.torrez@gmail.com - [LinkedIn](https://www.linkedin.com/in/alana-torrez/)
 -   **Shaun Ragasa** | sragasa97@gmail.com - [LinkedIn](https://www.linkedin.com/in/sragasa97/)
 -   **Jay Shastri** | jayshastri20@gmail.com - [LinkedIn](https://www.linkedin.com/in/jay-shastri/)
 -   **Jake Hannahan** | jakehannahan@gmail.com - [LinkedIn](https://www.linkedin.com/in/jakehannahan/)
