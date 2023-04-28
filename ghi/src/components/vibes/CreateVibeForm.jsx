@@ -48,7 +48,7 @@ function CreateVibeForm() {
 								onSubmit={handleSubmit}
 								className="max-w-sm glow mx-auto p-6 bg-neutral-900 rounded-lg shadow-md"
 							>
-								<h5 className="text-4xl font-bolder text-white text-center">Craft a Vibe</h5>
+								<h5 className="text-4xl my-2 font-bolder text-white text-center">Craft a Vibe</h5>
 								<label className="block mb-2 font-bold text-gray-300">
 									Name:
 									<input
