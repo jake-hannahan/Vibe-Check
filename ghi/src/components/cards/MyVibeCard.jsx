@@ -124,17 +124,17 @@ function MyVibesCard(props) {
           >
             {/* Left side of the card */}
             <div
-              className={`relative flex-1 p-2 w-full font-apple-system font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4 ${moodTextColor}`}
+              className={`relative flex-1 p-2 w-full font-raleway font-bold text-black text-3xl md:text-xl lg:text-xl text-clip overflow-hidden space-y-4 ${moodTextColor}`}
             >
               {capitalize(props.vibe.name)}
               {/* Mood box */}
               <div
-                className={`relative left-0 top-2 flex-1 p-2 w-full text-2xl md:text-lg lg:text-lg xl:text-xl font-apple-system text-black text-center rounded-lg ${moodNameBackgroundColor} ${moodTextColor} hover:${moodColor}`}
+                className={`relative left-0 top-2 flex-1 p-2 w-full tracking-wider text-2xl md:text-lg lg:text-lg xl:text-xl text-black text-center rounded-lg ${moodNameBackgroundColor} ${moodTextColor} hover:${moodColor}`}
               >
                 {props.vibe.mood}
               </div>
               {/* Activity box */}
-              <ul className="absolute pt-4 right-10 left-10 max-h-48 max-w-prose flex-1 text-base md:text-sm lg:text-base xl:text-lg font-apple-system text-black text-center overflow-hidden overflow-y-auto divide-y divide-gray-400 divide-opacity-25">
+              <ul className="absolute pt-4 right-10 left-10 max-h-48 max-w-prose flex-1 text-base md:text-sm lg:text-base xl:text-lg text-black text-center overflow-hidden overflow-y-auto divide-y divide-gray-400 divide-opacity-25">
                 {props.vibe.activities.map((activity) => (
                   <li key={activity.name} className="p-2 max-w-prose">
                     <span className="text-black">{activity.category}</span>
@@ -149,7 +149,7 @@ function MyVibesCard(props) {
               <ul className="absolute bottom-0 left-3 flex justify-center mt-auto gap-x-6 text-base">
                 <li>
                   <button
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-lg"
+                    className="bg-blue-500 hover:bg-blue-400 text-white py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-lg"
                     onClick={(e) => {
                       e.preventDefault();
                       navigate("/edit", { state: { vibe: props.vibe } });
@@ -160,7 +160,7 @@ function MyVibesCard(props) {
                 </li>
                 <li>
                   <button
-                    className="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded-lg"
+                    className="bg-red-500 hover:bg-red-400 text-white py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded-lg"
                     onClick={(e) => {
                       e.preventDefault();
                       deleteVibe(props.vibe.id);

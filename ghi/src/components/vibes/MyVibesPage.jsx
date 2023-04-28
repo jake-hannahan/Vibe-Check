@@ -9,8 +9,13 @@ function MyVibesPage() {
 
   return (
     <div className="grid justify-center">
-      <div className="container text-center text-4xl p-4 text-bold text-black">
-        My Vibes!
+      <div className="container text-center p-4 text-7xl text-white font-bold rounded-md p-3 my-6 font-megrim tracking-wide">
+        <h1>
+          <span className="text-8xl text-[#C43749]">M</span>
+          <span className="">Y</span>
+          <span className="text-8xl text-[#C43749]">V</span>
+          <span className="">ibes</span>
+        </h1>
       </div>
       {/* loop through each row */}
       {Array.from({ length: rows }).map((_, i) => (
