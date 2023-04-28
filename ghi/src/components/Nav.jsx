@@ -42,7 +42,7 @@ function Nav() {
 				<>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
 							to=""
 							data-te-nav-link-ref
 						>
@@ -51,7 +51,7 @@ function Nav() {
 					</li>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
 							onClick={logout}
 							to="account/logout"
 							data-te-nav-link-ref
@@ -61,7 +61,7 @@ function Nav() {
 					</li>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
 							to="new"
 							data-te-nav-link-ref
 						>
@@ -70,7 +70,7 @@ function Nav() {
 					</li>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400"
+							className="p-0 text-white opacity-80 hover:opacity-90 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
 							to="my"
 							data-te-nav-link-ref
 						>

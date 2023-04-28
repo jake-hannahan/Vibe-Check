@@ -1,199 +1,231 @@
 import React from "react";
 import CarouselCard from "../cards/CarouselCard";
 import { useGetVibesQuery } from "../../services/vibes";
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
 import { increment, set } from "../../features/vibes/counterSlice";
 import { NavLink } from "react-router-dom";
 import Login from "../auth/Login";
 import { useGetAccountQuery } from "../../services/auth";
-
+import "../auth/form.css";
 
 const MainPage = () => {
-    const count = useSelector((state) => state.counter.value)
-    const dispatch = useDispatch()
-    const { data, isLoading } = useGetVibesQuery();
-    if (isLoading) return <div>Vibe Loading...</div>;
-    const moodArr = [
-        "Chill",
-        "Lazy",
-        "Dreamy",
-        "Productive",
-        "Adventurous",
-        "Confident",
-        "Romantic",
-        "Energetic",
-        "Destructive",
-        "Gloomy",
-        "Rejected",
-        "Melancholic"
-    ];
-    const colorArr = [
-        "sky",
-        "teal",
-        "cyan",
-        "orange",
-        "yellow",
-        "amber",
-        "rose",
-        "lime",
-        "stone",
-        "gray",
-        "violet",
-        "indigo"
-    ]
-    const colors = {
-        sky: 'bg-sky-400',
-        teal: 'bg-teal-400',
-        cyan: 'bg-cyan-400',
-        orange: 'bg-orange-400',
-        yellow: 'bg-yellow-400',
-        amber: 'bg-amber-400',
-        rose: 'bg-rose-400',
-        lime: 'bg-lime-400',
-        stone: 'bg-stone-400',
-        gray: 'bg-gray-400',
-        violet: 'bg-violet-400',
-        indigo: 'bg-indigo-400',
-    }
-    // let start = 0
-    // let end = 4
-    // const changeSlice = () => {
-    //     start += 4;
-    //     end += 4
-    // }
+	const count = useSelector((state) => state.counter.value);
+	const dispatch = useDispatch();
+	const { data, isLoading } = useGetVibesQuery();
+	if (isLoading) return <div>Vibe Loading...</div>;
+	const moodArr = [
+		"Chill",
+		"Lazy",
+		"Dreamy",
+		"Productive",
+		"Adventurous",
+		"Confident",
+		"Romantic",
+		"Energetic",
+		"Destructive",
+		"Gloomy",
+		"Rejected",
+		"Melancholic",
+	];
+	const colorArr = [
+		"sky",
+		"teal",
+		"cyan",
+		"orange",
+		"yellow",
+		"amber",
+		"rose",
+		"lime",
+		"stone",
+		"gray",
+		"violet",
+		"indigo",
+	];
+	const colors = {
+		sky: "bg-sky-400",
+		teal: "bg-teal-400",
+		cyan: "bg-cyan-400",
+		orange: "bg-orange-400",
+		yellow: "bg-yellow-400",
+		amber: "bg-amber-400",
+		rose: "bg-rose-400",
+		lime: "bg-lime-400",
+		stone: "bg-stone-400",
+		gray: "bg-gray-400",
+		violet: "bg-violet-400",
+		indigo: "bg-indigo-400",
+	};
+	// let start = 0
+	// let end = 4
+	// const changeSlice = () => {
+	//     start += 4;
+	//     end += 4
+	// }
 
-    return (
-<>
-    <div className="container text-center mx-auto my-auto">
-      <h1 className="overflow-hidden text-center text-5xl text-gray-800 font-bold rounded-md p-3 my-6">Find a Vibe</h1>
-      <div className="container grid gap-2 md:grid-cols-3 xs:grid-cols-1 sm:grid-cols-2">
-            <div>
-                <button
-                    onClick={() => dispatch(set(3))}
-                    className="bg-orange-400 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded w-full"
-                    >
-                    Productive
-                </button>
-            </div>
-            <div>
-                <button
-                    onClick={() => dispatch(set(4))}
-                    className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-2 px-4 border-b-4 border-yellow-700 hover:border-yellow-500 rounded w-full"
-                    >
-                    Adventurous
-                </button>
-            </div>
-            <div>
-                <button
-                    onClick={() => dispatch(set(5))}
-                    className="bg-amber-500 hover:bg-amber-400 text-white font-bold py-2 px-4 border-b-4 border-amber-700 hover:border-amber-500 rounded w-full"
-                    >
-                    Confident
-                </button>
-            </div>
-             <div>
-                <button
-                    onClick={() => dispatch(set(6))}
-                    className="bg-rose-500 hover:bg-rose-400 text-white font-bold py-2 px-4 border-b-4 border-rose-700 hover:border-rose-500 rounded w-full"
-                    >
-                    Romantic
-                </button>
-            </div>
-            <div>
-                <button
-                    onClick={() => dispatch(set(7))}
-                    className="bg-lime-500 hover:bg-lime-400 text-white font-bold py-2 px-4 border-b-4 border-lime-700 hover:border-lime-500 rounded w-full"
-                    >
-                    Energetic
-                </button>
-            </div>
-            <div>
-                <button
-                    onClick={() => dispatch(set(8))}
-                    className="bg-stone-500 hover:bg-stone-400 text-white font-bold py-2 px-4 border-b-4 border-stone-700 hover:border-stone-500 rounded w-full"
-                    >
-                    Destructive
-                </button>
-            </div>
-             <div>
-                <button
-                    onClick={() => dispatch(set(9))}
-                    className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 border-b-4 border-gray-700 hover:border-gray-500 rounded w-full"
-                    >
-                    Gloomy
-                </button>
-            </div>
-            <div>
-                <button
-                    onClick={() => dispatch(set(10))}
-                    className="bg-violet-500 hover:bg-violet-400 text-white font-bold py-2 px-4 border-b-4 border-violet-700 hover:border-violet-500 rounded w-full"
-                    >
-                    Rejected
-                </button>
-            </div>
-            <div>
-                <button
-                    onClick={() => dispatch(set(11))}
-                    className="bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-2 px-4 border-b-4 border-indigo-700 hover:border-indigo-500 rounded w-full"
-                    >
-                    Melancholic
-                </button>
-            </div>
-            <div>
-                <button
-                    onClick={() => dispatch(set(0))}
-                    className="bg-sky-500 hover:bg-sky-400 text-white font-bold py-2 px-4 border-b-4 border-sky-700 hover:border-sky-500 rounded w-full"
-                    >
-                    Chill
-                </button>
-            </div>
-            <div>
-                <button
-                    onClick={() => dispatch(set(1))}
-                    className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 border-b-4 border-teal-700 hover:border-teal-500 rounded w-full"
-                    >
-                    Lazy
-                </button>
-            </div>
-            <div>
-                <button
-                    onClick={() => dispatch(set(2))}
-                    className="bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-2 px-4 border-b-4 border-cyan-700 hover:border-cyan-500 rounded w-full"
-                    >
-                    Dreamy
-                </button>
-            </div>
-      </div>
-      <div className={`container p-4 mt-4 grid grid-cols-4 grid-flow-row w-screen justify-items-center h-content rounded ${colors[colorArr[count]]}`}>
-        <div className="col-span-4 h-fill mb-4">
-            <div className="w-fill h-fill mx-auto">
-                <h1 className="text-2xl text-gray-800 font-bold">Vibes for when you're feeling {moodArr[count]}</h1>
-            </div>
-        </div>
-        {data.filter(vibe => vibe.mood === moodArr[count]).slice(0,4).map(vibe => {
-            return (
-                <CarouselCard vibe={vibe} color={colorArr[count]} key={vibe.id}/>
-            )
-        })}
-        <div className="col-span-4 h-content mt-4">
-            <NavLink type="button" to={"list"} className="h-12 p-3 m-1 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full">
-                Show All Vibes
-            </NavLink>
-            <button type="button" onClick={() => dispatch(increment())} className="h-12 p-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full">
-                <svg aria-hidden="true" className="w-full h-full" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-            </button>
-        </div>
-      </div>
-    </div>
-</>
-    )
+	return (
+		<>
+			<div className="container text-center mx-auto my-auto">
+				<h1 className="overflow-hidden text-right text-7xl text-white font-bold rounded-md p-3 my-6 font-megrim">
+					<span className="text-8xl text-[#C43749]">V</span>
+					<span className="">ibe</span>
+					<span className="text-8xl text-[#C43749]">C</span>
+					<span className="">heck</span>
+				</h1>
+				<div className="container grid gap-2 md:grid-cols-3 xs:grid-cols-1 sm:grid-cols-2">
+					<div>
+						<button
+							onClick={() => dispatch(set(3))}
+							className="bg-gray-900 hover:bg-orange-400 text-white font-semibold py-2 px-4 border-b-4 border-r-4 focus:bg-orange-400 focus:border-orange-500 border-gray-700 hover:border-orange-500 rounded w-full font-raleway tracking-widest"
+						>
+							Productive
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(4))}
+							className="bg-yellow-500 hover:bg-yellow-400 text-white font-semibold py-2 px-4 border-b-4 border-yellow-700 hover:border-yellow-500 rounded w-full font-raleway tracking-widest"
+						>
+							Adventurous
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(5))}
+							className="bg-amber-500 hover:bg-amber-400 text-white font-semibold py-2 px-4 border-b-4 border-amber-700 hover:border-amber-500 rounded w-full font-raleway tracking-widest"
+						>
+							Confident
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(6))}
+							className="bg-rose-500 hover:bg-rose-400 text-white font-semibold py-2 px-4 border-b-4 border-rose-700 hover:border-rose-500 rounded w-full font-raleway tracking-widest"
+						>
+							Romantic
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(7))}
+							className="bg-lime-500 hover:bg-lime-400 text-white font-semibold py-2 px-4 border-b-4 border-lime-700 hover:border-lime-500 rounded w-full font-raleway tracking-widest"
+						>
+							Energetic
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(8))}
+							className="bg-stone-500 hover:bg-stone-400 text-white font-semibold py-2 px-4 border-b-4 border-stone-700 hover:border-stone-500 rounded w-full font-raleway tracking-widest"
+						>
+							Destructive
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(9))}
+							className="bg-gray-500 hover:bg-gray-400 text-white font-semibold py-2 px-4 border-b-4 border-gray-700 hover:border-gray-500 rounded w-full font-raleway tracking-widest"
+						>
+							Gloomy
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(10))}
+							className="bg-violet-500 hover:bg-violet-400 text-white font-semibold py-2 px-4 border-b-4 border-violet-700 hover:border-violet-500 rounded w-full font-raleway tracking-widest"
+						>
+							Rejected
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(11))}
+							className="bg-indigo-500 hover:bg-indigo-400 text-white font-semibold py-2 px-4 border-b-4 border-indigo-700 hover:border-indigo-500 rounded w-full font-raleway tracking-widest"
+						>
+							Melancholic
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(0))}
+							className="bg-sky-500 hover:bg-sky-400 text-white font-semibold py-2 px-4 border-b-4 border-sky-700 hover:border-sky-500 rounded w-full font-raleway tracking-widest"
+						>
+							Chill
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(1))}
+							className="bg-teal-500 hover:bg-teal-400 text-white font-semibold py-2 px-4 border-b-4 border-teal-700 hover:border-teal-500 rounded w-full font-raleway tracking-widest"
+						>
+							Lazy
+						</button>
+					</div>
+					<div>
+						<button
+							onClick={() => dispatch(set(2))}
+							className="bg-cyan-500 hover:bg-cyan-400 text-white font-semibold py-2 px-4 border-b-4 border-cyan-700 hover:border-cyan-500 rounded w-full font-raleway tracking-widest"
+						>
+							Dreamy
+						</button>
+					</div>
+				</div>
+				<div
+					className={`relative container p-4 mt-4 grid grid-cols-4 grid-flow-row w-screen justify-items-center h-content rounded ${
+						colors[colorArr[count]]
+					}`}
+				>
+					<div className="col-span-4 h-fill mb-4">
+						<div className="w-fill h-fill mx-auto rounded-lg pt-3 pb-3 pl-5 pr-5 bg-gray-100 bg-opacity-25 shadow-xl">
+							<h1 className="text-3xl text-gray-800 font-raleway font-semibold">
+								Vibes for when you're feeling <br />
+								<span className="underline underline-offset-4 decoration-gray-800">
+									{moodArr[count]}
+								</span>
+							</h1>
+						</div>
+					</div>
+					{data
+						.filter((vibe) => vibe.mood === moodArr[count])
+						.slice(0, 4)
+						.map((vibe) => {
+							return <CarouselCard vibe={vibe} color={colorArr[count]} key={vibe.id} />;
+						})}
+					<div className="absolute right-3 bottom-3 col-span-4 h-content mt-4">
+						<NavLink
+							type="button"
+							to={"list"}
+							className="h-12 p-3 m-1 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full mr-3 font-raleway"
+						>
+							Show All Vibes
+						</NavLink>
+
+						<button
+							type="button"
+							onClick={() => dispatch(increment())}
+							className="h-12 p-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full mr-2 font-raleway"
+						>
+							<svg
+								aria-hidden="true"
+								className="w-full h-full"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fillRule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clipRule="evenodd"
+								></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 };
 
 export const Main = () => {
-    const { data: account } = useGetAccountQuery();
-    return (
-        <div>
-            {account ? <MainPage /> : <Login />}
-        </div>
-    );
+	const { data: account } = useGetAccountQuery();
+	return <div>{account ? <MainPage /> : <Login />}</div>;
 };
