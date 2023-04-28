@@ -4,7 +4,7 @@ const initialState = {
   fields: {
     username: "",
     password: "",
-    passwordConfirmation: ""
+    passwordConfirmation: "",
   },
   errorMessage: null,
 };
@@ -27,7 +27,6 @@ const signupSlice = createSlice({
     },
     reset: () => initialState,
   },
-
 });
 
 export const {
@@ -37,6 +36,5 @@ export const {
   error,
   reset,
 } = signupSlice.actions;
-
 
 export default signupSlice.reducer;

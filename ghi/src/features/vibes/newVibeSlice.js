@@ -1,58 +1,64 @@
-import { createSlice } from '@reduxjs/toolkit'
-
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    name: '',
-    mood: '',
-    spotify_id: '',
-    picture_url: '',
-    activities: [
-        {
-            category: '',
-            name: '',
-        },
-    ],
+  name: "",
+  mood: "",
+  spotify_id: "",
+  picture_url: "",
+  activities: [
+    {
+      category: "",
+      name: "",
+    },
+  ],
 };
 
 export const newVibeSlice = createSlice({
-  name: 'newVibe',
+  name: "newVibe",
   initialState,
   reducers: {
     handleNameChange: (state, action) => {
-        state.name = action.payload
+      state.name = action.payload;
     },
     handleMoodChange: (state, action) => {
-        state.mood = action.payload
+      state.mood = action.payload;
     },
     handleSpotifyIdChange: (state, action) => {
-        state.spotify_id = action.payload
+      state.spotify_id = action.payload;
     },
     handlePictureUrlChange: (state, action) => {
-        state.picture_url = action.payload
+      state.picture_url = action.payload;
     },
     handleActivitiesChange: (state, action) => {
-        const { index, field, value } = action.payload;
-        const newActivities = [...state.activities];
-        newActivities[index][field] = value;
-        state.activities = newActivities;
+      const { index, field, value } = action.payload;
+      const newActivities = [...state.activities];
+      newActivities[index][field] = value;
+      state.activities = newActivities;
     },
-    handleAddActivityChange:(state, action) => {
-        state.activities.push(
-            {
-                category: '',
-                name: '',
-            },
-        )
+    handleAddActivityChange: (state, action) => {
+      state.activities.push({
+        category: "",
+        name: "",
+      });
     },
-    handleRemoveActivityChange:(state, action) => {
-        if (state.activities.length > 1) {
-            state.activities.pop()
-        }
+    handleRemoveActivityChange: (state, action) => {
+      if (state.activities.length > 1) {
+        state.activities.pop();
+      }
     },
-    reset: () => initialState
+    reset: () => initialState,
   },
 });
 
-export const { handleNameChange, handleMoodChange, handleSpotifyIdChange, handlePictureUrlChange, handleActivitiesChange, handleAddActivityChange, handleRemoveActivityChange, reset } = newVibeSlice.actions;
+export const {
+  handleNameChange,
+  handleMoodChange,
+  handleSpotifyIdChange,
+  handlePictureUrlChange,
+  handleActivitiesChange,
+  handleAddActivityChange,
+  handleRemoveActivityChange,
+  reset,
+} = newVibeSlice.actions;
 
 export default newVibeSlice.reducer;

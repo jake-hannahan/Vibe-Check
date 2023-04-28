@@ -1,4 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useState, useEffect, useCallback } from "react";
+import { useLocation } from "react-router-dom";
+import { useUpdateVibeMutation } from "../../services/vibes";
 import {
   handleNameChange,
   handleMoodChange,
@@ -7,35 +10,24 @@ import {
   handleActivitiesChange,
   handleAddActivityChange,
   handleRemoveActivityChange,
-  // reset,
 } from "../../features/vibes/newVibeSlice";
-import EditVibeSuccess from "../notifications/EditVibeSuccess";
-import { useUpdateVibeMutation } from "../../services/vibes";
-import { useState, useEffect, useCallback } from "react";
-import { useLocation } from "react-router-dom";
-import "../auth/form.css";
 import TipMessage from "../TipMessage";
+import EditVibeSuccess from "../notifications/EditVibeSuccess";
+import "../auth/form.css";
 
 function EditVibeForm() {
-  const [notification, setNotification] = useState(false);
   const dispatch = useDispatch();
+  const [notification, setNotification] = useState(false);
+  const [showTip, setShowTip] = useState(false);
+  const location = useLocation();
+  const { state } = location;
   const [updateVibe] = useUpdateVibeMutation();
   const newVibe = useSelector((state) => state.newVibe);
   const activities = useSelector((state) => state.newVibe.activities);
-  const location = useLocation();
-  const { state } = location;
-	const [showTip, setShowTip] = useState(false);
 
   const handleAddActivityCallback = useCallback(() => {
     dispatch(handleAddActivityChange());
   }, [dispatch]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    updateVibe({ id: state.vibe.id, body: newVibe });
-    // dispatch(reset());
-    setNotification(true);
-  };
 
   useEffect(() => {
     const setNewVibeData = () => {
@@ -77,15 +69,22 @@ function EditVibeForm() {
   const handleRemoveActivity = () => {
     dispatch(handleRemoveActivityChange());
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    updateVibe({ id: state.vibe.id, body: newVibe });
+    setNotification(true);
+  };
+
   return (
     <>
-			<div className="bg-black h-screen flex justify-center items-center font-raleway tracking-wide">
-				<div className="grid gap-8 justify-items-center">
-					<div className="relative group">
-						<div className="bg-neutral-900 rounded-lg">
+      <div className="bg-black h-screen flex justify-center items-center font-raleway tracking-wide">
+        <div className="grid gap-8 justify-items-center">
+          <div className="relative group">
+            <div className="bg-neutral-900 rounded-lg glow">
               <form
                 onSubmit={handleSubmit}
-                className="max-w-sm mx-auto glow p-6 bg-neutral-900 rounded-lg shadow-md"
+                className="max-w-sm mx-auto p-6 bg-neutral-900 rounded-lg shadow-md"
               >
                 <h5 className="text-4xl my-2 font-bolder text-white text-center">
                   Edit a Vibe
@@ -126,26 +125,28 @@ function EditVibeForm() {
                 <label className="block mb-2 font-bold text-gray-300">
                   Spotify ID:
                   <span>
-										<button
-											type="button"
-											className="absolute right-4 p-1 rounded-full text-red-400 hover:text-white"
-											onClick={() => {
-												if (showTip === false) {
-													setShowTip(true);
-												} else {
-													setShowTip(false);
-												}
-											}}
-										>
-											?
-										</button>
-									</span>
-									{showTip ? <TipMessage /> : null}
+                    <button
+                      type="button"
+                      className="absolute right-4 p-1 rounded-full text-red-400 hover:text-white"
+                      onClick={() => {
+                        if (showTip === false) {
+                          setShowTip(true);
+                        } else {
+                          setShowTip(false);
+                        }
+                      }}
+                    >
+                      ?
+                    </button>
+                  </span>
+                  {showTip ? <TipMessage /> : null}
                   <input
                     type="text"
                     placeholder="Spotify ID"
                     value={newVibe.spotify_id}
-                    onChange={(e) => dispatch(handleSpotifyIdChange(e.target.value))}
+                    onChange={(e) =>
+                      dispatch(handleSpotifyIdChange(e.target.value))
+                    }
                     className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63]"
                   />
                 </label>
@@ -155,7 +156,9 @@ function EditVibeForm() {
                     type="text"
                     placeholder="Picture URL"
                     value={newVibe.picture_url}
-                    onChange={(e) => dispatch(handlePictureUrlChange(e.target.value))}
+                    onChange={(e) =>
+                      dispatch(handlePictureUrlChange(e.target.value))
+                    }
                     className="w-full p-2 mt-2 text-gray-700 bg-gray-200 rounded-lg focus:ring-[#e21f63] focus:border-[#e21f63]"
                   />
                 </label>
@@ -179,9 +182,13 @@ function EditVibeForm() {
                       >
                         <option value="">Choose a Category</option>
                         <option value="Food or Snack">Food or Snack</option>
-                        <option value="Movie or TV Series">Movie or TV Series</option>
+                        <option value="Movie or TV Series">
+                          Movie or TV Series
+                        </option>
                         <option value="Game">Game</option>
-                        <option value="Physical Activity">Physical Activity</option>
+                        <option value="Physical Activity">
+                          Physical Activity
+                        </option>
                       </select>
                       <input
                         type="text"
