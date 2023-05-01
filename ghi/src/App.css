@@ -1,41 +1,46 @@
 html,
 body {
-  height: 100%;
-  width: 100%;
+	height: 100%;
+	width: 100%;
+	cursor: url("./static/vibe-check-cursor-white.png"), auto;
 }
 body {
-  display: flex;
+	display: flex;
 }
 
 .bg {
-  width: 100vw;
-  background-image: url("./static/background-2.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	width: 100vw;
+	background-image: url("./static/background-2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .shake {
-  animation: 0.8s shake infinite alternate;
+	animation: 0.8s shake infinite alternate;
 }
 
 @keyframes shake {
-  0% {
-    transform: skewX(-15deg);
-  }
-  5% {
-    transform: skewX(15deg);
-  }
-  10% {
-    transform: skewX(-15deg);
-  }
-  15% {
-    transform: skewX(15deg);
-  }
-  20% {
-    transform: skewX(0deg);
-  }
-  100% {
-    transform: skewX(0deg);
-  }
+	0% {
+		transform: skewX(-15deg);
+	}
+	5% {
+		transform: skewX(15deg);
+	}
+	10% {
+		transform: skewX(-15deg);
+	}
+	15% {
+		transform: skewX(15deg);
+	}
+	20% {
+		transform: skewX(0deg);
+	}
+	100% {
+		transform: skewX(0deg);
+	}
+}
+
+.cursor-override {
+	cursor: url("./static/vibe-check-cursor-white.png"), auto;
 }
