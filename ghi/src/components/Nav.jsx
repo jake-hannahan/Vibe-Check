@@ -19,7 +19,7 @@ function Nav() {
 				<>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							to="account/login"
 							data-te-nav-link-ref
 						>
@@ -28,7 +28,7 @@ function Nav() {
 					</li>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							to="account/signup"
 							data-te-nav-link-ref
 						>
@@ -42,7 +42,7 @@ function Nav() {
 				<>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							to=""
 							data-te-nav-link-ref
 						>
@@ -51,7 +51,7 @@ function Nav() {
 					</li>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							to="list"
 							data-te-nav-link-ref
 						>
