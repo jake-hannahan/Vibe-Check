@@ -1,30 +1,25 @@
 import { NavLink } from "react-router-dom";
 
-
-
-
 function ListCard(props) {
-
-
-    const moodColorMap = {
-      chill:
-        "bg-gradient-to-r bg-gradient-to-t from-orange-400 to-bg-gradient-to-r from-blue-300 via-green-200 to-yellow-300-400from-blue-400 to-emerald-400",
-      lazy: "bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500",
-      dreamy: "bg-gradient-to-r from-green-300 to-purple-400",
-      productive: "bg-gradient-to-r from-yellow-600 to-red-600",
-      adventurous: "bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400",
-      confident:
-        "bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-900 to-yellow-300",
-      romantic: "bg-gradient-to-r from-fuchsia-600 to-pink-600",
-      energetic:
-        "bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-emerald-200 via-emerald-100 to-emerald-500",
-      destructive: "bg-gradient-to-r from-slate-500 to-yellow-100",
-      gloomy:
-        "bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400bg-gradient-to-r from-purple-200 via-purple-400-purple-800",
-      rejected:
-        "bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-900 to-yellow-300",
-      melancholic: "bg-gradient-to-r from-violet-300 to-violet-400",
-    };
+  const moodColorMap = {
+    chill:
+      "bg-gradient-to-r bg-gradient-to-t from-orange-400 to-bg-gradient-to-r from-blue-300 via-green-200 to-yellow-300-400from-blue-400 to-emerald-400",
+    lazy: "bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500",
+    dreamy: "bg-gradient-to-r from-green-300 to-purple-400",
+    productive: "bg-gradient-to-r from-yellow-600 to-red-600",
+    adventurous: "bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400",
+    confident:
+      "bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-900 to-yellow-300",
+    romantic: "bg-gradient-to-r from-fuchsia-600 to-pink-600",
+    energetic:
+      "bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-emerald-200 via-emerald-100 to-emerald-500",
+    destructive: "bg-gradient-to-r from-slate-500 to-yellow-100",
+    gloomy:
+      "bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400bg-gradient-to-r from-purple-200 via-purple-400-purple-800",
+    rejected:
+      "bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-900 to-yellow-300",
+    melancholic: "bg-gradient-to-r from-violet-300 to-violet-400",
+  };
 
   const moodColor =
     moodColorMap[props.vibe.mood.toLowerCase()] || "bg-gray-400";
@@ -64,7 +59,9 @@ function ListCard(props) {
               {props.vibe.activities.map((activity) => (
                 <div key={activity.name}>
                   <div className="text-sm mb-2">{activity.category}</div>
-                  <div className="text-sm mb-2">{capitalize(activity.name)}</div>
+                  <div className="text-sm mb-2">
+                    {capitalize(activity.name)}
+                  </div>
                 </div>
               ))}
             </h2>

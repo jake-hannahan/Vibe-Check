@@ -2,7 +2,7 @@ import os
 import pymongo
 
 
-MONGO_URL = os.environ["MONGO_URL"]
+MONGO_URL = os.environ.get("MONGO_URL", "test")
 client = pymongo.MongoClient(MONGO_URL)
 
 

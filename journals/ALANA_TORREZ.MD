@@ -101,4 +101,7 @@ Struggled with formatting list cards in card component so that they look uniform
 Scrapped the card component and list card tailwind and modified code being used in other cards.
 
 > > [W18:D5] 28 April 2023 | Friday
-Finalized mvp styling and formatting for list card and list vibes. 
+Finalized mvp styling and formatting for list card and list vibes.
+
+
+Test test test 

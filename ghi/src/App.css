@@ -7,22 +7,6 @@ body {
   display: flex;
 }
 
-.App {
-  text-align: center;
-  background: linear-gradient(90deg, #22c55e 0%, #60a5fa 100%);
-}
-
-.App-header {
-  /* background-color: #282c34; */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .bg {
   width: 100vw;
   background-image: url("./static/background-2.png");
@@ -54,14 +38,4 @@ body {
   100% {
     transform: skewX(0deg);
   }
-}
-
-.detailCard {
-  background-color: rgba(255, 255, 255, 0.13);
-  transform: translate(-50%, -50%);
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  padding: 50px 35px;
 }
