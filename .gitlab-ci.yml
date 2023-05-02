@@ -62,7 +62,6 @@ build-front-end-job:
     image: node:lts-bullseye
     variables:
         PUBLIC_URL: https://vibe-check.gitlab.io/vibe-check
-
     script:
         - cd ghi  # CHANGE THIS TO THE DIRECTORY THAT HAS package.json
         - npm install
