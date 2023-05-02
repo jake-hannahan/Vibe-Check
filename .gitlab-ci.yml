@@ -60,6 +60,8 @@ build-docker-main:
 build-front-end-job:
   stage: build
   image: node:lts-bullseye
+  needs:
+    - build-docker-main
   variables:
     PUBLIC_URL: https://vibe-check.gitlab.io/vibe-check
   script:
