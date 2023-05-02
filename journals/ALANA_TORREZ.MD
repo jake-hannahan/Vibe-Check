@@ -104,5 +104,4 @@ Scrapped the card component and list card tailwind and modified code being used 
 Finalized mvp styling and formatting for list card and list vibes.
 
 
-Test test test
-Test test test agaaaainnnnnnn
+
