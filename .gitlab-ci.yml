@@ -64,6 +64,7 @@ build-front-end-job:
     - build-docker-main
   variables:
     PUBLIC_URL: https://vibe-check.gitlab.io/vibe-check
+    REACT_APP_VIBE_CHECK_API_HOST: https://vibe-check.gitlab.io/vibe-check
   script:
     - cd ghi # CHANGE THIS TO THE DIRECTORY THAT HAS package.json
     - npm install
