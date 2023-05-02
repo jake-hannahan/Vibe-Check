@@ -13,7 +13,6 @@ function MyVibesCard(props) {
       .replace(/_/g, " ");
   };
 
-
   const navigate = useNavigate();
 
   const moodColorMap = {
