@@ -100,9 +100,9 @@ function Nav() {
 			className="relative flex w-full flex-wrap items-center justify-between bg-neutral-900 py-3 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start"
 			data-te-navbar-ref
 		>
-			<div className="flex w-full flex-wrap items-center justify-between px-6">
+			<div className="flex w-full flex-wrap items-center justify-center px-6">
 				<button
-					className="block border-0 bg-transparent px-2.5 py-2 text-neutral-200 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
+					className="block border-0 bg-transparent px-2.5 py-2 text-neutral-200 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden cursor-override"
 					type="button"
 					onClick={handleClick}
 					data-te-collapse-init
@@ -127,7 +127,7 @@ function Nav() {
 					</span>
 				</button>
 				<NavLink className="pr-2" to="/">
-					<VibeCheckLogo className="inline-block h-12 w-40" />
+					<VibeCheckLogo className="inline-block h-12 w-40 cursor-override" />
 				</NavLink>
 				<div className={isNavOpen ? hidden : visible} id="navbarSupportedContent4" data-te-collapse-item>
 					<ul className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
