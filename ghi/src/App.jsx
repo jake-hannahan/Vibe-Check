@@ -10,6 +10,7 @@ import CreateVibeForm from "./components/vibes/CreateVibeForm";
 import VibeDetailPage from "./components/vibes/VibeDetailPage";
 import VibesListPage from "./components/vibes/VibesListPage";
 import MyVibesPage from "./components/vibes/MyVibesPage";
+import Resources from "./components/other/Resources";
 import "./App.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="signup" element={<Signup />} />
             <Route path="logout" element={<Logout />} />
           </Route>
+          <Route path="resources" element={<Resources />} />
           <Route element={<ProtectedRoute />}>
             <Route path="edit" element={<EditVibeForm />} />
             <Route path="new" element={<CreateVibeForm />} />
