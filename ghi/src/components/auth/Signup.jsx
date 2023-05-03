@@ -34,7 +34,7 @@ const Signup = () => {
 					<div className="z-10 p-8 bg-neutral-900 rounded-lg glow">
 						<form className="space-y-6" onSubmit={handleSubmit}>
 							<div className="text-center">
-								<h5 className="text-2xl font-medium text-gray-300 dark:text-white">Signup</h5>
+								<h5 className="text-2xl font-medium text-gray-300 dark:text-white">Check Up</h5>
 							</div>
 							{errorMessage && <ErrorNotification>{errorMessage}</ErrorNotification>}
 							<div className="">
@@ -96,12 +96,15 @@ const Signup = () => {
 									color: "white",
 								}}
 							>
-								Signup
+								Check Up
 							</button>
 						</form>
 						<div className="mt-8 text-center">
-							<NavLink to="/account/login" className="text-lg text-white hover:underline cursor-override">
-								Have an account? Login <span className="red-text">here.</span>
+							<NavLink
+								to="/account/login"
+								className="text-lg text-white hover:underline hover:underline-offset-8 cursor-override"
+							>
+								Have an account? Check in <span className="red-text">here.</span>
 							</NavLink>
 						</div>
 					</div>

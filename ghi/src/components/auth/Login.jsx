@@ -23,7 +23,7 @@ const Login = () => {
 					<div className="z-10 p-8 bg-neutral-900 rounded-lg glow">
 						<form className="space-y-6" onSubmit={handleSubmit}>
 							<div className="text-center">
-								<h5 className="text-2xl font-medium text-white">Login</h5>
+								<h5 className="text-2xl font-medium text-white">Check In</h5>
 							</div>
 							<div className="">
 								<label
@@ -67,13 +67,13 @@ const Login = () => {
 									color: "white",
 								}}
 							>
-								Login
+								Check In
 							</button>
 						</form>
 						<div className="mt-8 text-center">
 							<NavLink
 								to="/account/signup"
-								className="text-lg text-white hover:underline cursor-override"
+								className="text-lg text-white hover:underline hover:underline-offset-8 cursor-override"
 							>
 								Don't have an account? Join the Vibes <span className="red-text">here.</span>
 							</NavLink>

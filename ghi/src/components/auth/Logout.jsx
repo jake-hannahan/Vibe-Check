@@ -1,22 +1,28 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./logout.css";
+import "../../App.css";
 
 const Logout = () => {
 	return (
 		<>
-			<div className="bg-black w-100 h-screen flex justify-center items-center font-raleway">
+			<div className="bg-black w-full h-[calc(100vh-4.5rem)] flex justify-center items-center font-raleway">
 				<div className="grid gap-8 items-start justify-center">
 					<div className="relative group">
 						<div className="absolute -inset-0.5 bg-[#e21f63] rounded-lg blur-xl opacity-75 group-hover:opacity-100 transition duration-200 tilt"></div>
-						<div className="relative px-7 py-4 bg-black rounded-lg leading-none flex flex-col items-center divide-y divide-gray-300">
-							<h1 className="text-gray-300 text-center pb-4 text-2xl group-hover:text-gray-100">
-								You've been successfully logged out. <span className="wave">👋</span>
+						<div className="relative px-7 py-7 bg-black rounded-lg leading-none flex flex-col items-center divide-y divide-gray-300">
+							<h1 className="text-gray-300 text-center pb-4 text-4xl group-hover:text-gray-100">
+								You've successfully checked out. <span className="wave">👋</span>
 							</h1>
-							<h1 className="text-gray-300 text-center pt-3 text-2xl group-hover:text-gray-100">
+							<h1 className="text-gray-300 text-center pt-3 text-4xl group-hover:text-gray-100">
 								Click{" "}
-								<span className="text-[#eb4d84] opacity-75 group-hover:opacity-100">
-									<NavLink to="../login">here</NavLink>
+								<span className="text-[#eb4d84] opacity-75 group-hover:opacity-100 ">
+									<NavLink
+										className="cursor-override hover:underline hover:underline-offset-8 hover:underline-[#eb4d84]"
+										to="../login"
+									>
+										here
+									</NavLink>
 								</span>{" "}
 								to join the vibes again!
 							</h1>
