@@ -40,32 +40,27 @@ function ListCard(props) {
   return (
     <>
       <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
-        <div
-          className={`col-span-1 grid grid-rows-4 w-60 md:w-52
-          lg:w-56 xl:w-60 h-72 lg:h-80 xl:h-80 rounded-l
-          shadow-md shadow-indigo-800 m-4 font-raleway tracking-wide ${moodColor}`}
-        >
+        <div className="group relative">
           <img
-            className="row-span-3 object-cover h-full max-h-48 w-full rounded-l"
+            className="h-auto max-w-full object-cover rounded-2xl mb3"
             onError={addDefaultSrc}
             src={props.vibe.picture_url}
             alt="Invalid url"
           />
-          <div className="relative h-full bottom-5 pl-2 overflow-y-scroll">
-            <h1 className="font-semibold text-xl pr-1">
+          <div
+            className={`absolute top-0 rounded-2xl left-0 w-full h-0 flex
+                  flex-col justify-center items-center ${moodColor} opacity-0
+                  group-hover:h-full  group-hover:opacity-100 duration-500`}
+          >
+            <h1 className="md:text-md lg:text-lg xl:text-xl 2xl:text-3xl pt-10 px-2 text-black text-center">
+              {" "}
               {capitalize(props.vibe.name)}
             </h1>
-            <h2 className="text-sm">
-              {props.vibe.activities.map((activity) => (
-                <div key={activity.name}>
-                  <div className="text-sm mb-2">{activity.category}</div>
-                  <div className="text-sm mb-2">
-                    {capitalize(activity.name)}
-                  </div>
-                </div>
-              ))}
-            </h2>
-            <p className="text-sm">{capitalize(props.vibe.created_by)}</p>
+            <a
+              className="mt-5 px-8 py-3 mb-10 rounded-full bg-[#C43749] hover:bg-amber-600"
+            >
+              Vibe Detail
+            </a>
           </div>
         </div>
       </NavLink>
