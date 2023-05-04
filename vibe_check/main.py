@@ -8,7 +8,11 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    os.environ.get("CORS_HOST", None)
+    "https://vibe-check.gitlab.io/vibe-check",
+    "https://vibe-check.gitlab.io",
+    os.environ.get("CORS_HOST", None),
+    os.environ.get("PUBLIC_URL", None),
+    os.environ.get("REACT_APP_VIBE_CHECK_API_HOST", None),
 ]
 
 app.add_middleware(
