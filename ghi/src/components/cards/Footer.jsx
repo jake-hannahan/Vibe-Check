@@ -8,11 +8,15 @@ const Footer = () => {
 		<>
 			<div className="grid gap-3 text-white py-4">
 				<div className="grid grid-cols-3 gap-3">
-					<div className="flex align-middle items-center justify-around">
-						<h2>Tech Stack</h2>
+					<div className="flex align-middle items-center justify-around text-lg">
+						<NavLink to={{ pathname: "/resources" }}>
+							<h2>Tech Stack</h2>
+						</NavLink>
 					</div>
-					<div className="flex align-middle items-center justify-around">
-						<h2>The Vibe Check Team</h2>
+					<div className="flex align-middle items-center justify-around text-lg">
+						<NavLink to={{ pathname: "/team" }}>
+							<h2>The Vibe Check Team</h2>
+						</NavLink>
 					</div>
 					<div className="flex align-middle items-center justify-around">
 						<a href="https://gitlab.com/vibe-check/vibe-check" target="_blank" rel="noopener noreferrer">
@@ -21,7 +25,7 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className="grid grid-cols-3">
-					<div className="flex align-middle items-center justify-center gap-3">
+					<div className="flex align-middle items-center justify-center gap-3 text-lg">
 						<h3>© 2023 VibeCheck™</h3>
 					</div>
 					<div className="flex align-middle items-center justify-center">

@@ -34,7 +34,7 @@ const MainPage = () => {
 			idx: 1,
 			mood: "Chill",
 			color: "sky",
-			color_bg: "bg-sky-400",
+			color_bg: "bg-sky-400/80",
 			hover_bg: "hover:bg-sky-400",
 			hover_border: "hover:border-sky-500",
 			focus_bg: "focus:bg-sky-400",
@@ -46,7 +46,7 @@ const MainPage = () => {
 			idx: 2,
 			mood: "Confident",
 			color: "amber",
-			color_bg: "bg-amber-400",
+			color_bg: "bg-amber-400/80",
 			hover_bg: "hover:bg-amber-400",
 			hover_border: "hover:border-amber-500",
 			focus_bg: "focus:bg-amber-400",
@@ -58,7 +58,7 @@ const MainPage = () => {
 			idx: 3,
 			mood: "Destructive",
 			color: "stone",
-			color_bg: "bg-stone-400",
+			color_bg: "bg-stone-400/80",
 			hover_bg: "hover:bg-stone-400",
 			hover_border: "hover:border-stone-500",
 			focus_bg: "focus:bg-stone-400",
@@ -70,7 +70,7 @@ const MainPage = () => {
 			idx: 4,
 			mood: "Dreamy",
 			color: "cyan",
-			color_bg: "bg-cyan-400",
+			color_bg: "bg-cyan-400/80",
 			hover_bg: "hover:bg-cyan-400",
 			hover_border: "hover:border-cyan-500",
 			focus_bg: "focus:bg-cyan-400",
@@ -82,7 +82,7 @@ const MainPage = () => {
 			idx: 5,
 			mood: "Energetic",
 			color: "lime",
-			color_bg: "bg-lime-400",
+			color_bg: "bg-lime-400/80",
 			hover_bg: "hover:bg-lime-400",
 			hover_border: "hover:border-lime-500",
 			focus_bg: "focus:bg-lime-400",
@@ -94,7 +94,7 @@ const MainPage = () => {
 			idx: 6,
 			mood: "Gloomy",
 			color: "gray",
-			color_bg: "bg-gray-400",
+			color_bg: "bg-gray-400/80",
 			hover_bg: "hover:bg-gray-400",
 			hover_border: "hover:border-gray-500",
 			focus_bg: "focus:bg-gray-400",
@@ -106,7 +106,7 @@ const MainPage = () => {
 			idx: 7,
 			mood: "Lazy",
 			color: "teal",
-			color_bg: "bg-teal-400",
+			color_bg: "bg-teal-400/80",
 			hover_bg: "hover:bg-teal-400",
 			hover_border: "hover:border-teal-500",
 			focus_bg: "focus:bg-teal-400",
@@ -118,7 +118,7 @@ const MainPage = () => {
 			idx: 8,
 			mood: "Melancholic",
 			color: "indigo",
-			color_bg: "bg-indigo-400",
+			color_bg: "bg-indigo-400/80",
 			hover_bg: "hover:bg-indigo-400",
 			hover_border: "hover:border-indigo-500",
 			focus_bg: "focus:bg-indigo-400",
@@ -130,7 +130,7 @@ const MainPage = () => {
 			idx: 9,
 			mood: "Productive",
 			color: "orange",
-			color_bg: "bg-orange-400",
+			color_bg: "bg-orange-400/80",
 			hover_bg: "hover:bg-orange-400",
 			hover_border: "hover:border-orange-500",
 			focus_bg: "focus:bg-orange-400",
@@ -142,7 +142,7 @@ const MainPage = () => {
 			idx: 10,
 			mood: "Rejected",
 			color: "violet",
-			color_bg: "bg-violet-400",
+			color_bg: "bg-violet-400/80",
 			hover_bg: "hover:bg-violet-400",
 			hover_border: "hover:border-violet-500",
 			focus_bg: "focus:bg-violet-400",
@@ -154,7 +154,7 @@ const MainPage = () => {
 			idx: 11,
 			mood: "Romantic",
 			color: "rose",
-			color_bg: "bg-rose-400",
+			color_bg: "bg-rose-400/80",
 			hover_bg: "hover:bg-rose-400",
 			hover_border: "hover:border-rose-500",
 			focus_bg: "focus:bg-rose-400",
@@ -170,11 +170,11 @@ const MainPage = () => {
 				<Hero />
 				{/* Div to give Hero card visibility */}
 				<div className="h-[100vh]"></div>
-				<div className="h-[30vh] text-white bg-neutral-900 box-border flex flex-col items-center justify-center align-middle border-y-4 font-raleway border-[#C43749]">
+				<div className="h-[30vh] text-white bg-neutral-900 box-border flex flex-col items-center justify-center align-middle border-y-4 font-raleway border-[#C43749] gap-4">
 					<h1 className="text-2xl text-center">
 						Vibe Check is a{" "}
 						<a
-							href="booksparks.com/wp-content/uploads/2018/04/dance-party-dancing-GIF-downsized-1.gif"
+							href="https://booksparks.com/wp-content/uploads/2018/04/dance-party-dancing-GIF-downsized-1.gif"
 							target="_blank"
 							rel="noopener noreferrer"
 							className=""
@@ -195,9 +195,11 @@ const MainPage = () => {
 						</a>
 					</h1>
 					<h1 className="text-2xl text-center">
-						It's whatever you guys, the Vibers (or whatever you guys call yourselves), make of it.{" "}
+						It's whatever you guys, the <span className="text-[#C43749]">Vibers</span> (or whatever you guys
+						call yourselves), make of it.{" "}
 					</h1>
-					<h1 className="text-2xl text-center">Embrace the silliness. Embrace the weird. Just vibe out.</h1>
+					<h1 className="text-2xl text-center">Embrace the silliness. Embrace the weird. </h1>
+					<h1 className="text-2xl text-center">Just vibe out. 🤙</h1>
 				</div>
 				<div className="h-[calc(100vh-4.5rem)] text-white bg-neutral-400 flex flex-col items-center justify-center align-middle ">
 					<div className="h-full w-full relative">

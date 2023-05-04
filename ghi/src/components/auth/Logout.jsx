@@ -2,11 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./logout.css";
 import "../../App.css";
+import Footer from "../cards/Footer";
 
 const Logout = () => {
 	return (
 		<>
-			<div className="bg-black w-full h-[calc(100vh-4.5rem)] flex justify-center items-center font-raleway">
+			<div className="w-full h-[calc(4.5rem)]"></div>
+			<div className="bg-neutral-900 w-full h-[calc(100vh-4.5rem)] flex justify-center items-center font-raleway">
 				<div className="grid gap-8 items-start justify-center">
 					<div className="relative group">
 						<div className="absolute -inset-0.5 bg-[#e21f63] rounded-lg blur-xl opacity-75 group-hover:opacity-100 transition duration-200 tilt"></div>
@@ -29,6 +31,9 @@ const Logout = () => {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className="w-full bg-neutral-900 box-border border-t-4 border-[#C43749]">
+				<Footer />
 			</div>
 		</>
 	);
