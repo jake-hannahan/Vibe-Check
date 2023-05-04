@@ -20,7 +20,7 @@ const Signup = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (fields.password !== fields.passwordConfirmation) {
-			dispatch(error("Password does not match confirmation."));
+			dispatch(error("Passwords do not match."));
 			return;
 		}
 		signup(fields);
