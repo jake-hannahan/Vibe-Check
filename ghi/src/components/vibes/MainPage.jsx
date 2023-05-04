@@ -171,14 +171,25 @@ const MainPage = () => {
 				{/* Div to give Hero card visibility */}
 				<div className="h-[100vh]"></div>
 				<div className="h-[30vh] text-white bg-neutral-900 box-border flex flex-col items-center justify-center align-middle border-y-4 font-raleway border-[#C43749]">
-					<h1 className="text-2xl text-center">Vibe Check is a party.</h1>
+					<h1 className="text-2xl text-center">
+						Vibe Check is a{" "}
+						<a
+							href="booksparks.com/wp-content/uploads/2018/04/dance-party-dancing-GIF-downsized-1.gif"
+							target="_blank"
+							rel="noopener noreferrer"
+							className=""
+						>
+							party.
+						</a>{" "}
+						🎉
+					</h1>
 					<h1 className="text-2xl text-center">
 						Or maybe it's a social network? Wholesome{" "}
 						<a
 							href="https://media.tenor.com/GA-_QG_hfPYAAAAC/toad-screaming.gif"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="cursor-override"
+							className=""
 						>
 							chaos!
 						</a>
