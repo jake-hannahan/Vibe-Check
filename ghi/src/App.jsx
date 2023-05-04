@@ -10,6 +10,7 @@ import CreateVibeForm from "./components/vibes/CreateVibeForm";
 import VibeDetailPage from "./components/vibes/VibeDetailPage";
 import VibesListPage from "./components/vibes/VibesListPage";
 import MyVibesPage from "./components/vibes/MyVibesPage";
+import TheTeamPage from "./components/vibes/TheTeamPage";
 import "./App.css";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="detail" element={<VibeDetailPage />} />
             <Route path="list" element={<VibesListPage />} />
             <Route path="my" element={<MyVibesPage />} />
+            <Route path="team" element={<TheTeamPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
