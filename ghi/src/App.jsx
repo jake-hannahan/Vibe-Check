@@ -16,31 +16,33 @@ import Team from "./components/vibes/Team";
 import "./App.css";
 
 function App() {
-	return (
-		<div className="w-[100vw]">
-			<BrowserRouter>
-				<Nav />
-				<Routes>
-					<Route path="/" element={<Main />} />
-					<Route path="account">
-						<Route path="login" element={<Login />} />
-						<Route path="signup" element={<Signup />} />
-						<Route path="logout" element={<Logout />} />
-					</Route>
-					<Route element={<ProtectedRoute />}>
-						<Route path="edit" element={<EditVibeForm />} />
-						<Route path="new" element={<CreateVibeForm />} />
-						<Route path="detail" element={<VibeDetailPage />} />
-						<Route path="list" element={<VibesListPage />} />
-						<Route path="my" element={<MyVibesPage />} />
-						<Route path="team" element={<TheTeamPage />} />
-						<Route path="resources" element={<Resources />} />
-						<Route path="teampic" element={<Team />} />
-					</Route>
-				</Routes>
-			</BrowserRouter>
-		</div>
-	);
+  const domain = /https:\/\/[^/]+/;
+  const basename = process.env.PUBLIC_URL.replace(domain, "");
+  return (
+    <div className="w-[100vw]">
+      <BrowserRouter basename={basename}>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="account">
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="logout" element={<Logout />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="edit" element={<EditVibeForm />} />
+            <Route path="new" element={<CreateVibeForm />} />
+            <Route path="detail" element={<VibeDetailPage />} />
+            <Route path="list" element={<VibesListPage />} />
+            <Route path="my" element={<MyVibesPage />} />
+            <Route path="team" element={<TheTeamPage />} />
+            <Route path="resources" element={<Resources />} />
+            <Route path="teampic" element={<Team />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

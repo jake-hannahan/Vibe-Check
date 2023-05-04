@@ -61,7 +61,7 @@ build-front-end-job:
   stage: build
   image: node:lts-bullseye
   variables:
-    PUBLIC_URL: https://vibe-check.gitlab.io/vibe-check
+    PUBLIC_URL: https://vibe-check.gitlab.io
     REACT_APP_VIBE_CHECK_API_HOST: https://vibe-check-api.dec-ct-6.mod3projects.com
   script:
     - cd ghi # CHANGE THIS TO THE DIRECTORY THAT HAS package.json
