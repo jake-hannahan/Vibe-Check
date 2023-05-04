@@ -75,7 +75,7 @@ function TheTeamPage() {
             </div>
             {/* LinkedIn and GitLab links  */}
             <div className="relative flex justify-center items-center h-20 pt-12 pb-6">
-              <div className="text-7xl md:text-6xl lg:text-6xl xl:text-7xl pr-8 text-blue-400">
+              <div className="text-7xl md:text-6xl lg:text-6xl xl:text-7xl pr-8 text-blue-400 hover:text-blue-200">
                 <a
                   href={member.linkedIn}
                   target="_blank"
@@ -84,7 +84,7 @@ function TheTeamPage() {
                   <FaLinkedin />
                 </a>
               </div>
-              <div className="text-7xl md:text-6xl lg:text-6xl xl:text-7xl pl-8 text-orange-500">
+              <div className="text-7xl md:text-6xl lg:text-6xl xl:text-7xl pl-8 text-orange-500 hover:text-orange-300">
                 <a
                   href={member.gitlab}
                   target="_blank"
