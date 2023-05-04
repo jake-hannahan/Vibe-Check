@@ -12,6 +12,7 @@ import VibesListPage from "./components/vibes/VibesListPage";
 import MyVibesPage from "./components/vibes/MyVibesPage";
 import TheTeamPage from "./components/vibes/TheTeamPage";
 import Resources from "./components/other/Resources";
+import Team from "./components/vibes/Team";
 import "./App.css";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
 						<Route path="my" element={<MyVibesPage />} />
 						<Route path="team" element={<TheTeamPage />} />
 						<Route path="resources" element={<Resources />} />
+						<Route path="teampic" element={<Team />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>

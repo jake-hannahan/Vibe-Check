@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { FaLinkedin, FaGitlab } from "react-icons/fa";
 import JayPicture from "../../static/JayProfile.jpg";
 import ShaunPicture from "../../static/ShaunProfile.jpg";
@@ -12,7 +13,7 @@ function TheTeamPage() {
 			name: "Jay Shastri",
 			picture: JayPicture,
 			description:
-				"Proficient Full-stack developer with expertise in building robust web applications using modern technologies and frameworks.",
+				"Proficient Full-stack developer with expertise in building robust, authenticated web applications using modern technologies and frameworks.",
 			linkedIn: "https://www.linkedin.com/in/jay-shastri",
 			gitlab: "https://gitlab.com/jayshastri20",
 		},
@@ -45,16 +46,19 @@ function TheTeamPage() {
 	return (
 		<div>
 			<div className="h-[calc(2.5rem)]"></div>
-			<div className="h-[calc(10rem)] box-border mt-8 bg-neutral-900 flex w-full justify-center items-center text-center p-4 text-8xl text-white font-bold font-megrim tracking-widest">
-				<h1>
-					<span className="text-9xl text-[#C43749]">T</span>
-					<span className="">he</span>
-					<span className="text-9xl text-[#C43749]">T</span>
-					<span className="">eam</span>
-					<span className="text-9xl text-[#C43749]">T</span>
-					<span className="">itans</span>
-				</h1>
-			</div>
+			<NavLink to={{ pathname: "/teampic" }}>
+				<div className="h-[calc(10rem)] box-border mt-8 bg-neutral-900 flex w-full justify-center items-center text-center p-4 text-8xl text-white font-bold font-megrim tracking-widest">
+					<h1>
+						<span className="text-9xl text-[#C43749]">T</span>
+						<span className="">he</span>
+						<span className="text-9xl text-[#C43749]">T</span>
+						<span className="">eam</span>
+						<span className="text-9xl text-[#C43749]">T</span>
+						<span className="">itans</span>
+					</h1>
+				</div>
+			</NavLink>
+
 			<div className="h-[calc(100vh-12.5rem)] p-8 grid grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 text-white bg-neutral-900">
 				{team.map((member) => (
 					// Member Card
