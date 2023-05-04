@@ -86,15 +86,6 @@ function Nav() {
               Logout
             </NavLink>
           </li>
-          <li className="p-2" data-te-nav-item-ref>
-            <NavLink
-              className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
-              to="team"
-              data-te-nav-link-ref
-            >
-              The Team
-            </NavLink>
-          </li>
         </>
       );
     }

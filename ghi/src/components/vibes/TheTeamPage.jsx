@@ -43,13 +43,13 @@ function TheTeamPage() {
 
   return (
     <div>
-      <div className="container text-center p-4 text-7xl text-white font-bold rounded-md p-3 my-6 font-megrim tracking-widest">
+      <div className="flex w-full justify-center items-center text-center p-4 text-8xl text-white font-bold rounded-md my-6 font-megrim tracking-widest">
         <h1>
-          <span className="text-8xl text-[#C43749]">T</span>
+          <span className="text-9xl text-[#C43749]">T</span>
           <span className="">he</span>
-          <span className="text-8xl text-[#C43749]">T</span>
+          <span className="text-9xl text-[#C43749]">T</span>
           <span className="">eam</span>
-          <span className="text-8xl text-[#C43749]">T</span>
+          <span className="text-9xl text-[#C43749]">T</span>
           <span className="">itans</span>
         </h1>
       </div>
