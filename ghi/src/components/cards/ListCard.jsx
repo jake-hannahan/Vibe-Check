@@ -41,7 +41,7 @@ function ListCard(props) {
     <>
       <div className="group relative mx-1">
         <img
-          className="h-auto max-w-full object-cover rounded-2xl mb-14"
+          className="h-auto max-w-full object-contain rounded-2xl mb-14"
           onError={addDefaultSrc}
           src={props.vibe.picture_url}
           alt="Invalid url"
