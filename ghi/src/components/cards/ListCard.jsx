@@ -42,7 +42,7 @@ function ListCard(props) {
 
         <div className="group relative mx-1">
           <img
-            className="h-auto max-w-full object-cover rounded-2xl mb-14"
+            className="h-auto max-w-full object-cover rounded-2xl mb-8"
             onError={addDefaultSrc}
             src={props.vibe.picture_url}
             alt="Invalid url"
@@ -50,14 +50,14 @@ function ListCard(props) {
           <div
             className={`absolute top-0 rounded-2xl left-0 w-full h-0 flex
                   flex-col justify-center items-center ${moodColor} opacity-0
-                  group-hover:h-full group-hover:opacity-100 duration-500`}
+                  group-hover:h-[85%] group-hover:opacity-100 duration-500`}
           >
-            <h1 className="md:text-md lg:text-lg xl:text-xl 2xl:text-3xl pt-10 px-2 pb-2 text-black text-center">
+            <h1 className="md:text-md lg:text-lg xl:text-xl 2xl:text-3xl pt-10 px-2 pb-4 text-black text-center">
               {" "}
               {capitalize(props.vibe.name)}
             </h1>
             <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}
-              className=" px-8 py-3 rounded-full bg-[#C43749] hover:bg-amber-600 duration-300"
+              className="px-8 py-3 rounded-full bg-[#C43749] hover:bg-amber-600 duration-300"
             >
               Vibe Detail
             </NavLink>
