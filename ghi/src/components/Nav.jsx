@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useLogoutMutation } from "../services/auth";
 import { useGetAccountQuery } from "../services/auth";
 import { ReactComponent as VibeCheckLogo } from "../static/logo-no-background.svg";
+import "./auth/logout.css";
 
 function Nav() {
 	const [logout] = useLogoutMutation();
@@ -19,20 +20,20 @@ function Nav() {
 				<>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-white focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#C43749] disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							to="account/login"
 							data-te-nav-link-ref
 						>
-							Login
+							Check In
 						</NavLink>
 					</li>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-white focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#C43749] disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							to="account/signup"
 							data-te-nav-link-ref
 						>
-							Signup
+							Check Up
 						</NavLink>
 					</li>
 				</>
@@ -42,7 +43,7 @@ function Nav() {
 				<>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-white focus:opacity-100 [&.active]:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#C43749] disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							to=""
 							data-te-nav-link-ref
 						>
@@ -51,7 +52,7 @@ function Nav() {
 					</li>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-white [&.active]:opacity-100 focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#C43749] disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest"
 							to="list"
 							data-te-nav-link-ref
 						>
@@ -60,7 +61,7 @@ function Nav() {
 					</li>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-white [&.active]:opacity-100 focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#C43749] disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							to="my"
 							data-te-nav-link-ref
 						>
@@ -69,23 +70,23 @@ function Nav() {
 					</li>
 					<li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-white [&.active]:opacity-100 focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#C43749] disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							to="new"
 							data-te-nav-link-ref
 						>
 							Craft Vibe
 						</NavLink>
 					</li>
-					<li className="p-2" data-te-nav-item-ref>
+					{/* <li className="p-2" data-te-nav-item-ref>
 						<NavLink
-							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 focus:opacity-100 disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
+							className="p-0 text-white opacity-75 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-white focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#C43749] disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
 							onClick={logout}
 							to="account/logout"
 							data-te-nav-link-ref
 						>
-							Logout
+							Check Out
 						</NavLink>
-					</li>
+					</li> */}
 				</>
 			);
 		}
@@ -97,12 +98,14 @@ function Nav() {
 
 	return (
 		<nav
-			className="relative flex w-full flex-wrap items-center justify-between bg-neutral-900 py-3 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start"
+			className={`${
+				isNavOpen ? "" : "h-[calc(4.5rem)]"
+			} fixed top-0 left-0 z-20 flex w-full flex-wrap items-center justify-between bg-neutral-900 py-2.5 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start box-border border-b-4 border-[#C43749]`}
 			data-te-navbar-ref
 		>
-			<div className="flex w-full flex-wrap items-center justify-between px-6">
+			<div className="flex w-full flex-wrap items-center justify-center px-6 text-center">
 				<button
-					className="block border-0 bg-transparent px-2.5 py-2 text-neutral-200 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
+					className="block border-0 bg-transparent px-2.5 py-2 text-neutral-200 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden cursor-override"
 					type="button"
 					onClick={handleClick}
 					data-te-collapse-init
@@ -126,13 +129,55 @@ function Nav() {
 						</svg>
 					</span>
 				</button>
-				<NavLink className="pr-2" to="/">
-					<VibeCheckLogo className="inline-block h-12 w-40" />
+				<NavLink className="pr-2 mr-6" to="/">
+					<VibeCheckLogo className="inline-block h-12 w-40 cursor-override hover:scale-110 hover:translate-y-1" />
 				</NavLink>
-				<div className={isNavOpen ? hidden : visible} id="navbarSupportedContent4" data-te-collapse-item>
-					<ul className="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
-						<UserCheck />
-					</ul>
+				<div className={isNavOpen ? visible : hidden} id="navbarSupportedContent4" data-te-collapse-item>
+					{!isNavOpen ? (
+						<>
+							<ul className="mr-auto flex flex-row justify-around" data-te-navbar-nav-ref>
+								<UserCheck />
+							</ul>
+							<ul className="mr-2 flex flex-row" data-te-navbar-nav-ref>
+								{account ? (
+									<li className="relative list-style-none" data-te-nav-item-ref>
+										<NavLink
+											className="p-0 text-white opacity-75 hover:opacity-100  hover:underline-offset-8 focus:opacity-100 [&.active]:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#C43749] disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
+											onClick={logout}
+											to="account/logout"
+											data-te-nav-link-ref
+										>
+											<span className="hover:underline hover:underline-offset-8 hover:decoration-[#C43749] ">
+												Check Out
+											</span>{" "}
+											👋
+										</NavLink>
+									</li>
+								) : null}
+							</ul>
+						</>
+					) : (
+						<>
+							<ul className="mr-auto flex flex-row justify-around" data-te-navbar-nav-ref>
+								<UserCheck />
+								{account ? (
+									<li className="p-2" data-te-nav-item-ref>
+										<NavLink
+											className="p-0 text-white opacity-75 hover:opacity-100 focus:opacity-100 [&.active]:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#C43749] disabled:text-black/30 lg:px-2 [&.active]:text-white/90 dark:[&.active]:text-neutral-400 font-raleway text-xl tracking-widest cursor-override"
+											onClick={logout}
+											to="account/logout"
+											data-te-nav-link-ref
+										>
+											<span className="hover:underline hover:underline-offset-8 hover:decoration-[#C43749] ">
+												Check Out
+											</span>{" "}
+											👋
+										</NavLink>
+									</li>
+								) : null}
+							</ul>
+						</>
+					)}
 				</div>
 			</div>
 		</nav>
