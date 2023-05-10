@@ -60,11 +60,9 @@ build-docker-main:
 build-front-end-job:
   stage: build
   image: node:lts-bullseye
-  needs:
-    - build-docker-main
   variables:
     PUBLIC_URL: https://vibe-check.gitlab.io/vibe-check
-    REACT_APP_VIBE_CHECK_API_HOST: https://vibe-check.gitlab.io/vibe-check
+    REACT_APP_VIBE_CHECK_API_HOST: https://vibe-check-api.dec-ct-6.mod3projects.com
   script:
     - cd ghi # CHANGE THIS TO THE DIRECTORY THAT HAS package.json
     - npm install
