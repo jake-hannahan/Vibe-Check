@@ -63,7 +63,7 @@ function VibesListPage() {
 					>
 						<span className="text-[#C43749]">A</span>
 						<span>ll </span>
-						<span className=" text-[#C43749]">T</span>
+						<span className="text-[#C43749]">T</span>
 						<span>he </span>
 						<span className="text-[#C43749]">V</span>
 						<span>ibes</span>
@@ -74,7 +74,7 @@ function VibesListPage() {
 							className="bg-neutral-900 w-3/4 p-2.5 text-center text-neutral-500
                       border rounded-md focus:ring-[#C43749] focus:border-[#C43749]
                       text-xl sm:text-md shadow-sm outline-none appearance-none
-                      hover:bg-[#C43749] hover:text-white font-raleway cursor-override"
+                      hover:bg-[#C43749] hover:text-white font-raleway"
 						>
 							{moods.map((mood) => (
 								<option value={mood.name} key={mood.id}>

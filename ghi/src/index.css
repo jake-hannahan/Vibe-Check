@@ -13,31 +13,31 @@
         .masonry {
             column-gap: 1em;
             column-count: 1;
-            padding: 1em;
+            padding: 2em;
         }
 
         .masonry-sm {
             column-gap: 1em;
             column-count: 2;
-            padding: 1em;
+            padding: 2em;
         }
 
         .masonry-md {
             column-gap: 1em;
             column-count: 3;
-            padding: 1em;
+            padding: 2em;
         }
 
         .masonry-lg {
         column-gap: 1em;
         column-count: 4;
-        padding: 1em;
+        padding: 2em;
     }
 
         .masonry-xl {
         column-gap: 1em;
         column-count: 5;
-        padding: 1em;
+        padding: 2em;
     }
 
     }
