@@ -42,7 +42,7 @@ function ListCard(props) {
       <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
         <div className="group relative mx-1">
           <img
-            className="h-auto max-w-full justify-center items-center object-contain rounded-2xl mb-8"
+            className="h-auto max-w-full object-contain mx-auto grid place-items-center rounded-2xl mb-8"
             onError={addDefaultSrc}
             src={props.vibe.picture_url}
             alt="Invalid url"
