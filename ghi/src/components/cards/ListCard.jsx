@@ -47,9 +47,9 @@ function ListCard(props) {
           alt="Invalid url"
         />
         <div
-          className={`absolute top-0 rounded-2xl left-0 right-0 w-full h-0 flex
+          className={`absolute top-0 rounded-2xl left-0 w-full object-contain h-0 flex
                   flex-col justify-center items-center ${moodColor} opacity-0
-                  group-hover:h-[85%] group-hover:opacity-100 duration-500`}
+                  group-hover:h-full group-hover:opacity-100 duration-500`}
         >
           <h1 className="md:text-md lg:text-lg xl:text-xl 2xl:text-3xl pt-10 px-2 pb-4 text-black text-center">
             {" "}
