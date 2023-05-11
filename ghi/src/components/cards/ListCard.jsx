@@ -39,30 +39,27 @@ function ListCard(props) {
 
   return (
     <>
-    <NavLink
-            to={{ pathname: "/detail" }}
-            state={{ vibeId: props.vibe.id }}
-          >
+      <NavLink to={{ pathname: "/detail" }} state={{ vibeId: props.vibe.id }}>
         <div className="group relative mx-1">
           <img
-          className="h-auto max-w-full object-contain rounded-2xl mb-8"
-          onError={addDefaultSrc}
-          src={props.vibe.picture_url}
-          alt="Invalid url"
+            className="h-auto max-w-full justify-center items-center object-contain rounded-2xl mb-8"
+            onError={addDefaultSrc}
+            src={props.vibe.picture_url}
+            alt="Invalid url"
           />
           <div
-          className={`absolute top-0 rounded-2xl left-0 w-full h-0 flex
+            className={`absolute top-0 rounded-2xl left-0 w-full h-0 flex
                   flex-col justify-center items-center ${moodColor} opacity-0
                   group-hover:h-full group-hover:opacity-100 duration-500`}
           >
-          <h1 className="sm:text-2xl md:text-md lg:text-lg xl:text-xl 2xl:text-3xl pt-10 px-2 pb-4 text-black text-center">
-            {" "}
-            {capitalize(props.vibe.name)}
-          </h1>
+            <h1 className="sm:text-2xl md:text-md lg:text-lg xl:text-xl 2xl:text-3xl pt-10 px-2 pb-4 text-black text-center">
+              {" "}
+              {capitalize(props.vibe.name)}
+            </h1>
+          </div>
         </div>
-      </div>
-    </NavLink>
-  </>
+      </NavLink>
+    </>
   );
 }
 
