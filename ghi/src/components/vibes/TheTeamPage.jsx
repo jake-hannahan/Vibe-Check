@@ -31,7 +31,7 @@ function TheTeamPage() {
 			description:
 				"Knowledgeable Full-stack developer with expertise in frontend technologies and a talent for creating efficient and effective code.",
 			linkedIn: "https://www.linkedin.com/in/shaunragasa/",
-			gitlab: "https://gitlab.com/sragasa97",
+			gitlab: "https://gitlab.com/sragasadev",
 		},
 		{
 			name: "Alana Torrez",
